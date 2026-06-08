@@ -1,0 +1,17 @@
+# Spike / tool-trial outputs
+spike_out/
+.spike_venv/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+
+# Scratch
+_rp_tmp.json
+*.tmp
