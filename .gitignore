@@ -1,6 +1,6 @@
-# Spike / tool-trial outputs
-spike_out/
-.spike_venv/
+# Conversion tool venvs (Windows; recreated via reference/scripts, not committed)
+.docling_venv/
+.mineru_venv/
 
 # Python
 __pycache__/
