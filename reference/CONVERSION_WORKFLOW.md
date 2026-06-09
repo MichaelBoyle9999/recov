@@ -1,7 +1,10 @@
 # Reference PDF → Markdown Conversion Workflow
 
 Working notes for converting the academic PDFs in `reference/pdfs/` into clean,
-LLM-readable markdown. **This document will evolve.** See the changelog at the bottom.
+LLM-readable markdown. **Status: complete and validated** — the flow and the aggregation
+prompt below were proven end-to-end on the Clarke-2013 pilot (the first official
+conversion passed its rubric). Follow it as the standard procedure for new papers; track
+any future changes in the changelog at the bottom.
 
 ## Goal
 
@@ -151,11 +154,12 @@ correct* principle:
   description beneath. Equations and tables are transcribed as text even when MinerU
   cropped them as images — only genuine plots/figures stay as image links.
 
-### Aggregation prompt (working draft — being dialed in on Clarke-2013)
+### Aggregation prompt (canonical — validated on Clarke-2013)
 
-> **Status:** draft under iteration. The exact wording is still being validated against
-> the Clarke-2013 rubric (`Clarke-2013_validation-target.md`); update this block once the
-> first official conversion passes. Replace `<BASE>` with the paper's folder name.
+> **Status:** validated and canonical. This wording was dialed in against the Clarke-2013
+> rubric (`Clarke-2013_validation-target.md`) and the first official conversion passed it
+> (see `reference/Clarke-2013_fitness-fatigue-modeling-tutorial/`). Use it as-is for new
+> papers; replace `<BASE>` with the paper's folder name. Revise only with a changelog entry.
 
 ```text
 You are converting ONE academic paper into its final, canonical Markdown file by
@@ -208,22 +212,42 @@ HOW TO AGGREGATE:
 7. Strip running heads, page numbers, footers, and journal boilerplate. Preserve reading
    order; do not reorder sections or figures.
 
-FIGURES (image + caption):
-For each figure ("Fig. 1", "Fig. 2", ...) in the paper:
-a. Find its cropped image: in mineru.md, locate the `![](mineru_images/<hash>.jpg)`
-   reference next to that figure's caption; that hash file is the candidate crop. VIEW the
-   candidate .jpg to confirm it visually matches the figure's panels.
-b. Copy that file to reference\<BASE>\images\figure-N.jpg (N = printed figure number).
-c. If MinerU has no clean crop for a figure, instead copy that figure's full page render
-   (pages\page-NNN.png) to images\figure-N.png and note the fallback in conversion_notes.
-d. In the body, at the point the figure is first referenced/placed (do not reorder),
-   insert exactly:
+FIGURES (image + caption) — NO IMAGE MANIPULATION:
+A single numbered figure ("Fig. 2") is often made of several PANELS (A, B, C, ...), and
+MinerU usually crops each panel as its own .jpg. Carry the panels as SEPARATE crop files
+exactly as MinerU produced them. Do NOT stitch, combine, concatenate, pad, resize, rotate,
+or otherwise edit any crop — copying and renaming are the ONLY permitted operations on a
+figure image. (Stitching panels into one image clips panel labels and distorts layout;
+that is why it is forbidden.)
 
+For each figure ("Fig. 1", "Fig. 2", ...) in the paper:
+a. Find its crop(s): in mineru.md, locate the `![](mineru_images/<hash>.jpg)` reference(s)
+   next to that figure's caption. There may be ONE crop (single-panel figure) or SEVERAL
+   (one per panel). VIEW each candidate .jpg to confirm it matches the figure and to
+   identify which panel (A/B/C/...) it is.
+b. Copy the crop(s) into reference\<BASE>\images\, named by figure number — and, when the
+   figure has more than one panel, by panel letter in printed reading order:
+     - single-panel figure -> figure-N.jpg
+     - multi-panel figure  -> figure-N-a.jpg, figure-N-b.jpg, figure-N-c.jpg, ...
+   (N = printed figure number; panel letters follow the printed A/B/C labels.)
+c. If MinerU has no clean crop for a figure or a panel, copy that figure's full page render
+   (pages\page-NNN.png) to images\figure-N.png and note the fallback in conversion_notes.
+   Never fabricate or reconstruct a missing panel.
+d. In the body, at the point the figure is first referenced/placed (do not reorder), link
+   ALL of the figure's panels consecutively, then ONE shared caption beneath them:
+
+   single-panel:
    ![Figure N](images/figure-N.jpg)
    > **[Figure N]** <full caption, transcribed verbatim from the page image>
 
+   multi-panel:
+   ![Figure N panel A](images/figure-N-a.jpg)
+   ![Figure N panel B](images/figure-N-b.jpg)
+   ![Figure N panel C](images/figure-N-c.jpg)
+   > **[Figure N]** <full caption, transcribed verbatim from the page image>
+
    The blockquote marks the figure boundary so figure content is never mistaken for body
-   prose.
+   prose. One caption per figure, regardless of panel count.
 e. If a figure EMBEDS a table or equations (common for definition/summary figures), ALSO
    transcribe that embedded table/equations as text (Markdown table / LaTeX) immediately
    under the caption — the image preserves the visual/plotted content; the text preserves
@@ -285,15 +309,20 @@ Body conventions:
 
 - Equations as LaTeX `$$...$$`, transcribed verbatim from the printed page.
 - Figures: inline at the point they're referenced (don't reorder). Carry the figure's
-  cropped image as an inline link to `images/figure-N.jpg`, immediately followed by an
-  explicit, clearly-delimited caption/description so figure content is never mistaken
-  for body prose, e.g.:
+  MinerU crop(s) as inline links, immediately followed by an explicit, clearly-delimited
+  caption so figure content is never mistaken for body prose. **No image manipulation** —
+  copy/rename crops only; never stitch, pad, or resize. A multi-panel figure keeps one
+  separate crop per panel (`figure-N-a.jpg`, `figure-N-b.jpg`, …) linked consecutively
+  under a single shared caption, e.g.:
 
   ```markdown
-  ![Figure 1](images/figure-1.jpg)
-  > **[Figure 1]** <printed caption, transcribed verbatim>
+  ![Figure 2 panel A](images/figure-2-a.jpg)
+  ![Figure 2 panel B](images/figure-2-b.jpg)
+  ![Figure 2 panel C](images/figure-2-c.jpg)
+  > **[Figure 2]** <printed caption, transcribed verbatim>
   ```
 
+  A single-panel figure is just `images/figure-N.jpg` + caption.
   **Mark the figure boundary explicitly.**
 - Tables inside figures stay tables (all columns, including reference/term-description
   columns).
@@ -311,6 +340,15 @@ Body conventions:
 
 ## Changelog
 
+- 2026-06-09: **Workflow promoted to complete/validated.** The Clarke-2013 pilot is the
+  first official conversion and passed its rubric (`Clarke-2013_validation-target.md`); its
+  output folder `reference/Clarke-2013_fitness-fatigue-modeling-tutorial/` is the reference
+  example. The aggregation prompt is now canonical (was "draft under iteration").
+- 2026-06-09: Figures policy set to **no image manipulation**. Multi-panel figures keep one
+  separate MinerU crop per panel (`figure-N-a.jpg`, `figure-N-b.jpg`, …) linked under a
+  single shared caption — copy/rename only; stitching/padding/resizing forbidden (a stitch
+  trial on Clarke-2013 clipped a panel label). Updated the aggregation prompt's FIGURES
+  block and the output template accordingly.
 - 2026-06-08: Reworked into the **multi-tool ensemble** flow on the new Windows-AMD /
   RTX 3090 Ti box. Per-paper folders under `reference/pdfs/<base>/` now hold
   olmOCR + MinerU + Docling (+ manual Mathpix) drafts plus rendered page images, which
