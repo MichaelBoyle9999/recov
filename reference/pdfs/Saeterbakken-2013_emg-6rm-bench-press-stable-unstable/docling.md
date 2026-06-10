@@ -1,0 +1,189 @@
+## ELECTROMYOGRAPHIC ACTIVITY AND 6RM STRENGTH IN BENCH PRESS ON STABLE AND UNSTABLE SURFACES
+
+ATLE H. SAETERBAKKEN 1 AND MARIUS S. FIMLAND 2,3
+
+1 Faculty of Teacher Education and Sport, Sogn og Fjordane University College, Norway; 2 Department of Public Health and General Practice, Faculty of Medicine, Norwegian University of Science and Technology, Trondheim, Norway; and 3 Hysnes Rehabilitation Center, St. Olavs University Hospital, Trondheim, Norway
+
+## ABSTRACT
+
+Saeterbakken, AH and Fimland, MS. Electromyographic activity and 6RM strength in bench press on stable and unstable surfaces. J Strength Cond Res 27(4): 1101-1107, 2013-The purpose of the study was to compare 6-repetition maximum (6RM) loads and muscle activity in bench press on 3 surfaces, namely, stable bench, balance cushion, and Swiss ball. Sixteen healthy, resistance-trained men (age 22.5 6 2.0 years, stature 1.82 6 6.6 m, and body mass 82.0 6 7.8 kg) volunteered for 3 habituation/ strength testing sessions and 1 experimental session. In randomized order on the 3 surfaces, 6RM strength and electromyographic activity of pectoralis major, deltoid anterior, biceps brachii, triceps brachii, rectus abdominis, oblique external and erector spinae were assessed. Relative to stable bench, the 6RM strength was approximately 93% for balance cushion ( p # 0.001) and approximately 92% for Swiss ball ( p = 0.008); the pectoralis major electromyographic (EMG) activity was approximately 90% using the balance cushion ( p =0.080) and approximately 81% using Swiss ball ( p = 0.006); the triceps EMG was approximately 79% using the balance cushion ( p = 0.028) and approximately 69% using the Swiss ball ( p = 0.002). Relative to balance cushion, the EMG activity in pectoralis, triceps, and erector spinae using Swiss ball was approximately 89% ( p = 0.016), approximately 88% ( p = 0.014) and approximately 80% ( p =0.020), respectively. In rectus abdominis, the EMG activity relative to Swiss ball was approximately 69% using stable bench ( p = 0.042) and approximately 65% using the balancecushion( p =0.046).SimilarEMGactivitiesbetweenstable and unstable surfaces were observed for deltoid anterior, biceps brachii, and oblique external. In conclusion, stable bench press had greater 6RM strength and triceps and pectoralis EMG activity compared with the unstable surfaces. These findings have implications for athletic training and rehabilitation, because they demonstrate an inferior effect of unstable surfaces on muscle activation of prime movers and strength in bench press. If an unstable surface in
+
+Address correspondence to atle.saeterbakken@hisf.no.
+
+27(4)/1101-1107
+
+Journal of Strength and Conditioning Research Ó 2013 National Strength and Conditioning Association bench press is desirable, a balance cushion should be chosen instead of a Swiss ball.
+
+KEY WORDS EMG, resistance exercise, unstable surface, trunk
+
+## INTRODUCTION
+
+R esistance training on unstable surfaces, such as Swiss balls, slings, BOSU balls, and balance discs, induces varying degrees of instability and are believed to be useful for injury prevention, rehabilitation, and general health benefits (2,5,21,26). Proponents of instability in resistance training deduce that greater instability is beneficial compared with traditional resistance training in a number of ways, such as inducing increased stress on the neuromuscular system, improving balance, and coordination, being more sport specific and be beneficial for rehabilitation (1,6,7). However, although unstable surfaces can lead to increased stabilization requirements, several studies have suggested that they may not provide an adequate overload for strength, power, and hypertrophy gains (5,11,20).
+
+The bench press is probably the most popular upper-body resistance exercise among athletes and recreational trainers. Previous studies have examined bench press on a stable bench and unstable Swiss ball (3,15,19,26). Marshall and Murphy (19) employed 60% of 1repetition maximum (1RM) in the stable exercise and reported greater electromyographic (EMG) activity of anterior deltoid and abdominal muscles using the Swiss ball. Further, Uribe et al. (26) reported similar EMGactivity in anterior deltoid and pectoralis at 80% of 1RM in the stable condition. During maximal isometric bench press, Anderson and Behm (3) reported an approximately 60% lower force output on the Swiss ball but similar EMG activity. In contrast, Goodman et al. (15) examined 1RM and reported similar strength and similar EMG activity on the 2 surfaces. Thus, the effects of unstable surfaces on muscle activation of prime movers in bench press are unclear.
+
+Unstable surfaces have been used to increase trunk muscle activity compared with stable surfaces (2,8,19,21,26,27). Norwood et al. (21) compared bench press with unstable BOSU balls underneath (a) feet, (b) shoulders, and (c) feet and shoulders. Overall, the EMG activity in the trunk increased
+
+VOLUME 27 | NUMBER 4 | APRIL 2013 | 1101
+
+Figure 1. A-C) Illustration of how bench presses were performed on the 3 different surfaces. The feet and arm positions were the same during ordinary bench, balance cushion, and Swiss ball testing.
+
+<!-- image -->
+
+with increasing instability. Further, Behm et al. (8) compared bench press on a bench and Swiss ball and reported greater EMG activity of the trunk muscles.
+
+It is important to note that several bench press studies mentioned above were methodologically limited because they failed to match relative resistance but rather used the same
+
+1102
+
+Journal of Strength and Conditioning Research the TM
+
+Figure 2. Mean ( SD ) 6 repetition maximum (RM) strength in bench press performed on a stable bench, balance cushion, and Swiss ball. *Different from unstable surfaces, p # 0.05.
+
+<!-- image -->
+
+absolute intensity (8,19,21,26). There is ample evidence that inducing instability in resistance exercises reduces absolute strength/force production (3,20,23). Thus, using the same absolute load means that higher relative loads were employed in the unstable conditions. The 2 bench press studies that did not suffer from this methodological flaw tested isometric maximal effort (3) or dynamic 1RM (15). Therefore, it is not known how unstable surfaces affect strength and muscle activation at intensities commonly used in resistance training (e.g., 6-12RM). Further, previous studies did not examine muscle activation during multiple repetitions (i.e., . 1 repetition) to muscular fatigue on several different surfaces.
+
+Therefore, the purpose was to investigate 6RM strength and concomitant neuromuscular activation of the prime movers and trunk muscles on 3 different surfaces during bench press. We hypothesized that (a) the 6RM load would decrease with increasing instability and (b) neuromuscular activity would generally be similar on the 3 surfaces for upper body and trunk muscles, as relative resistance was matched.
+
+## METHODS
+
+## Experimental Approach to the Problem
+
+A within-subject, randomized and counterbalanced repeated-measures design was used to examine the 6RM strength and concomitant EMG activity in bench presses on 3 surfaces. The participants took part in 3 habituation/ strength testing session and 1 experimental session where muscle activity was obtained during 6RM on each surface. The surfaces had different stability requirements and were (a) an ordinary stable bench, (b) a balance cushion, and (c) a Swiss ball (Figure 1). Muscle activation was obtained in prime mover and stabilizer muscles. Bench press was investigated because it is a very popular upper-body resistance exercise among athletes and recreational trainers.
+
+## Subjects
+
+Sixteen healthy, resistance-trained men (age 22.5 6 2.0 years, stature 1.82 6 6.6 m, body mass 82.0 6 7.8 kg)
+
+Figure 3. Mean ( SD ) root-mean square (RMS) electromyographic activity of the different conditions in (A) pectoralis major and anterior deltoid and (B) biceps and triceps. * Different from all other surfaces, p # 0.05.
+
+<!-- image -->
+
+participated in the study. The subjects were excluded from the study if they had musculoskeletal pain, injury, illness that might reduce maximal effort, experienced pain during testing or had , 1 year of resistance training experience. Further, self-reported 1RM in bench press had to exceed the subjects' body mass. None of the subjects were competitive power lifters but had 4.6 6 2.1 years of resistance training experience. All the subjects were familiar with the bench press exercise. The 6RM strength was 85 6 15.6 kg. The 6RM normalized to body weight was 1.05. The subjects were instructed to refrain from any additional resistance training targeting the upper body during the 72 hours before testing. Ethics approval was obtained from the local research ethics committee and conformed to the latest revision of the Declaration of Helsinki. Each subject was informed of the testing procedures and possible risks, and a written consent was obtained before the study.
+
+## Procedures
+
+On the stable bench, the head, shoulders, and hips were supported by the bench with an approximately 90 8 fl exion in the knees (Figure 1A). Each subject chose a preferred grip-and
+
+|
+
+feet position. The width were measured, controlled and used in every session and condition. Two test-leaders acted as spotters and assisted the subjects in the preload phase by lifting and stabilizing the Olympic barbell (2.8-cm diameter, length 1.92 m) until the subject had fully extended arms. The barbell was lowered in a controlled manner, lightly touched the chest, and lifted back to the starting position with fully extended elbows. No bouncing of the weights was allowed. The tempo of each repetition was self-selected, but subjects were instructed to use a controlled tempo with correct technique.
+
+The balance cushion (Fysiopartner AS, Norway) was placed on the stable bench (Pivot 430, Sportsmaster AS, Norway). Semielastic mats, corresponding to the height of the balance cushion, were placed underneath the feet so that the conditions would be comparable with the stable bench (Figures 1A and B). The air pressure used during testing was 1.5 psi for the bal-
+
+ance cushion. Each subject assumed a position where the balance cushion was placed between the scapulas. The head, neck, and hips were not in contact with the bench, and the position was maintained during testing (Figure 1B).
+
+After a series of pilot tests, a 75-cm Swiss ball (Eidsvoll, Egos Sport AS, Norway) were used with an air pressure of 3.0 psi (Figure 1C). When a person (weight 80 kg) lifted 80 kg on the Swiss ball, the air pressure, and Swiss ball size corresponded to height of the ordinary bench. The Swiss ball was placed in a position where the head, neck, and hips were not in contact with the Swiss ball (Figure 1C). The base of support on the balance cushion (35 cm) and the base of support on the Swiss ball were identical when a person (body mass 80 kg) lifted 80 kg on the Swiss ball (35 cm). However, the Swiss ball was movable in multiple directions and was therefore considered to be more unstable than the nonmoveable balance cushion.
+
+Approximately 2 weeks before the experimental test, each subject attended the first of 3 combined habituation and strength testing sessions (23). The habituation sessions were used to identify 6RM for each of 3 surfaces and were separated by 2-5 days (12). The subjects were assigned to the 3 surfaces in a counterbalanced and randomized fashion to nullify any treatment order effects. Before a 6RM test, the subject performed a 10-minute warm-up on a cycle ergometer or treadmill at an intensity corresponding to a rating of perceived exertion between 8 and 10 on the Borg scale (10). Next, 3 warm-up sets were performed on a stable bench: 20 repetitions at 25% of anticipated 1RM, 10 repetitions at 50% of 1RM, and 8 repetitions at 70% of 1RM (4). After the last warm-up set, the subjects were asked what they believed their 6RM load was. After 6 successful repetitions, the subjects were asked if they thought the set was their 6RM. If not, heavier resistance was added so that 6RM could be identified. The same procedure was used for all 3 surfaces. The 6RM was identified within 1-3 attempts. A 3- to 4-minute rest period was given between each attempt (15,23,25). The last habituation session and experimental test was separated with 3-5 days (23).
+
+Figure 4. Mean ( SD ) root-mean square (RMS) electromyographic activity of the different conditions in erector spinae, oblique external, and rectus abdominis. * Different from all other surfaces, p # 0.05. # Different between balance cushion and Swiss ball, p # 0.05.
+
+<!-- image -->
+
+In the experimental test, the warm-up was first performed as described above. Next, 6RM testing with concomitant EMG measurements was performed on each of the 3 surfaces. The 4- to 5-minute periods separated the 6RM tests on each surface (23,25). Six repetitions at 50% of 6RM were performed on the new surface in this time period before the new 6RM test.
+
+## Electromyography Measurements
+
+The EMG signals were measured from pectoralis major ( ; 4 cm medial to the axillary fold [24]), anterior deltoid (1.5 cm distal and anterior to the acromion), triceps brachii (long head, ; 3 cm medial and on 50% on the line between acromion and olecranon), biceps brachii (one-third from the fossa cubit), rectus abdominis (3 cm lateral to the umbilicus), oblique external ( ; 15 cm to the umbilicus), and erector spinae (L1, 6 cm lateral to the spinous process) according to the recommendations of Surface ElectroMyoGraphy for the Non-Invasive Assessment
+
+1104 Journal of Strength and Conditioning Research the TM
+
+of Muscles (SENIAM) (16) and as used in similar studies (3,8). The electrodes (11-mm contact diameter, 20-mm center-to-center distance) were placed on the side of the dominant arm (8,22). The skin was shaved, washed with alcohol, and abraded before the placement of gel coated selfadhesive electrodes (Dri-Stick Silver circular surface electromyography (sEMG) Electrodes AE131, NeuroDyne Medical, USA).
+
+A commercial EMG recording system was used to measure the EMG activation (Musclelab 4020e, Ergotest Technology AS, Langesund, Norway). The raw EMG signals were amplified and filtered using a preamplifier located as close to the pickup
+
+point as possible. The signals were high pass (600 Hz) and low pass (8 Hz) filtered, rectified, and integrated. Further, the raw EMG signals were converted to root-mean-square (RMS) signals using a hardware circuit network (frequency response 450 kHz, averaging constant 12 milliseconds, total error 6 0.5%). With a common rejection rate of 106 dB, the RMS signals were sampled at a rate of 100 Hz using a 16-bit A/D converter. All EMG data were recorded in 1 session to avoid methodological issues regarding electrode placements. Hence, we did not consider it necessary to normalize the EMG data. The data were analyzed using commercial software (Musclelab V8.13, Ergotest Technology AS). A linear encoder (ETEnc-02, Ergotest Technology AS) was attached to the barbell to assess the total lifting time of the 6RM tests, and the vertical position of the barbell, so that the beginning and end of the 6RMtesting could be identified. The linear encoder had a sampling frequency of 100 Hz and was synchronized with the EMG recordings. The beginning and end of each of the 6 repetitions were identified and EMG RMS activities were calculated as the mean of the 6 repetitions (i.e., short stops at full arm extension were removed from the analysis).
+
+## Statistical Analyses
+
+Visual inspection of the data using probability plots demonstrated that the data were normally distributed. To assess differences in EMG activity during 6RM testing, a 2-way (3 surfaces 3 7 muscles) analysis of variance (ANOVA) with repeated measures was used. When differences were detected by ANOVA, paired t -tests with Bonferroni post hoc corrections were applied to determine where the differences lay. The dependent variables were the EMG activity for each of the muscles. To assess the differences in 6RM load and time used in the 6RM testing, repeated-measures 1-way ANOVAs were used with Bonferroni post hoc tests.
+
+Figure 5. Electromyographic activation on unstable surfaces relative to the stable surface (mean and SEM ), * Different from all other surfaces; # different between balance cushion and Swiss ball, p # 0.05.
+
+<!-- image -->
+
+All results are presented as mean 6 SD and Cohen's d effect size (ES), unless otherwise noted. Effect size of 0.2 was considered small, 0.5 medium, and 0.8 large. SPSS (v19, Chicago, IL, USA) was used for statistical analyses. Statistical significance was accepted at p # 0.05.
+
+## RESULTS
+
+Relative to stable bench (85.0 6 15.6 kg), the 6RM strength was approximately 93% using the balance cushion (79.0 6 15.1 kg, p # 0.001, ES = 0.39) and approximately 92% using the Swiss ball (78.5 6 14.3 kg, P = 0.008, ES = 0.43, Figure 2). There were similar 6RM strengths for balance cushion and Swiss ball ( p = 0.700).
+
+For the EMG activity, the surface 3 muscle interaction was significantly different ( F = 6.261, p # 0.001). After post hoc analyses, the EMG activity in pectoralis major relative to stable bench (0.555 6 0.28 mV) was approximately 81% using Swiss ball (0.448 6 0.19 mV, p = 0.006, ES = 0.45) and approximately 90% for balance cushion (0.500 6 0.22 mV, p = 0.080, ES = 0.25, Figure 3A). Further, the EMG activity in Swiss ball was approximately 89% of the balance cushion ( p = 0.016, ES = 0.25, Figure 3A). Similar EMG was observed in deltoid anterior using stable bench press (0.945 6 0.28 mV), balance cushion (1.005 6 0.27 mV), and Swiss ball (0.943 6 0.29 mV; p = 0.238-0.962, Figure 3A).
+
+For triceps brachii, the EMG activity relative to stable bench (0.747 6 0.23 mV) was approximately 79% using the balance cushion (0.587 6 0.1 7 mV, p = 0.028, ES = 0.79) and approximately 69% using the Swiss ball (0.516 6 0.17 mV, p = 0.002, ES = 1.14, Figure 3B). Further, the EMG activity relative to balance cushion was approximately 88% using the Swiss ball ( p = 0.014, ES = 0.42). There were similar EMG activities in biceps brachii using stable bench (0.316 6 0.15 mV), balance cushion (0.352 6 0.20 mV) and Swiss ball (0.301 6 0.1 7 mV; p = 0.226-0.564, Figure 3B).
+
+For erector spinae, the EMG activity relative to balance cushion (0.156 6 0.05 mV) was approximately 80% using the Swiss ball (0.125 6 0.05 mV, p = 0.020, ES = 0.62, Figure 4). There was similar EMG activity in stable bench (0.142 6 0.06 mV) compared with balance cushion ( p = 0.562) and Swiss ball ( p = 0.506). In oblique external, similar EMG activities were observed using stable bench (0.060 6 0.02 mV), balance cushion (0.060 6 0.02 mV) and Swiss ball (0.057 6 0.02 mV; p = 0.439-0.852, Figure 4). In the rectus abdominis, the EMG
+
+activity relative to Swiss ball (0.049 6 0.038 mV) was approximately 69% using stable bench (0.034 6 0.028 mV, p = 0.042, ES = 0.45) and approximately 65% using the balance cushion (0.032 6 0.018 mV, p = 0.046, ES = 0.57, Figure 4). Similar EMG activity was observed for stable bench and balance cushion ( p = 0.670). The overall differences in the EMG activity are presented as percent of the stable bench in Figure 5.
+
+In a few cases in the experimental session, the subjects were not able to complete 6 repetitions in the condition that was performed last. In these cases, the weight was reduced with 2.5 kg, and 4-5 minutes of rest was given before a new attempt, which was always successful. The intracorrelation coefficient for the 6RM exercises between the practice test and the experimental test was 0.985 (stable bench), 0.993 (balance cushion), and 0.980 (Swiss ball). There were no differences in total time spent executing the 6 repetitions in stable bench (17.0 6 3.6 seconds), balance cushion (16.0 6 1.5 seconds), or Swiss ball (16.3 6 1.9 seconds; p = 0.433-0.628).
+
+## DISCUSSION
+
+This investigation demonstrated that 6RM loads decreased on unstable surfaces (balance cushion and Swiss ball) compared with the stable bench. Further, on unstable surfaces, the EMG activities in pectoralis major (Swiss ball , stable bench) and triceps brachii (Swiss ball and balance cushion , stable bench) were reduced compared with the stable surface. Balance cushion provided higher activation of the pectoralis, triceps, and erector spinae than did the Swiss ball. The Swiss ball induced greater rectus abdominis but similar erector spinae and oblique external EMG activity compared with the stable bench.
+
+The EMG activity in the pectoralis was greater for the stable bench than for the Swiss ball and also tended to be
+
+VOLUME 27 | NUMBER 4 | APRIL 2013 | 1105
+
+greater compared with the balance cushion. In addition, greater EMG activation was observed in triceps brachii for stable bench than both unstable surfaces. Thus, for the pectoralis and triceps, the exercise with the greatest 6RM strength resulted in the greatest EMG activity. That is, higher instability did not compensate for lower absolute load. For the first time, these results show an inferior effect of unstable surfaces on muscle activation of prime movers in bench press. To our knowledge, only 2 previous studies have matched relative resistance when comparing unstable and stable bench press (3,15). However, these studies examined maximal isometric or dynamic (1RM) contractions and reported similar EMG in pectoralis, anterior deltoid, triceps, and biceps, whereas we used a 6RM load, which is more typical in resistance training. On the other hand, the results we observed could possibly be attributed to the training status among the participants. The 6RM strengths (stable and unstable surfaces) in this study were greater than the isometric force outputs (stable and unstable) and 1RM loads (stable and unstable) in previous studies (3,15).
+
+The decreases in strength we observed in unstable compared with stable conditions are in line with the findings of Anderson and Behm (3) but not with Goodman et al. (15). In this study, the 6RM load on the Swiss ball was approximately 8% less than in the stable bench. In the study of Anderson and Behm (3), unstable force output was approximately 60% less than in the stable condition. However, Anderson and Behm (3) used a different experimental model with 2 independent handles attached, via straps, to force sensors on the floor and tested isometric force output. Because Goodman et al. (15) failed to report the air pressure of the Swiss ball, it cannot be excluded that the load and weight of the subjects, deformed the roundness of the Swiss ball to a more horizontal platform than in our study. With a larger base of support in Swiss ball testing, the surface becomes more stable and more similar to bench testing. This could be the reason for similar 1RM results in stable bench and Swiss ball in their study (15). Further, Berger and Smith (9) reported that a ventroflexion, required to keep the head in a neutral position, reduced power output in bench press. In this study and in the investigation of Anderson and Behm (3), the buttocks and head were not supported on the Swiss ball. However, in the study by Goodman et al. (15), upper shoulders, neck, and head were supported on the Swiss ball. Thus, the position of the upper body on the Swiss ball and different horizontal bases of support could explain these discrepancies. In support of this notion, Behm et al. (5) reported that when only 2 points of balance were in contact with the floor, force was reduced with 70%. Conversely, 3 points of contact with the floor resulted in a force reduction of only 20%, relative to the stable condition.
+
+We expected that the Swiss ball would be more unstable than the balance cushion, because it was movable in multiple directions. However, similar 6RM strength between these 2 devices suggests that this was not the case. With the weight of a relatively average subject (80 kg) and a relatively average
+
+6RM load (80 kg) the deformed Swiss ball had a similar base of support as the balance cushion.
+
+Inferior effects of unstable surfaces, as we observed here for absolute strength and muscle activation of prime movers have also been reported for other exercises and muscle groups. For example, Kohler et al. (17) demonstrated greater EMGactivity in triceps during seated shoulder press on a stable bench vs. Swiss ball. Further, Behm et al. (5) reported 44% less EMG activation in quadriceps during unstable leg extension than in a comparable stable condition. As in this study, both Kohler et al. (17) and Behm et al. (5) used the same relative intensities on stable and unstable surfaces.
+
+The mechanism for decreased activation of prime movers in the unstable conditions we employed could theoretically be increased stress associated with the postural demands. The body is a linked mechanical system, and it is necessary to provide a strong base of support before heavy weightlifting (14). Nonetheless, we did not observe systematically elevated EMG for superficial trunk muscles on the unstable surfaces.
+
+There were similar EMG activities in anterior deltoid and the antagonist biceps between the surfaces, which is in line with previous studies (3,15,26). In contrast, Marshall and Murphy (19) reported greater EMG activity in anterior deltoid when performing bench press on a Swiss ball compared with a stable bench. However, those results are not directly comparable with our results, as in that study the same absolute loads instead of relative loads were used (19), which in our opinion is an inappropriate comparison.
+
+For the trunk muscles, similar EMG activities in the stable bench and the unstable surfaces (balance cushion and Swiss ball) were generally observed, with a few exceptions. The EMG activity in the rectus abdominis was greater during Swiss ball compared with stable bench and balance cushion. Further, EMGactivity in the erector spinae was lower when using Swiss ball than balance cushion. This is not surprising, considering that the lower back was supported on the Swiss ball and not on the balance cushion. Overall, the relatively similar EMG activity in the trunk for the exercises could be attributed to relatively moderate and similar stability requirements for the trunk on all surfaces, because of a stable base of support caused by the feet.
+
+For the first time, several trunk muscles were examined during heavy bench press on stable vs. unstable surfaces performed close to muscular fatigue (i.e., 6RM). Previous studies were limited by only testing the EMG activity of rectus abdominis of the trunk muscles (3,15,26) or using low resistance (8,18,21,26).
+
+There are some limitations to our study. Only healthy resistance-trained subjects were recruited. Thus, the results cannot necessarily be generalized to other populations. Further, it should be noted that surface EMG can only provide an estimate of the neuromuscular activation and that there is an inherent risk of crosstalk from neighboring muscles (13), even if a small interelectrode distance was used. The testing was not performed at a standardized time of day, and we made no attempt to control for hydration or nutrition. However, the participants were instructed to prepare for the testing as they would have done for a normal strength training session.
+
+In conclusion, stable bench press broadly had greater 6RM strength and EMG activity in pectoralis and triceps compared with the 2 unstable surfaces. With respect to trunk muscles, the Swiss ball resulted in higher rectus abdominis activation compared with stable bench and balance cushion but lower erector spinae activation than balance cushion.
+
+## PRACTICAL APPLICATIONS
+
+In this study, we compared bench presses performed on a stable bench, Swiss ball, and balance cushion with the same relative resistance (6RM). The 6RM loads on the balance cushion and Swiss ball were only 93 and 92%, respectively, of the loads that could be lifted on the stable bench. When the subjects performed stable bench presses, greater muscle activation was achieved in pectoralis major compared with Swiss ball, and triceps brachii activation was superior on the stable bench compared with both unstable surfaces. Similar muscle activation was observed for anterior deltoid and biceps brachii on all surfaces. Regarding the trunk muscles, rectus abdominis had greater muscle activation on the Swiss ball than the stable bench but lower erector spinae activation. The balance cushion induced greater triceps brachii, pectoralis major, and erector spinae activation but lower rectus abdominis activation than the Swiss ball. Therefore, with respect to muscle activation of prime movers and absolute strength, this study broadly suggests beneficial effects of stable bench presses compared with unstable alternatives. However, if an unstable surface is desirable in bench press, for example, for rehabilitative purposes or in a periodized training program, a balance cushion is recommended instead of a Swiss ball because it provides higher activation of the prime movers with the same absolute load.
+
+## ACKNOWLEDGMENTS
+
+The authors wish to thank the participants for their enthusiastic participation and Orjan Myklebust and Aril Hagen Ravnoy for assistance in data collection and participant recruitment. This study was conducted without any funding from companies or manufacturers or outside organizations.
+
+## REFERENCES
+
+1. Anderson, K and Behm, DG. The impact of instability resistance training on balance and stability. Sports Med 35: 43-53, 2005.
+2. Anderson, K and Behm, DG. Trunk muscle activity increases with unstable squat movements. Can J Appl Physiol 30: 33-45, 2005.
+3. Anderson, KG and Behm, DG. Maintenance of EMG activity and loss of force output with instability. J Strength Cond Res 18: 637-640, 2004.
+4. Baechle, TR and Earle, RW, and National Strength &amp; Conditioning Association (U.S.). Essentials of Strength Training and Conditioning . Champaign, IL: Human Kinetics, 2008.
+5. Behm, DG, Anderson, K, and Curnew, RS. Muscle force and activation under stable and unstable conditions. J Strength Cond Res 16: 416-422, 2002.
+6. Behm, DG and Anderson, KG. The role of instability with resistance training. J Strength Cond Res 20: 716-722, 2006.
+7. Behm, DG, Drinkwater, EJ, Willardson, JM, and Cowley, PM. The use of instability to train the core musculature. Appl Physiol Nutr Metab 35: 91-108, 2010.
+8. Behm, DG, Leonard, AM, Young, WB, Bonsey, WAC, and MacKinnon, SN. Trunk muscle electromyographic activity with unstable and unilateral exercises. J Strength Cond Res 19: 193-201, 2005.
+9. Berger, A and Smith, KJ. Effects of the tonic neck reflex in the bench press. J Appl Sport Sci Res 5: 188-191, 1991.
+10. Borg, G. Borg's Perceived Exertion and Pain Scales . Champaign, IL: Human Kinetics, 1998.
+11. Chandler, TJ and Stone, MH. The squat exercise in athletic conditioning: A position statement paper and literature review. Natl Strength Cond Assoc J 13: 51-58, 1991.
+12. Drinkwater, EJ, Pritchett, EJ, and Behm, DG. Effect of instability and resistance on unintentional squat-lifting kinetics. Int J Sports Physiol Perform 2: 400-413, 2007.
+13. Farina, D. Interpretation of the surface electromyogram in dynamic contractions. Exerc Sport Sci Rev 34: 121-127, 2006.
+14. Folland, JP and Williams, AG. The adaptations to strength training: Morphological and neurological contributions to increased strength. Sports Med 37: 145-168, 2007.
+15. Goodman, CA, Pearce, AJ, Nicholes, CJ, Gatt, BM, and Fairweather, IH. No difference in 1RM strength and muscle activation during the barbell chest press on a stable and unstable surface. J Strength Cond Res 22: 88-94, 2008.
+16. Hermens, HJ, Freriks, B, Disselhorst-Klug, C, and Rau, G. Development of recommendations for SEMG sensors and sensor placement procedures. J Electromyogr Kinesiol 10: 361-374, 2000.
+17. Kohler, JM, Flanagan, SP, and Whiting, WC. Muscle activation patterns while lifting stable and unstable loads on stable and unstable surfaces. J Strength Cond Res 24: 313-321, 2010.
+18. Lehman, GJ, MacMillan, B, MacIntyre, I, Chivers, M, and Fluter, M. Shoulder muscle EMG activity during push up variations on and off a Swiss ball. Dyn Med 5: 7, 2006.
+19. Marshall, PW and Murphy, BA. Increased deltoid and abdominal muscle activity during Swiss ball bench press. J Strength Cond Res 20: 745-750, 2006.
+20. McBride, JM, Cormie, P, and Deane, R. Isometric squat force output and muscle activity in stable and unstable conditions. J Strength Cond Res 20: 915-918, 2006.
+21. Norwood, JT, Anderson, GS, Gaetz, MB, and Twist, PW. Electromyographic activity of the trunk stabilizers during stable and unstable bench press. J Strength Cond Res 21: 343-347, 2007.
+22. Saeterbakken, AH and Fimland, MS. Muscle activity of the core during bilateral, unilateral, seated and standing resistance exercise. Eur J Appl Physiol 112: 1671-1678, 2012.
+23. Saeterbakken, AH, van den Tillaar, R, and Fimland, MS. A comparison of muscle activity and 1-RM strength of three chest-press exercises with different stability requirements. J Sports Sci 29: 533-538, 2011.
+24. Schick, EE, Coburn, JW, Brown, LE, Judelson, DA, Khamoui, AV, Tran, TT, and Uribe, BP. A comparison of muscle activation between a Smith machine and free weight bench press. J Strength Cond Res 24: 779-784, 2010.
+25. Schwanbeck, S, Chilibeck, PD, and Binsted, G. A comparison of free weight squat to Smith machine squat using electromyography. J Strength Cond Res 23: 2588-2591, 2009.
+26. Uribe, BP, Coburn, JW, Brown, LE, Judelson, DA, Khamoui, AV, and Nguyen, D. Muscle activation when performing the chest press and shoulder press on a stable bench vs. a Swiss ball. J Strength Cond Res 24: 1028-1033, 2010.
+27. Willardson, JM, Fontana, FE, and Bressel, E. Effect of surface stability on core muscle activity for dynamic resistance exercises. Int J Sports Physiol Perform 4: 97-109, 2009.

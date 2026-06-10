@@ -34,13 +34,21 @@ def main() -> None:
     mineru = mineru if mineru.exists() else Path("mineru")
 
     with tempfile.TemporaryDirectory() as tmp:
+        # MinerU bakes the input file stem into a deep internal temp path
+        # (mineru-api-client-*/output/<uuid>/<stem>/auto/<stem>_content_list_v2.json).
+        # With long paper folder names that path exceeds Windows MAX_PATH (260) and the
+        # output stage dies with FileNotFoundError. Run on a short-stem copy to keep the
+        # internal path short; outputs are surfaced to out_md regardless of stem.
+        stem = "p"
+        work_pdf = Path(tmp) / f"{stem}.pdf"
+        shutil.copyfile(pdf, work_pdf)
         subprocess.run(
-            [str(mineru), "-p", str(pdf), "-o", tmp,
+            [str(mineru), "-p", str(work_pdf), "-o", tmp,
              "-b", "pipeline", "-m", "auto", "-l", args.lang,
              "-f", "true", "-t", "true"],
             check=True,
         )
-        produced = next(Path(tmp).rglob(f"{pdf.stem}.md"))
+        produced = next(Path(tmp).rglob(f"{stem}.md"))
         md = produced.read_text(encoding="utf-8")
 
         src_imgs = produced.parent / "images"

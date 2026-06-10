@@ -1,0 +1,398 @@
+MUSCLE ACTIVATION IN THE LOADED FREE BARBELL SQUAT: A BRIEF REVIEW
+
+DAVE R. CLARK,1,3 MIKE I. LAMBERT,2 AND ANGUS M. HUNTER3
+1Scotland Institute of Sport, Stirling, Scotland; 2MRC/UCT Research Unit for Exercise Science and Sports Medicine, University of Cape Town, Cape Town, South Africa; and 3School of Sport, University of Stirling, Stirling, Scotland
+
+ABSTRACT
+Clark, DR, Lambert, MI, and Hunter, AM. Muscle activation in the loaded free barbell squat: A brief review. J Strength Cond Res 26(4): 1169–1178, 2012—The purpose of this article was to review a series of studies (n = 18) where muscle activation in the free barbell back squat was measured and discussed. The loaded barbell squat is widely used and central to many strength training programs. It is a functional and safe exercise that is obviously transferable to many movements in sports and life. Hence, a large and growing body of research has been published on various aspects of the squat. Training studies have measured the impact of barbell squat loading schemes on selected training adaptations including maximal strength and power changes in the squat. Squat exercise training adaptations and their impact on a variety of performance parameters, in particular countermovement jump, acceleration, and running speed, have also been reported. Furthermore, studies have reported on the muscle activation of the lower limb resulting from variations of squat depth, foot placement, training status, and training intensity. There have also been studies on the impact of squatting with or without a weight belt on trunk muscle activation (TMA). More recently, studies have reported on the effect of instability on TMA and squat performance. Research has also shown that muscle activation of the prime movers in the squat exercise increases with an increase in the external load. Also common variations such as stance width, hip rotation, and front squat do not significantly affect muscle activation. However, despite many studies, this information has not been consolidated, resulting in a lack of consensus about how the information can be applied. Therefore, the purpose of this review was to examine studies that reported muscle activation measured by electromyography in the free barbell back squat with the goal of clarifying the understanding of how the exercise can be applied.
+
+KEY WORDS resistance training, strength tests, athletic performance
+
+INTRODUCTION
+The squat exercise has a long history in fitness training, exercise for rehabilitation, and strength training for performance in sport. It is a functional movement that is performed loaded or unloaded by flexing and extending the hip, knee, and ankle joints in a manner similar to many movements that occur in daily activity and sport. The squat exercise is regarded as a closed kinetic chain exercise where the force is expressed through the end (length) of the limb while it is fixed to the ground (11).
+
+Variations of the loaded barbell squat are widely used in the physical preparation programs for athletes in many sports. The primary reasons for this are the functional nature of the squat exercise movement, the ability to overload the muscles during this exercise, and the relative safety (9) of the squat when performed in a squat rack or cage. As a consequence, this exercise and a selection of variants have been subjected to research. For example, training studies have measured the impact of barbell squat loading schemes (14) on selected training adaptations including maximal strength (30) and power changes in the squat (2,14,18,29,31). Squat exercise training adaptations and their impact on a variety of performance parameters, in particular countermovement jump, acceleration, and running speed (7,34), have also been reported. Kinematic, kinetic, and electromyographic (EMG) studies have reported muscle activation of the lower limb resulting from variations of squat depth (5), foot placement (10,24,25), and training status and training intensity (26). There have also been studies (36) on the impact of squatting with or without a weight belt on trunk muscle activation (TMA). More recently, a number of researchers have reported the effect of instability on TMA and squat performance (2,3,13,20,21,23,27,33).
+
+The barbell squat was established as a key exercise in the physical preparation of athletes before the growing body of scientific evidence describing muscle activation in variations of this exercise. However, despite the growing body of
+evidence, there is no consensus on how the information should be applied. The organic manner in which this research has been conducted and published necessitates a review of the findings as they relate to athletic training and therefore inform practice. In particular, because of (a) the narrow topic area, defined by muscle activation in the free barbell back squat; (b) the wide range of methodologies used in the studies; and (c) the spread of muscle sites reported, we decided that a systematic narrative review method was the most appropriate way to achieve our objectives of consolidating the evidence so that it can be applied in a more evidence-based way.
+
+Therefore, the purpose of this article is to review the studies (n = 18) that investigated the muscle activation during the free barbell back squat and applied variations of this exercise as used in the physical training of athletes for performance. The review does include data from studies that reported muscle activation in the leg extension, leg press, front squat, and Smith machine squat, only where these exercises have been compared with the free barbell back squat.
+
+A PubMed search of the academic literature was performed using the following terms: “free barbell back squat,” “loaded back squat,” “back squat,” “electromyography,” “EMG,” and “muscle activation,” limited to English articles and human subjects. Literature was also sourced from links to related articles, hand searches, and the bibliographies of academic articles. The searches retrieved 18 full articles, where muscle activation in the loaded free barbell back squat was reported.
+
+MUSCLE SITES ANALYZED
+
+In all the studies reviewed, EMG activity in muscles of the lower limb was measured and reported more than twice as often (56 of 80) as muscles of the trunk (24 of 80) (Table 1). Interest in hamstring and quadriceps activation was the higher than any other muscle group reported; biceps femoris and vastus medialis activation were each reported in 12 of the 18 studies. This reflects the fact that these muscles are traditionally the primary muscles of interest in loaded squat training, hence the interest in factors and variables that may influence muscle activation and therefore training efficacy of the squat exercise.
+
+More recently, a number of investigators (2,3,13,23,27,33) have reported TMA for the loaded squat exercise under different conditions. The trunk muscles reported most frequently are the rectus abdominis (6 of 18), external oblique (4/18), and various aspects of the erector spinae (8 of 18). In all the studies reviewed, the measurement of the activation of the muscles of the trunk is used to assess the impact of stability vs. instability in the squat.
+
+NORMALIZATION PROCEDURES
+
+One of the challenges with EMG analysis is that the amplitude of the data is highly variable and influenced by a number of factors. Measurements can differ across muscle sites, and intrasubject day-to-day fluctuations also contribute to the variability. Although it is not the purpose of this article to review EMG normalization procedure, a basic understanding of the process and the procedures used in the studies reviewed justifies comment.
+
+One method of accounting for this variation is to normalize the EMG data against a reference value. The most common normalization method is to express the EMG activity under investigation as a percentage of the EMG activity during a maximal isometric voluntary contraction (MVIC), usually performed at the start of test session.
+
+The majority of the studies reviewed (3,12,13,23,25, 28,32,33,36) used an MVC procedure to normalize EMG data. In studies with repeated measures within the same individual, mean EMG was reported without normalization (2,27). Recent evidence (1) has been published to support a dynamic method of normalization (i.e., EMG data collected while cycling at 70% peak power) as being more repeatable than maximal voluntary contraction (MVC). Dankaerts et al. (8) also showed that normalization with submaximal voluntary contractions was more reliable than normalization with MVC when measuring TMA. In his recent review, Burden (4) states that using a dynamic MVC with the same muscle action is better than an isometric MVC at an arbitrary angle to normalize the EMG for a dynamic test effort.
+
+MUSCLE ACTIVATION AND THE LOADED BACK SQUAT
+
+An inclusion criterion for this review was that the exercise under investigation was the free barbell back squat as this is the most widely practiced version of the loaded squat (12), especially in strength training for athletic performance. Given this popularity, it is not surprising that this version of the squat is used in most research where muscle activation is investigated to confirm commonly held coaching theories. A summary of research design and key findings for all reviewed studies is presented in Table 2.
+
+Stance Width and Hip Rotation
+
+It is a long-held belief in coaching that by manipulating squat stance width, specific muscle groups in the lower limb can be targeted, thereby influencing training adaptation. For example, in track sprint cycling, there is a strong belief that stance width in the squat should be equal to the width between the bicycle pedals and that feet should be parallel as they are when pedalling. The 2 studies (22,24) that measured lower limb muscle activation in 3 different stance widths for 2 submaximal relative squat loads had one common finding: lower limb muscle activation increased as a result of the increase in load. Paoli et al. (24) subjects perform the squat at loads of 0, 30, and 70% 1 repetition maximum (RM) with feet at hip width (greater trochanter width), 150 and 200% of hip width. They reported an increase in activation for all 8 muscles monitored with each increment in load; however, the gluteus maximus was the only muscle that had increased activation as stance width increased. These differences were only significant at the lowest loads (0% 1RM) and heaviest
+Table 1. A summary of subjects and electrode placements in all studies reviewed.*
+
+<table>
+  <tr>
+    <th rowspan="2">Paper</th>
+    <th rowspan="2">Subjects</th>
+    <th colspan="4">Quadriceps</th>
+    <th colspan="3">Harmstrings</th>
+    <th colspan="5">Calf/shank</th>
+    <th colspan="6">Thigh and hips</th>
+    <th colspan="4">Anterior trunk</th>
+    <th colspan="4">Posterior trunk</th>
+  </tr>
+  <tr>
+    <th>VM</th>
+    <th>VL</th>
+    <th>RF</th>
+    <th>BF</th>
+    <th>ST</th>
+    <th>GN</th>
+    <th>TA</th>
+    <th>SO</th>
+    <th>GMA</th>
+    <th>GME</th>
+    <th>AM</th>
+    <th>AL</th>
+    <th>AMG</th>
+    <th>RA</th>
+    <th>EO</th>
+    <th>TRA</th>
+    <th>ULES</th>
+    <th>LSES</th>
+  </tr>
+  <tr>
+    <td>Paoli et al. (24)</td>
+    <td>6 men with 3 years of experience</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>McCaw and Melrose (22)</td>
+    <td>9 male lifters with 7 years of experience</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Caterisano et al. (5)</td>
+    <td>male strength trainees with 5 years of experience</td>
+    <td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Zink et al. (36)</td>
+    <td>14 healthy men currently in weight training</td>
+    <td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Wretenberg et al. (35)</td>
+    <td>14 national power and strength trainees</td>
+    <td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Nuzzo et al. (23)</td>
+    <td>9 men with squat to BW ratio of 1.78</td>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Hamlyn et al. (13)</td>
+    <td>8 men and 8 women with weight training experience</td>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>McBride et al. (20)</td>
+    <td>9 men currently in weight training</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>McBride et al. (21)</td>
+    <td>men with squat to BW ratio 1.53</td>
+    <td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Willardson et al. (33)</td>
+    <td>12 men, average squat 1RM 135 kg</td>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Bressel et al. (3)</td>
+    <td>men with squat:BW ratio 1.6</td>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Smilios et al. (28)</td>
+    <td>16 men, average squat 1RM 129 kg</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Gullett et al. (12)</td>
+    <td>9 men and 6 women with \( \geq 1 \) year of squat experience</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Schwarbeck et al. (27)</td>
+    <td>3 men and 3 women with 2–5 years of experience in strength</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Anderson and Behm (2)</td>
+    <td>14 men; \( > 8 \) years of experience with weights</td>
+    <td>x</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Wilkinson et al. (32)</td>
+    <td>men with an average of 11 years of lifting experience</td>
+    <td>x</td><td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Pick and Becque (26)</td>
+    <td>16 men; 8 years of experience and 8 < 2 years of experience</td>
+    <td>x</td><td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>Pereira et al. (25)</td>
+    <td>5 men and 5 women</td>
+    <td>x</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Total</td>
+    <td>8</td><td>12</td><td>7</td><td>12</td><td>2</td><td>3</td><td>1</td><td>1</td><td>4</td><td>1</td><td>2</td><td>1</td><td>2</td><td>6</td><td>4</td><td>2</td><td>6</td><td>5</td><td>79</td>
+  </tr>
+</table>
+
+*AL = adductor longus; AM = adductor major; AMG = adductor magnus; BF = biceps femoris; BW = body weight; EO = external oblique; GMA = gluteus maximus; GME = gluteus medius; GN = gastrocnemius; LSES = lumbosacral erector spinae; RA = rectus abdominis; RF = rectus femoris; RM = repetition maximum; VL = vastus lateralis; VM = vastus medialis; SO = soleus; ST = semitendinosus; TA = tibialis anterior; TRA = transversus abdominis; ULES = upper lumbar erector spinae.
+<table>
+  <tr>
+    <th>Study</th>
+    <th>Design</th>
+    <th>Key finding</th>
+  </tr>
+  <tr>
+    <td>Paoli et al. (24)</td>
+    <td>3 stance widths at 3 loads 0, 30, and 70% 1RM</td>
+    <td>EMG increased with load, gluteus maximus; EMG increased with stance width at 0 and 70% 1RM</td>
+  </tr>
+  <tr>
+    <td>McCaw and Melrose (22)</td>
+    <td>3 stance widths at 65 and 75% 1RM</td>
+    <td>Quadriceps activation increases with load, adductor longus and gluteus maximum EMG increase with stance width<br>Only gluteus maximus activation increases with squat depth</td>
+  </tr>
+  <tr>
+    <td>Caterisano et al. (5)</td>
+    <td>3 squat depths at 0–125% body mass</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Zink et al. (36)</td>
+    <td>Weight belt vs. NWB for 1 repetition at 90% 1RM</td>
+    <td>Weight belt use does not affect trunk and leg muscle activation compared with no weight belt<br>No difference in activation for parallel compared with full squats, but powerlifters produce higher EMG than strength trainees</td>
+  </tr>
+  <tr>
+    <td>Wretenberg et al. (35)</td>
+    <td>Squat to parallel vs. full depth at 65% 1RM</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Nuzzo et al. (23)</td>
+    <td>Stability ball exercises vs. squat and deadlift at 50, 70, 90% 1RM</td>
+    <td>Squat (and deadlifts) produces equal or more TMA than stability ball exercises<br>80% 1RM squat produced more activation of LSES than stability ball exercises</td>
+  </tr>
+  <tr>
+    <td>Hamlyn et al. (13)</td>
+    <td>Squat and deadlift at 0 and 80% 1RM vs. isometric unstable trunk exercises</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>McBride et al. (20)</td>
+    <td>Stable vs. unstable isometric squat</td>
+    <td>Unstable isometric squats reduce force, RFD, and agonist muscle activity with no increase in synergistic activity</td>
+  </tr>
+  <tr>
+    <td>McBride et al. (21)</td>
+    <td>Stable vs. unstable dynamic squat at 70, 80, and 90% 1RM and 3 fixed loads</td>
+    <td>Stable squats produce equal or greater activation of the VL, BF, and erector spinae than unstable squats</td>
+  </tr>
+  <tr>
+    <td>Willardson et al. (33)</td>
+    <td>Stable vs. BOSU squat at 50% 1RM and stable squat at 75% 1RM</td>
+    <td>TMA at 50 and 75% 1RM: stable squats were equal or greater than for 50% squats on BOSU</td>
+  </tr>
+  <tr>
+    <td>Bressel et al. (3)</td>
+    <td>Stable vs. BOSU squat at 50% 1RM and stable squat at 75% 1RM and verbal cue</td>
+    <td>Verbal cue resulted in increased TMA compared to squat without cue at the same load</td>
+  </tr>
+  <tr>
+    <td>Smilios et al. (28)</td>
+    <td>4 × 20 repetitions at 50% 1RM, then 4 maximum repetitions at 40 and 80% 1RM at 3 and 30 min</td>
+    <td>Muscle activity increases to compensate for metabolic fatigue</td>
+  </tr>
+  <tr>
+    <td>Gullett et al. (12)</td>
+    <td>Front vs. back squat 70% 1RM tested separately</td>
+    <td>No difference in muscle activity between the front and back squat at the same relative load</td>
+  </tr>
+  <tr>
+    <td>Schwanbeck et al. (27)</td>
+    <td>8RM smith machine squat vs. barbell back squat</td>
+    <td>Overall muscle activation was 43% greater for the free weight squat compared with Smith machine</td>
+  </tr>
+  <tr>
+    <td>Anderson and Behm (2)</td>
+    <td>Smith machine vs. free barbell squat vs. free barbell on balance disks at body weight and 60% 1RM</td>
+    <td>Unstable squat resulted in increased TMA but reduced activation of the prime movers</td>
+  </tr>
+  <tr>
+    <td>Wilk et al. (32)</td>
+    <td>12RM squat vs. leg extension vs. leg press</td>
+    <td>Highest EMG for the quadriceps and hamstrings occurred in the squat compared with the leg press and extension</td>
+  </tr>
+  <tr>
+    <td>Pick and Becque (26)</td>
+    <td>Squat 1RM and repetitions to failure at 85% 1RM, trained vs. untrained subjects</td>
+    <td>Trained subjects produced higher EMG during back squat 1RM test and repetitions to failure at 85% 1RM</td>
+  </tr>
+  <tr>
+    <td>Pereira et al. (25)</td>
+    <td>External hip rotation 0°, 30°, and 50° for RM parallel squat</td>
+    <td>Hip rotation did not affect quadriceps activation in any phase of a 1RM squat, hip adductor activation was greater at 30° external rotation</td>
+  </tr>
+</table>
+
+*BF = biceps femoris; LSES = lumbosacral erector spinae; NWB = no weight belt; RM = repetition maximum; VL = vastus lateralis.
+load (70% 1RM). McCaw and Melrose (22) also used the 3 stance widths; shoulder width and 75 and 140% of shoulder width and 2 test loads; and 65 and 75% squat 1RM. On average, EMG of the quadriceps (rectus femoris, vastus lateralis, and vastus medialis) was 20% higher for the 75% 1RM for all stance widths and phases of the squat compared with the 60% 1RM. Interestingly, stance width did not affect muscle activation of the quadriceps contrary to the popular belief. Activation of the adductor longus was 28% greater for the heavier load and was highest during the ascent in the wide stance squat. Similarly, the activation of the gluteus maximus during the ascent was double that compared with the descent.
+
+Pereira et al. (25) compared squatting with parallel depth while the hip was in neutral position and rotated to 30° and 50°. Ten subjects performed a RM parallel squat in the 3 hip positions, and muscle activity of the rectus femoris and the hip adductors (adductor longus and gracilis) was recorded. Muscle activity of the hip adductors was significantly greater with the rotation of the hips from neutral to 30° and from 30° and to 50° only in the last 30° of flexion to parallel and the first 30° of extension or ascent. Hip rotation did not change activation of the rectus femoris, the main extensor muscle in the squat. All muscle activity was significantly greater in the deepest phase (last 30°) of the squat in flexion and extension regardless of hip rotation.
+
+Extreme stance widths of 40% wider than shoulder width (22) or twice the width of the hips (24) result in greater activation of adductors of the thigh and gluteus maximus. High adductor activation is also increased by turning the feet out or rotating the hips (25). The studies by Paoli et al. (24) and McCaw and Melrose (22) demonstrate that activation of quadriceps, the agonist, increases as a result of an increase in external load in the squat. Therefore, it may be concluded that if the purpose of the squat exercise is to overload the primary movers, then the stance, width of feet, and hip rotation should be dictated by the technical demands of executing the squat safely and to the appropriate or selected depth. These guidelines will vary according to individual physical mechanics and are covered by strength coaching principles. Central to this is ensuring that the vertical travel of the load in the sagittal plane remains in the line of gravity. In applied terms, this means that from a side view (sagittal plane), the vertical path of the bar during the squat is kept close to a perpendicular line emanating from the middle of the foot throughout the range of movement.
+
+There is also evidence (25) that regardless of foot position, activation is highest in the last phase of the descent to parallel and the first phase of the ascent. This means that partial or quarter squats will result in reduced muscle activation of the prime movers and therefore arguably produce an inferior training effect in comparison to parallel or full squats. Although the loads used in these studies are representative of those used in athletic strength training, it is also common to train at higher relative loads where it would be unlikely that the widest stance widths in these studies would be practical or safe.
+
+Squat Depth
+A range of squat depths are used practically; however, it is generally believed that a squat depth to parallel is most effective for improving athletic performance (6). This belief is supported by a study (5) where the activation of muscles of the quadriceps, hamstrings, and buttocks for squats to 3 depths, partial, parallel, and full with knee angles of 135, 90 and 45°, respectively, was measured. Caterisano et al. (5) used a load of between 0 and 125% body weight because of the difficulty of standardizing the load across the 3 depths and found that activation of the gluteus maximus increased with the increase in squat depth. Increased muscle activation with squat depth was only found in the gluteus maximus in the full squat (35% mean integrated EMG) compared with 17% in the partial squat. No differences were found across the squat depths for the remaining 3 thigh muscles; biceps femoris, vastus medialis, and vastus lateralis. A limitation of this study was the selection of the test load as this would have represented very different relative loads for the squat at each depth. For example, a load that may have been a moderately high load for the full squat would have been a light load for the partial squat in the same individual.
+
+Given the findings in the studies looking at stance width (22,24) where an increase in absolute load resulted in increased activation, one would expect that if Caterisano et al. (5) had managed to test using a relatively equivalent load for each squat depth, then they may well have found a difference in the activation for each depth of squat. A possible solution would be to determine a 1RM for the squat for each depth and then test muscle activation at the same relative submaximal percentage for each depth.
+
+Wretenberg et al. (35) measured the activation of the vastus lateralis, rectus femoris, and the long head of biceps femoris in powerlifters (\( n = 6 \)) and strength trainees (\( n = 8 \)) with a combined average 1RM of 200 kg for the full squat. All subjects performed both parallel squats and full squats with the bar in the high position for the strength trainees and low position for the powerlifters. Mean peak muscle activation for all muscles was higher in the powerlifters for both squat depths, although this was only significant for the rectus femoris. Wretenberg et al. (35) found no difference in muscle activation across the 2 depths of the squat.
+
+The authors suggested that this was because of their greater body mass and absolute mass lifted in testing for the powerlifters. The average body mass of the powerlifters was 5.7 kg greater than the strength trainees, and the powerlifters’ average full squat 1RM was 0 kg greater than for the strength trainees. This meant that average test load of 65% of the 1RM represented 123% of the body mass for the strength trainees compared with 190% for the powerlifters. The average test load for the powerlifters was 65 kg heavier than that used for the strength trainees while the body mass difference was only 5.7 kg in favor of the powerlifters. Hence, the greater overall activation found in the powerlifters is probably explained entirely by the greater absolute loads lifted
+by them compared with the strength trainees rather than the difference in body mass. However, if we ignore the comparison between powerlifters and strength trainees, the pooled data indicate that, at a relative submaximal load, there was no difference in muscle activation of the muscles of the upper leg, including the prime movers, between squatting to parallel or full depth.
+
+The real question in applied strength training for performance in sport is whether loaded squats performed to different depths at the same relative load result in different muscle activation and therefore different training stimuli. By using the same absolute load, Catersiano et al. (5) failed to answer this question; however, their results did give some indication that greater depth increases activity of the gluteus maximus. In the study of Wretenberg et al. (35), there was no difference in activation between parallel and full squats for well-trained subjects at a submaximal load. Pereira et al. (25), however, divided the eccentric and concentric movements into 30° segments and found that activation was highest for the deepest segment of both phases in a RM parallel squat. This suggests that depth of squat does impact on muscle activation. The results of the study by Wretenberg et al. (35) suggest that absolute load lifted per kilogram body mass had an impact on activation regardless of the depth of the squat. Both these studies focussed exclusively on the muscles of the thighs; it would be of significant interest to assess the impact of squat depth on TMA.
+
+Weight Belt
+The use of a supportive abdominal belt or weight belt is common in heavy lifting in weight training and in manual handling tasks. Zink et al. (36) conducted a study to measure the impact of squatting at a high relative load (90% 1RM) with or without a weight belt on joint kinematics and muscle activity of the following muscles: vastus lateralis, biceps femoris, adductor magnus, gluteus maximus, and erector spinae. There were no significant differences for mean EMG and time to peak EMG for any of the muscles in the concentric or eccentric phase of a parallel squat at 90% 1RM with a weight belt compared with no weight belt. Squatting with a weight belt, however, was significantly faster, for the total movement and for each phase separately, than when performed without a weight belt.
+
+It appears that when stability is enhanced by the use of a weight belt, squat performance in terms of the velocity of movement and bar kinematics is improved. The authors of this research concede that although this may possibly represent an opportunity for the development of more work and power, at the same time, this may undermine the training effect resulting from slower and more stable training.
+
+External Load
+The loads used for the free barbell squat tests in the studies reviewed ranged from 0 to 90% of 1RM and included loads determined as a percentage of body mass and according to the RM method (Table 2). Wretenberg et al. (35) conducted a study to assess the effect of squatting with the high bar position compared with a low bar and whether this was different for full squats compared with the parallel squat. They used highly trained subjects who performed squats at 65% of their full squat 1RM. The loads reported were representative of the submaximal loads commonly used in strength training for the development of dynamic athlete performance. Two research groups used near maximal loads of 90% of 1RM. Zink et al. (36) used parallel squats at this intensity to assess the impact of a weight belt vs. no weight belt on muscle activation. Nuzzo et al. (23) used a range of loads: 50, 70 and 90% of 1RM in the squat and deadlift, to assess muscle activation in comparison to 3 stability ball exercises.
+
+A methodological challenge facing investigators comparing 2 or more variations of the squat is how to determine a relatively equal test load for each variation to ensure that the dependent variable is the variation of the squat and not the load. Wretenberg et al. (35) and Catersiano et al. (5) failed to account for this in their studies comparing squats at different depths. The former used a load of 65% of the 1RM for the full squat for both test depths, full and parallel squat. Catersiano et al. (5) overcame this by selecting a test load which the subjects could complete for the 3 squat depths with the correct technique. If we assume that squats performed to different depths each represent a different physical challenge, then the test load for each depth should be based on the same submaximal relative percentage calculated from the maximal ability for each depth. Wilk et al. (32), Pereira et al. (25), and Schwanbeck et al. (27) overcame this challenge by using 12, and 8 RM, respectively, for each of the test variations. This is achieved by determining the maximal load which the subject can complete for the given number of repetitions, and in the study of Schwanbeck et al. (27), this was determined for the free bar back squat and the Smith machine back squat. Possibly, the most accurate theoretical method is to determine the 1RM for each of the squat variations and then calculate the submaximal test load for each as a percentage of the maximum (1RM). Gullett et al. (12), in a biomechanical comparison for the front and back squats, tested 1RM for each of these exercises, and McBride et al. (21) determined both stable and unstable squat 1RM.
+
+There is an indication that increments in load for the same squat variation have an impact on muscle activation (22,24,35). Therefore, the test loads should be relatively equal if the research question is whether muscle activation is affected by a specific squat variation.
+
+Instability
+Although the squat is an established method of developing strength through the whole body, evidence that it is an effective method of developing core stability or trunk strength is relatively new (13,23). The concept of using instability as part of the protocol, whether it be for fitness for health, conditioning for sport, or exercise for rehabilitation, is based
+on the principle of core stability (15,19). Initially, the recommendations for core stability training were to isolate the contraction of the deep stabilizing muscles of the trunk (16,17). The use of unstable training surfaces was introduced in the belief that this would increase the challenge placed on these stabilizing muscles. As a consequence, a number of studies (2,20,21,33) have been conducted to assess the impact of instability during the squat on muscle activation. There have also been studies comparing muscle activation in the squat performed on a stable surface and selected unstable trunk exercises (13,23). For example, Anderson and Behm (2) reported greater muscle activation in the key muscles of the thigh and trunk when performing squats on 2 balance disks compared with a Smith machine. Hamlyn et al. (13) compared the TMA during squats and deadlifts at 80% of 1RM with 2 trunk strengthening exercises performed on an unstable surface. The results showed that first, the squat produced significantly greater activation of the lower sacral erector spinae than the other 3 exercises, and second, the deadlift resulted in greater activation of the upper lumbar erector spinae. Nuzzo et al. (23) showed that TMA in squats and deadlifts was greater than or equal to that found in 3 stability ball exercises in male subjects with an average squat 1RM to body mass ratio of 1.78 (21). The latter 2 groups (13,23) concluded that upright free weight training on a stable base was effective in challenging and developing trunk stability through effective TMA. Finally, McBride et al. (20,21) assessed the impact of instability on force and muscle activity (vastus lateralis, biceps femoris, and erector spinae) in both isometric (20) and dynamic squats (21). They found that instability in an isometric squat significantly impaired force and power capabilities without an advantage for muscle activity. Unstable squat 1RM (83 kg) was significantly lower (44 kg) than the stable squat 1RM (128 kg), and muscle activity at the same relative loads was equal or less in the unstable trial compared with the stable squat. McBride et al. (20,21) concluded that stable squats were more effective in producing force, power, and muscle activation, including TMA, than unstable squats.
+
+Anderson and Behm (2) assessed the parallel squat under 3 conditions of stability: in a Smith machine, with a free bar, and with a free bar standing on balance disks. Three loads were tested for each condition: body mass, 29.5 kg (the load of the bar in the Smith Machine), and 60% of body mass. They found that muscle activation in the muscles of the legs and the trunk stabilizers was highest during the most unstable squat with the free bar on the balance disks. They also report an increase in activation with the increase in load for all muscles apart from the hamstrings and abdominal stabilizers. Furthermore, they showed that EMG activity was highest during the concentric movement compared with the eccentric phase for all squat variations in the following muscles: soleus, vastus lateralis, biceps femoris, upper lumbar erector spinae, and abdominal stabilizers. Duration of activity of the abdominal stabilizers during the transition between descent and ascent was significantly higher for the unstable squat.
+
+Although the purpose of many of the studies referred above was not primarily to measure and describe TMA in the loaded squat, they all showed that this exercise is an effective method of challenging the trunk stabilizers. There is also evidence that the introduction of instability impairs force and power production in the squat without necessarily increasing TMA.
+
+Acute Fatigue
+Strength training in the practical setting is usually performed with a certain amount of acute muscular fatigue, and as such the effect of this on muscle activation is of interest. Smilios et al. (28) measured the power output and EMG activity during a moderate load muscular endurance session (4 sets of 20 repetitions at 50% 1RM). They measured power output and EMG in a set of 4 repetitions at a light load (40% 1RM) and heavy load (80% 1RM) immediately before and after the endurance sets and again at 30 minutes after this. The subjects, who were resistance-trained men with an average squat 1RM of 129 kg, performed the parallel back squat. Power output was significantly reduced in sets 3 and 4 of the muscular endurance protocol, although EMG activity increased from set to set for the quadriceps but not the biceps femoris muscles.
+
+Average power immediately after the endurance work was reduced by 14 and 21% for the power tests at 40 and 80% 1RM. These improved but remained 8 and 14% lower for the 2 power test loads, respectively, after 30 minutes of recovery. Average quadriceps EMG activity at 3 and 30 minutes post endurance effort was decreased by 12 and 14% for the 40% 1RM power tests and 6 and 10% for the 80% 1RM power tests. Biceps femoris EMG activity did not change in the 40 and 80% 1RM power tests performed at 3 and 30 minutes after the endurance protocol.
+
+The authors hypothesize that the increase in EMG activity of the agonists during the endurance sets, despite the loss of power across the sets, was because of an increased central drive to maintain work though increased motor unit recruitment (28).
+
+Front Vs. Back Squat
+A number of variations of the loaded barbell squat are used in programs for the development of athletes. The 2 most common versions are the back squat, where the bar is carried across the back of the shoulders, and the front squat, with the bar across the front of the shoulders. There is a belief that this technical difference produces a different physical challenge and therefore training effect. This would be reflected by a difference in activation of the primary muscles across these 2 squats.
+
+Subjects performed 2 trials of 3 repetitions for each squat variation: front and back squat at 70% of the IRM (12). The IRM scores were determined for each squat on 2 separate prior occasions. During the investigative efforts, EMG activity for the following muscles was recorded: rectus
+femoris, vastus lateralis, vastus medialis, biceps femoris, semitendinosus, and erector spinae. These authors found no difference in muscle activity across the 2 squat variations; however, they did show that average muscle activity was significantly higher during the ascent than the descent for the 6 muscles that were monitored.
+
+Using a test load of 70% of 1RM for each of the 2 squat variations meant that the absolute load lifted was 61.8 ± 18.6 kg for the back squat and 45.8 ± 14.1 kg for the front squats. Muscle activity was not found to be different for the front squat compared with the back squat at 70% 1RM. The common belief in coaching is that these 2 exercises offer different physical challenges primarily because of the difference in the position of the load in relation to the line of gravity throughout the movement. It is possible that the submaximal load used in this experiment failed to elicit this difference; however, this is surprising given the low level of squat training exposure reported for subjects in this study.
+
+Free Bar Vs. Smith Machine Squat
+Schwanbeck et al. (27) compared a free bar squat with a squat performed in a Smith machine to assess muscle activity in the legs (tibialis anterior, gastrocnemius, vastus lateralis, vastus medialis, and biceps femoris) and in the trunk (lumbar erector spinae and rectus abdominis). The test load for each exercise was determined as an 8RM as this load represented a common method of determining training intensity for athletic conditioning. This method resulted in the test loads being 14–23 kg heavier for all subjects for the Smith machine squat than the free bar squat.
+
+Despite this, the free bar squat elicited 43% higher average activity for all muscle groups than the Smith machine squat. Closer inspection of individual muscles shows that only 3 leg muscles had significantly higher activation in the free bar squat, gastrocnemius (34%), biceps femoris (26%), and vastus medialis (49%) compared with the Smith machine squat. The muscles of the trunk followed this trend but failed to reach significance. The authors claim that this was because of the low number of subjects (n = 6) in the study.
+
+Squat Vs. Leg Extension and Leg Press
+Wilk et al. (32) compared the muscle activity of the quadriceps and hamstrings in 3 exercises: the squat, the leg press, and the leg extension. They found that the highest activation occurred in the closed kinetic chain squat compared with both the leg press and leg extension and that this was significant for the vastus lateralis, medial, and lateral hamstrings. The maximal activation of the quadriceps presented at a knee angle between 88° and 2° during the concentric phase. For the hamstrings, the peak activation occurred between 60° and 74° knee flexion also during the concentric movement. This confirms the belief that squatting with a free external load represents a greater neural challenge to the prime movers than exercises that isolate the limb as in the leg press and leg extension exercises. It has been suggested that this may be because of the increased demand to stabilize the free bar load in the squat; however, this would not necessarily present as increased EMG of the prime movers but rather the stabilizing muscles. The higher activation in the free bar squat may well be because of the fact that the load is lifted vertically against gravity compared to during the machine leg exercises where the load is applied via levers.
+
+TRAINING STATUS AND MUSCLE ACTIVATION IN THE SQUAT
+All the studies reviewed so far have compared muscle activation for variations of the back squat in a range of subjects including those untrained, moderately trained, and well trained in the back squat and of both genders (Table 1). Pick and Becque (26) reported muscle activation of 2 primary movers in the squat, vastus lateralis and vastus medialis, for a back squat set to failure at 85% 1RM in trained (1RM = 184 kg) and untrained male subjects (1RM = 120 kg).
+
+They found that the trained subjects (± 0.9 repetitions) completed significantly more repetitions at 85% 1RM than the untrained group (7 ± 0.7 repetitions) and therefore demonstrated greater relative submaximal lifting capacity. Muscle activity was recorded during 1RM testing, and EMG during the repetitions to failure was reported as a percentage of 1RM EMG. This was higher in both the 1RM test and the repetitions to failure for the trained compared with the untrained group for both the individual muscles and combined data. Of particular importance was that this difference was significant toward the end of the test, at 80 and 0% of repetitions to failure.
+
+The study is characterized by the high relative back squat 1RM of 1.6 of body mass reported for an untrained group and the fairly marked difference in body mass between the 2 groups; the untrained group (74.8 kg) was 15.1 kg lighter than the trained subjects (89.9 kg). This meant that the test load difference on average was 54 kg heavier for the trained group than the untrained group. It appears that the difference in absolute load may explain the difference in the EMG measured during both the 1RM test and repetitions to failure.
+
+SUMMARY
+• Increasing stance width and hip rotation increase activation of the adductors and gluteus maximus and not the primary movers of the squat exercise.
+• Muscle activation is not different in squats to varying depths at moderate loads. Within a parallel squat, it appears that activation is greatest in the last phase of the descent and the first phase of the ascent.
+• Activation of the muscles of the legs and trunk increases as a consequence of increases in absolute external load.
+• It is important to use equal, relative, submaximal test loads calculated from a maximum for each specific squat if the aim is to measure the differences in activation between 2 types of squat or squat variation such as depth of squat.
+• Muscle activity is not influenced by the use of a weight belt.
+• Squatting on an unstable base increases the activation of the leg and trunk muscle, but it impairs force and power production in this exercise.
+• The squat at moderate external loads is a more effective method of activating the trunk stabilizers compared with other instability trunk exercises.
+• Acute fatigue in a submaximal squatting task results in increased muscle activation corresponding to a loss of power across the task. Power and EMG is reduced for up to 30 minutes in a low and high load power test.
+• Muscle activation in muscles of the leg, thigh, and trunk is the same in the front and back squat at 70% of 1RM.
+• Free bar squat elicits higher overall EMG than squats in a Smith Machine, leg press, and leg extension.
+• Highest activation occurs in the concentric phase of the squat.
+• In sets to failure at 85% 1RM, trained subjects completed significantly more squat repetitions than untrained subjects and produced higher muscle activation in both the 1RM test and the set of repetitions to failure.
+
+PRACTICAL APPLICATIONS
+The free barbell back squat is superior to more supported squats performed in a Smith machine and closed kinetic chain leg exercises in activating the prime movers. There is also evidence that the level of activation of the agonist muscles is increased with the increase in absolute external load. It is also clear that many technical alterations to the squat, including stance width, hip rotation, and the use of a weight belt, do not enhance the activation of the prime movers. At moderate loads, even fairly significant alterations, as found in the front squat, do not alter the activation of the prime movers compared with the back squat. These data suggest that increases in load are largely responsible for increased activation. Also the concentric phase produces the highest activation and within the eccentric phase, the last third of the descent to parallel elicits the highest activation. Therefore, if the aim is to increase the strength of the known prime movers, the technique should ensure effective completion of the squat to parallel at the desired load.
+
+At loads of greater than 50% of 1RM, the back squat to parallel is an effective method of developing trunk activation and therefore arguably trunk stability. The application of the loaded squat for the development of trunk and core stability is an area for future research.
+
+REFERENCES
+1. Albertus-Kajee, Y, Tucker, R, Derman, W, and Lambert, M. Alternative methods of normalising EMG during cycling. J Electromyogr Kinesiol 20: 36–43, 2010.
+2. Anderson, K and Behm, DG. Trunk muscle activity increases with unstable squat movements. Can J Appl Physiol 30: 33–45, 2005.
+3. Bressel, E, Willardson, JM, Thompson, B, and Fontana, FE. Effect of instruction, surface stability, and load intensity on trunk muscle activity. J Electromyogr Kinesiol 19: e500–e504, 2009.
+4. Burden, A. How should we normalize electromyograms obtained from healthy participants? What we have learned from over 25 years of research. J Electromyogr Kinesiol 20: 23–35, 2010.
+5. Caterisano, A, Moss, RF, Pellinger, TK, Woodruff, K, Lewis, VC, Booth, W, and Khadra, T. The effect of back squat depth on the EMG activity of 4 superficial hip and thigh muscles. J Strength Cond Res 16: 428–432, 2002.
+6. Comfort, P and Kasim, P. Optimizing squat technique. Strength Cond J 29: –13, 2007.
+7. Cormie, P, McGuigan, MR, and Newton, RU. Adaptations in athletic performance after ballistic power versus strength training. Med Sci Sports Exerc 42: 1582–1598, 2010.
+8. Dankerwaerts, W, O’Sullivan, PB, Burnett, AF, Straker, LM, and Dannells, LA. Reliability of EMG measurements for trunk muscles during maximal and sub-maximal voluntary isometric contractions in healthy controls and CLBP patients. J Electromyogr Kinesiol 14: 333–342, 2004.
+9. Escamilla, RF. Knee biomechanics of the dynamic squat exercise. Med Sci Sports Exerc 33: 127–141, 2001.
+10. Escamilla, RF, Fleisig, GS, Lowry, TM, Barrentine, SW, and Andrews, JR. A three-dimensional biomechanical analysis of the squat during varying stance widths. Med Sci Sports Exerc 33: 984–998, 2001.
+11. Escamilla, RF, Fleisig, GS, Zheng, N, Barrentine, SW, Wilk, KE, and Andrews, JR. Biomechanics of the knee during closed kinetic chain and open kinetic chain exercises. Med Sci Sports Exerc 30: 556–569, 1998.
+12. Gullett, JC, Tillman, MD, Gutierrez, GM, and Chow, JW. A biomechanical comparison of back and front squats in healthy trained individuals. J Strength Cond Res 23: 284–292, 2009.
+13. Hamlyn, N, Behm, DG, and Young, WB. Trunk muscle activation during dynamic weight-training exercises and isometric instability activities. J Strength Cond Res 21: 18–112, 2007.
+14. Hansen, K and Cronin, J. Training loads for the development of lower body power during squatting movements. Strength Cond J 31: 17–33, 2009.
+15. Hibbs, AE, Thompson, KG, French, D, Wrigley, A, and Spears, I. Optimizing performance by improving core stability and core strength. Sports Med 38: 995–1008, 2008.
+16. Hodges, PW and Richardson, CA. Relationship between limb movement speed and associated contraction of the trunk muscles. Ergonomics 40: 1220–1230, 1997.
+17. Hodges, PW and Richardson, CA. Transversus abdominis and the superficial abdominal muscles are controlled independently in a postural task. Neurosci Lett 265: 91–94, 1999.
+18. Hoff, J. Training and testing physical capacities for elite soccer players. J Sports Sci 23: 573–582, 2005.
+19. Lederman, E. The myth of core stability. J Bodyw Mov Ther 14: 84–98, 2010.
+20. McBride, JM, Cormie, P, and Deane, R. Isometric squat force output and muscle activity in stable and unstable conditions. J Strength Cond Res 20: 915–918, 2006.
+21. McBride, JM, Larkin, TR, Dayne, AM, Haines, TL, and Kirby, TJ. Effect of absolute and relative loading on muscle activity during stable and unstable squatting. Int J Sports Physiol Perform 5: 177–183, 2010.
+22. McCaw, ST and Melrose, DR. Stance width and bar load effects on leg muscle activity during the parallel squat. Med Sci Sports Exerc 31: 428–436, 1999.
+23. Nuzzo, JL, McCaulley, GO, Cormie, P, Cavill, MJ, and McBride, JM. Trunk muscle activity during stability ball and free weight exercises. J Strength Cond Res 22: 95–2, 2008.
+24. Paoli, A, Marcolin, G, and Petrone, N. The effect of stance width on the electromyographical activity of eight superficial thigh muscles during back squat with different bar loads. J Strength Cond Res 23: 246–250, 2009.
+25. Pereira, GR, Leporace, G, Chagas, DV, Furtado, LF, Praxedes, J, and Batista, LA. Influence of hip external rotation on hip adductor and rectus femoris myoelectric activity during a dynamic parallel squat. J Strength Cond Res 24: 2749–2754, 2010.
+26. Pick, J and Becque, DM. The relationship between training status and intensity on muscle activation and relative submaximal lifting capacity during the back squat. J Strength Cond Res 14: 175–181, 2000.
+27. Schwanbeck, S, Chilibeck, PD, and Binsted, G. A comparison of free weight squat to Smith machine squat using electromyography. J Strength Cond Res 23: 2588–2591, 2009.
+28. Smilios, I, Häkkinen, K, and Tokmakidis, SP. Power output and electromyographic activity during and after a moderate load muscular endurance session. J Strength Cond Res 24: 2122–2131, 2010.
+29. Stone, MH, O’Bryant, HS, McCoy, L, Coglianese, R, Lehmkuhl, M, and Schilling, B. Power and maximum strength relationships during performance of dynamic and static weighted jumps. J Strength Cond Res 17: 140–147, 2003.
+30. Stone, MH, Potteiger, JA, Pierce, KC, Proulx, CM, O’Bryant, HS, Johnson, RL, and Stone, ME. Comparison of the effects of three different weight-training programs on one repetition maximum squat. J Strength Cond Res 14: 332–337, 2000.
+31. Stone, MH, Sanborn, K, O’Bryant, HS, Hartman, M, Stone, ME, Proulx, C, Ward, B, and Hruby, J. Maximum strength-power-performance relationships in collegiate throwers. J Strength Cond Res 17: 739–745, 2003.
+32. Wilk, KE, Escamilla, RF, Fleisig, GS, Barrentine, SW, Andrews, JR, and Boyd, ML. A comparison of tibiofemoral joint forces and electromyographic activity during open and closed kinetic chain exercises. Am J Sports Med 24: 518–527, 1996.
+33. Willardson, JM, Fontana, FE, and Bressel, E. Effect of surface stability on core muscle activity for dynamic resistance exercises. Int J Sports Physiol Perform 4: 97–9, 2009.
+34. Wisloff, U, Castagna, C, Helgerud, J, Jones, R, and Hoff, J. Strong correlation of maximal squat strength with sprint performance and vertical jump height in elite soccer players. Br J Sports Med 38: 285–288, 2004.
+35. Wretenberg, PER, Feng, YI, and Arborelius, UP. High- and low-bar squatting techniques during weight-training. Med Sci Sports Exerc 28: 218–224, 1996.
+36. Zink, AJ, Whiting, WC, Vincent, WJ, and McLaine, AJ. The effects of a weight belt on trunk and leg muscle activity and joint kinematics during the squat exercise. J Strength Cond Res 15: 235–240, 2001.

@@ -27,8 +27,9 @@ that tells the human/LLM reviewer exactly where to look.
   "same" equation with different index/notation, transcribe each where it appears. Do
   **not** reconcile them and do **not** run an equation cross-referencing pass.
 - **Don't invent.** If something is unreadable, mark it rather than guessing.
-- Publisher errata/corrigenda *are* applied (they are the authoritative corrected
-  record) and noted in frontmatter `conversion_notes`.
+- **Errata/corrigenda are standalone papers, not patches.** Convert a corrigendum as its
+  own first-class paper in its own folder; never merge its corrections back into the
+  original paper. Each document transcribes exactly what its own PDF prints.
 
 ## Why these tools (approach diversity)
 
@@ -301,7 +302,7 @@ doi: "..."
 themes: ["..."]
 source_pdf: "pdfs/<base>/<base>.pdf"
 conversion: "ensemble (olmOCR + MinerU + Docling + Mathpix) aggregated against page images"
-conversion_notes: "errata applied; anything flagged 'verify against PDF'; tool disagreements resolved from images; etc."
+conversion_notes: "anything flagged 'verify against PDF'; tool disagreements resolved from images; preserved inconsistencies; etc."
 ---
 ```
 
@@ -336,10 +337,23 @@ Body conventions:
   long-term (retrieval value vs. repo size), or keep them local and git-ignored.
 - Whether the aggregation step should itself be scripted (batch prompt per paper) once
   the manual flow is proven on a few papers.
-- Errata policy (currently: apply publisher corrigenda).
+- Whether corrigenda need any cross-link in frontmatter to the paper they correct (kept
+  as standalone papers either way — corrections are never merged into the original).
 
 ## Changelog
 
+- 2026-06-10: **MinerU MAX_PATH hardening.** `convert_mineru.py` now runs MinerU on a
+  short-stem (`p.pdf`) copy of the input. MinerU bakes the input file stem into a deep
+  internal temp path; with long paper folder names that path exceeded Windows' 260-char
+  MAX_PATH and the output stage died with `FileNotFoundError` on `*_content_list_v2.json`
+  (hit Howatson-2008 and Rodriguez-Ridao-2020 during the batch run). Outputs are still
+  surfaced to `mineru.md` + `mineru_images/` unchanged.
+- 2026-06-10: **Corrigenda are standalone first-class papers, not patches.** Removed the
+  earlier "publisher errata/corrigenda are applied" policy. A corrigendum is now converted
+  as its own paper in its own folder; its corrections are never merged back into the
+  original. Each document transcribes exactly what its own PDF prints (consistent with
+  *transcribe, don't correct*). Updated the guiding principle, the frontmatter
+  `conversion_notes` example, and the open-questions list.
 - 2026-06-09: **Workflow promoted to complete/validated.** The Clarke-2013 pilot is the
   first official conversion and passed its rubric (`Clarke-2013_validation-target.md`); its
   output folder `reference/Clarke-2013_fitness-fatigue-modeling-tutorial/` is the reference
