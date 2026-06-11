@@ -233,6 +233,74 @@ exact author/title/DOI should be confirmed before citing.
 
 ---
 
+## C. Modeling-phase additions (added 2026-06-10, during `mathematical-model.md` survey)
+
+Surfaced while building the model taxonomy. Grouped by what they inform. All but two are
+**pulled** into `pdfs/<slug>/`. Citations spot-verified via Crossref; mark **[verify]** items
+before formal citing.
+
+### C1 — Unified continuous-time / fitness-fatigue modeling (the "same problem, different approach" cluster)
+- **Kontro H, Mastracci A, Cheung SS, MacInnis MJ (2025).** *The three-dimensional impulse-response
+  model: Modeling the training process in accordance with energy system-specific adaptation.* PLoS ONE
+  / arXiv 2503.14841. — **✓ pulled.** Extends Banister IR to multiple adaptation channels; closest
+  structural analogue to our per-muscle multi-channel idea.
+- **Imbach F, Sutton-Charani N, Montmain J, Candau R, Perrey S (2022).** *The Use of Fitness-Fatigue
+  Models for Sport Performance Modelling: Conceptual Issues and Contributions from Machine-Learning.*
+  Sports Medicine - Open 8:59. — **✓ pulled.** **Identifiability critique of FF models** — backs our
+  population-level (no per-user fit) stance; flags FF structural unfalsifiability.
+- **Herold JL, Sommer A (2021).** *A mathematical model-based approach to optimize loading schemes of
+  isometric resistance training sessions.* Sports Engineering 24:5. — **✓ pulled.** Sigmoid stimulus +
+  MVIC-loss fatigue under optimal control; an alternative to our log/root dose-response form.
+- **Ceddia D, Bondell H, Taylor P (2025).** *Mathematical Modelling and Optimisation of Athletic
+  Performance: Tapering and Periodisation.* arXiv 2505.20859. — **✓ pulled.** Optimal-control over FF
+  dynamics; relevant if we ever project sequences rather than rank the single next set.
+
+### C2 — Per-set stimulus & proximity-to-failure (parameterizes the L2 RIR modifier)
+- **Refalo MC, Helms ER, Hamilton DL, Fyfe JJ (2023).** *Influence of Resistance Training
+  Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis.* Sports
+  Medicine 53:649–665. [verify DOI 10.1007/s40279-022-01784-y] — **✓ pulled.** Gives the *shape* of the
+  RIR→hypertrophy modifier: small effect, concave, plateaus by ~1–2 RIR.
+- **Refalo MC, et al. (2023).** *Influence of Resistance Training Proximity-to-Failure, Determined by
+  Repetitions-in-Reserve, on Neuromuscular Fatigue in Resistance-Trained Males and Females.* Sports
+  Medicine - Open 9 (PMC9908800). — **✓ pulled.** Acute fatigue cost vs RIR — feeds both L2 `d_set` and
+  the sub-session layer.
+- **Damas F, Phillips SM, Libardi CA, et al. (2016).** *Resistance training-induced changes in
+  integrated myofibrillar protein synthesis are related to hypertrophy only after attenuation of muscle
+  damage.* J Physiol 594(18):5209–5222. DOI 10.1113/JP272472. **PMC5023708.** — **✓ pulled**
+  (user-provided). The *primary* study behind Damas-2015; empirical basis for the productivity-gate /
+  training-status non-stationarity.
+- **Burd NA, Holwerda AM, et al. (2010).** *Resistance exercise volume affects myofibrillar protein
+  synthesis and anabolic signalling molecule phosphorylation in young men.* J Physiol 588(16):3119–3130.
+  DOI 10.1113/jphysiol.2010.192856. **PMC2956949.** — **✓ pulled** (user-provided). Per-session MyoPS
+  volume dose-response (the per-session anabolic ceiling mechanism).
+
+### C3 — Global / systemic fatigue (the cross-muscle session productivity cap)
+- **Zając A, Chalimoniuk M, Maszczyk A, Gołaś A, Langfort J (2015).** *Central and peripheral fatigue
+  during resistance exercise – A critical review.* J Hum Kinet 49:159–169. — **✓ pulled.** Central
+  (systemic) vs peripheral (local) fatigue — the conceptual basis for a global per-exercise fatigue term.
+- **Sousa CA, Zourdos MC, Storey AG, Helms ER (2024).** *The Importance of Recovery in Resistance
+  Training Microcycle Construction.* J Hum Kinet 91:205–223. — **✓ pulled.** Grades exercises by
+  recovery cost (multi-joint / lower-body / eccentric / lengthened cost more) — the nearest thing to
+  *data* on exercise-specific systemic fatigue.
+
+### C4 — Sub-session / acute fatigue kinetics (now IN scope: replacing "session"/"PPL day")
+- **Pareja-Blanco F, Villalba-Fernández A, Cornejo-Daza PJ, Sánchez-Valdepeñas J, González-Badillo JJ
+  (2019).** *Time Course of Recovery Following Resistance Exercise with Different Loading Magnitudes and
+  Velocity Loss in the Set.* Sports 7(3):59. — **✓ pulled.** Recovery time course by load × velocity-loss
+  (0/6/24/48 h) — fast-kernel data for the sub-session layer.
+- **Jukic I, et al. (2023).** *The Acute and Chronic Effects of Implementing Velocity Loss Thresholds
+  During Resistance Training: A Systematic Review, Meta-Analysis, and Critical Evaluation of the
+  Literature.* Sports Medicine 53(1):177–214. — **✓ pulled.** Velocity loss as an objective in-set
+  fatigue marker; informs how within-set effort maps to acute fatigue.
+
+> **Deliberately omitted (scope, 2026-06-10):** lengthened/ROM stimulus modifiers, exercise-specific
+> *stimulus* differentiation, effective/"stimulating reps" constructs, and bottom-up mechanobiological
+> ODE models (IGF1-AKT-mTOR). Reason: precision exceeds a typical user's input fidelity and the
+> differences are likely more individual than population-modelable. Model stays on **direct/indirect
+> (fractional) sets only.**
+
+---
+
 ## Raw empirical data / datasets (cross-cutting)
 
 - **Pelland 2024 / Remmert 2024 supplements & code** — look for OSF.io links inside the
