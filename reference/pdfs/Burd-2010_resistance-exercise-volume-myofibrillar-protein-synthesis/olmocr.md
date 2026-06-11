@@ -1,0 +1,402 @@
+Resistance exercise volume affects myofibrillar protein synthesis and anabolic signalling molecule phosphorylation in young men
+
+Nicholas A. Burd1, Andrew M. Holwerda1, Keegan C. Selby1, Daniel W. D. West1, Aaron W. Staples1, Nathan E. Cain1, Joshua G. A. Cashaback2, James R. Potvin2, Steven K. Baker3 and Stuart M. Phillips1
+
+1Exercise Metabolism Research Group and 2Occupational Biomechanics Laboratory, Department of Kinesiology, McMaster University, and 3Michael G. DeGroote School of Medicine, Department of Neurology, McMaster University, Hamilton, Ontario, Canada
+
+We aimed to determine if any mechanistic differences exist between a single set (1SET) and multiple sets (i.e. 3 sets; 3SET) of resistance exercise by utilizing a primed constant infusion of [ring-13C6]phenylalanine to determine myofibrillar protein synthesis (MPS) and Western blot analysis to examine anabolic signalling molecule phosphorylation following an acute bout of resistance exercise. Eight resistance-trained men (24 ± 5 years, BMI = 25 ± 4 kg m−2) were randomly assigned to perform unilateral leg extension exercise at 70% concentric one repetition maximum (1RM) until volitional fatigue for 1SET or 3SET. Biopsies from the vastus lateralis were taken in the fasted state (Fast) and fed state (Fed; 20 g of whey protein isolate) at rest, 5 h Fed, 24 h Fast and 29 h Fed post-exercise. Fed-state MPS was transiently elevated above rest at 5 h for 1SET (2.3-fold) and returned to resting levels by 29 h post-exercise. However, the exercise induced increase in MPS following 3SET was superior in amplitude and duration as compared to 1SET at both 5 h (3.1-fold above rest) and 29 h post-exercise (2.3-fold above rest). Phosphorylation of 70 kDa S6 protein kinase (p70S6K) demonstrated a coordinated increase with MPS at 5 h and 29 h post-exercise such that the extent of p70S6K phosphorylation was related to the MPS response (\( r = 0.338,\ P = 0.033 \)). Phosphorylation of 90 kDa ribosomal S6 protein kinase (p90RSK) and ribosomal protein S6 (rpS6) was similar for 1SET and 3SET at 24 h Fast and 29 h Fed, respectively. However, 3SET induced a greater activation of eukaryotic translation initiation factor 2Be (eIF2Be) and rpS6 at 5 h Fed. These data suggest that 3SET of resistance exercise is more anabolic than 1SET and may lead to greater increases in myofibrillar protein accretion over time.
+
+(Received 10 May 2010; accepted after revision 24 June 2010; first published online 25 June 2010)
+Corresponding author S. M. Phillips: Exercise Metabolism Research Group, Department of Kinesiology, McMaster University, 1280 Main Street West, Hamilton, ON L8S 4K1, Canada. Email: phillis@mcmaster.ca
+
+Abbreviations 1RM, one repetition maximum; 1SET, one set; 3SET, three sets; MPF, mean power frequency; MPS, myofibrillar protein synthesis.
+
+Introduction
+
+The majority of studies examining muscle protein synthesis following acute resistance exercise have utilized high volume (i.e. ≥3 sets) bouts of exercise (Phillips et al. 1997; Kumar et al. 2008; Moore et al. 2009b). Presumably, there is an exercise volume (i.e. load × repetitions) dose–response that ultimately reaches a ceiling where the stimulatory effects of more contractions would diminish. A lack of difference between the acute rise in myofibrillar protein synthesis (MPS) seen in young men who had performed three versus six sets of resistance exercise (Kumar et al. 2008) provides support for this concept. We have proposed (Burd et al. 2009; Phillips et al. 2009) that acute changes in muscle protein synthesis are predictive of phenotypic adaptations; thus, it was of interest to us to characterize changes in muscle protein synthesis in response to lower exercise volumes than previously tested. We are unaware of any knowledge of the acute adaptations of myofibrillar proteins to resistance exercise after lower volumes of exercise, such as one or three sets. The efficacy of single versus multiple sets of resistance training in
+inducing gains in muscle size and strength are equivocal (Krieger, 2009, 2010; Ratamess et al. 2009; Winett et al. 2009). The conflicting results among studies may relate to the large heterogeneity of response between participants in response to resistance training (Hubal et al. 2005), coupled with poor study design, and/or a heterogeneous training status of the research subjects (Marx et al. 2001; Carpinelli, 2002).
+
+The mechanisms that facilitate muscle protein synthesis following acute resistance exercise require the activation of signalling molecules within the mTOR (mammalian target of rapamycin) pathway (Kumar et al. 2008; Drummond et al. 2009) or mitogen-activated protein kinase (MAPK) signalling cascades (Williamson et al. 2003; Karlsson et al. 2004; Tannerstedt et al. 2009). Whether MPS is mediated by the convergence of Akt–mTOR and MAPK signalling pathways on downstream targets such as 70 kDa S6 protein kinase (p70S6K) and ribosomal protein S6 (rpS6) to achieve maximal stimulation of MPS still requires further examination. Furthermore, we have recently demonstrated, following resistance exercise, that eukaryotic translation initiation factor 2Be (eIF2Be) phosphorylation (involved in ribosomal recycling) is reduced in recreationally resistance-trained men (Glover et al. 2008a); however, the extent of the impact of resistance exercise volume on the activation of these anabolic factors and the subsequent stimulation of MPS remains to be investigated in humans.
+
+Therefore, the purpose of this study was to examine the extent to which resistance exercise performed for one set (1SET) or three sets (3SET), with the same relative workload, affected the amplitude and early duration of MPS and phosphorylation of anabolic signalling molecules. We utilized trained subjects to overcome issues of training-induced heterogeneity in motor unit firing rate and firing synchrony (Sale, 1988). We also know that resistance training can chronically elevate resting muscle protein synthesis (Phillips et al. 2002; Kim et al. 2005) and attenuate muscle protein breakdown that occurs in response to an isolated bout of exercise (Phillips et al. 1999). Furthermore, resistance training can shorten the duration and amplitude of muscle protein synthesis following acute resistance exercise (Tang et al. 2008). Thus, trained individuals need to maintain a relatively ‘unique’ exercise stimulus to promote continuing muscle adaptation and as such increased volume of exercise may be an important factor. Based on observations that high volume resistance exercise can have long lasting effects on muscle protein synthesis (Phillips et al. 1997), and that anabolic signalling molecule activation is related to (Kumar et al. 2008) and/or required for (Drummond et al. 2009) muscle protein synthesis, we hypothesized that 3SET would induce a greater increase in MPS in both amplitude and duration versus 1SET. We also hypothesized that the increase in MPS would be reflected in the extent of anabolic signalling protein phosphorylation, in particular p70S6K (Kumar et al. 2008; Terzis et al. 2008).
+
+Methods
+
+Subjects
+
+Eight recreationally resistance-trained males (24.3 ± 1.6 years; 84.3 ± 3.3 kg; body mass index (BMI) = 25.1 ± 0.7 kg m^{-2}) participated in this study. Subjects were all habitually active and reported engaging in lower body resistance exercise at least 1 time per week for ≥1 year at the time of the study. Subjects were informed about the experimental procedure to be used as well as the purpose of the study and all potential risks prior to obtaining written consent. All participants were deemed healthy based on their response to a routine medical screening questionnaire. The study was approved by the local Research Ethics Board of McMaster University and Hamilton Health Sciences and conformed to all standards for the use of human subjects in research as outlined in the Declaration of Helsinki.
+
+Experimental protocol
+
+One week before any infusion trials, all subjects reported to the laboratory for a familiarization session with the exercise equipment and to establish their unilateral 1 repetition maximum (1RM) on each leg for knee extension exercise (Hartman et al. 2007). Subjects’ unilateral 1RM for the right and left legs was 94.5 ± 5.4 kg and 92.3 ± 5.0 kg, respectively (\( P = 0.29 \)). Each subject recorded his dietary intake for 3 days prior to the resting and exercise experimental infusion trial (trial 1). A unilateral model, whereby each individual served as his own rested control, was utilized to ensure that acute changes in MPS following exercise and feeding were due to these stimuli rather than inter-subject variability (i.e. genetics and motivation).
+
+On the morning of trial 1 (Fig. 1), participants reported to the laboratory at 07.00 h after an overnight fast and having refrained from any strenuous physical activity for the previous 3 days. An 18-gauge catheter was inserted in the antecubital vein of one arm for blood sampling. After a baseline blood sample was drawn, a second catheter was inserted in the contralateral arm for the primed constant infusion (PHD 2000; Harvard Apparatus, Natick, MA, USA) of L-[ring-^{13}C_6]phenylalanine (prime: 2 \( \mu \)mol kg^{-1}; 0.05 \( \mu \)mol kg^{-1} min^{-1}; Cambridge Isotopes, Andover, MA, USA; Fig. 1) passed through a 0.2 \( \mu \)m filter. The subjects rested comfortably on a bed throughout the infusions. At 3 h after the start of the infusion, a single muscle biopsy was taken from the dominant leg to
+measure fasted rates of protein synthesis (Rest). Following the biopsy, subjects’ legs were shaved with a hand razor and cleaned with isopropyl alcohol prior to electrode placement. Bipolar self-adhesive Ag–AgCl monitoring electrodes (Kendall Meditrace 133, Chicopee, MA, USA) were placed on the medial portion of the muscle bellies of the vastus lateralis, vastus medialis, and rectus femoris in line with the direction of muscle fibre orientation. The reference electrode was placed on the head of the fibula, for evaluation of electromyography (EMG) during exercise. Subjects then performed a fatiguing bout of unilateral leg extension exercise at 70% of their previously established concentric 1RM. Subjects legs were randomized to perform exercise volumes of 1SET or 3SET, balanced for leg dominance (based on strength) in each condition, until volitional failure. Failure was defined as the point at which the exercise could not be completed or the subjects’ technique failed. For 3SET, subjects performed three sets of exercise with 2 min rest between sets with one leg, whereas the other leg completed a single set (1SET). The subjects were instructed on proper lifting cadence using verbal cues and a metronome set to 50 beats min\(^{-1}\), which corresponded to 1 s concentric muscle action, 0 s pause, and a 1 s eccentric muscle action. A goniometer was positioned on the leg extension machine to record knee joint angle. The derivative of the flexion angle and angular velocity was used to identify the concentric, isometric and eccentric phases of each repetition.
+
+After completion of the exercise subjects returned to the resting position and lay supine while a blood sample was collected. Then participants consumed a drink containing 20 g of whey protein isolate (Table 1), which was a generous gift from Inbalance Nutrition Inc. (Burlington, ON, Canada). This protein dose has previously been shown to maximally stimulate muscle protein synthesis following resistance exercise (Moore et al. 2009a). To minimize disturbances in isotopic equilibrium, the drinks were enriched to 6% with tracer according to a measured phenylalanine content of 3.5% in the whey protein. Previous work in our lab has shown that the tracer added to protein in this manner is not absorbed at a rate appreciably faster than the amino acids from digestion of the protein itself. This is evidenced by a stable isotopic plateau in both the blood and muscle pools (see Results), which would not be the case if the isotope added to the protein appeared more rapidly in the blood. Thus, this model and approach satisfies all criteria for the precursor-product approach and steady state equations. Trial 1 was concluded by obtaining bilateral biopsies at 5 h after completion of unilateral resistance exercise. Subjects were then instructed to eat a meal that was representative of the meals they previously recorded on the three-day dietary log, and this meal was to be consumed no later than 22.00 h to ensure
+
+<table>
+  <tr>
+    <th>Essential amino acid</th>
+    <th>g (100 g protein)\(^{-1}\)</th>
+  </tr>
+  <tr>
+    <td>Isoleucine</td>
+    <td>6.2</td>
+  </tr>
+  <tr>
+    <td>Leucine</td>
+    <td>14.0</td>
+  </tr>
+  <tr>
+    <td>Lysine</td>
+    <td>11.1</td>
+  </tr>
+  <tr>
+    <td>Methionine</td>
+    <td>2.9</td>
+  </tr>
+  <tr>
+    <td>Phenylalanine</td>
+    <td>3.8</td>
+  </tr>
+  <tr>
+    <td>Threonine</td>
+    <td>5.0</td>
+  </tr>
+  <tr>
+    <td>Tryptophan</td>
+    <td>2.4</td>
+  </tr>
+  <tr>
+    <td>Valine</td>
+    <td>5.7</td>
+  </tr>
+  <tr>
+    <td>Histidine</td>
+    <td>2.1</td>
+  </tr>
+</table>
+
+Table 1. Essential amino acid content of protein drinks (Fonterra Alacen-895-I)
+
+![Schematic diagram of the experimental infusion protocols](page_1012_1342_495_312.png)
+
+Figure 1. Schematic diagram of the experimental infusion protocols
+Double arrows indicate bilateral biopsies were obtained at corresponding time points.
+a 10 h fast prior to the beginning of the 24 h post-exercise protein synthesis measurement (trial 2). Subjects also refrained from any physical activity for the evening. In the morning subjects returned to the laboratory for trial 2 and underwent the previously described infusion trial procedures. Bilateral biopsies were obtained at 1.5 h after the start of the infusion, followed by the consumption of 20 g of tracer-enriched whey protein isolate drink. Infusion trial 2 was concluded by bilateral biopsies at 6.5 h. Muscle biopsies were performed with a Bergström needle that was custom-modified for manual suction under local anaesthesia (2% xylocaine). Biopsy samples were blotted dry and freed of any visible fat and connective tissue, immediately frozen in liquid nitrogen and stored at −80°C until further analysis. Each biopsy was obtained through a separate incision at least 3 cm from the previous incision. Blood samples were drawn every 0.5–1 h of trial 1 and 2 and were processed as previously described (Moore et al. 2009a).
+
+Blood analyses
+
+Plasma L-[ring-13C6]phenylalanine enrichments were determined as previously described (Glover et al. 2008b). Blood amino acid concentrations were analysed by HPLC as previously described (Moore et al. 2005). Blood glucose concentrations were analysed using a blood glucose meter (OneTouch Ultra 2, Lifescan Inc., Milpitas, CA, USA) within 5 min of blood collection. Plasma insulin was measured using a commercially available immunoassay kit (ALPCO Diagnostics, Salem, NH, USA).
+
+Electromyography analyses
+
+The raw EMG signals were sampled at 1024 Hz, using a custom-made bioamplifier, and were collected with acquisition software (LabVIEW v 8.2, National Instruments, Austin, TX, USA). All raw EMG signals were digitized and stored on an external hard drive for subsequent analysis. Repetitions were normalized to the total time taken to perform the exercise, because of the differing number of repetitions performed by each of the subjects, such that the first and last repetitions were represented as 0% and 100%, respectively. All signal processing was performed off-line using custom written software (LabVIEW). Signal amplitudes, reflective of motor unit recruitment and their rate of discharge, were assessed as the signal envelope. Specifically, the raw signal was bandpass filtered between 20 and 500 Hz, full-wave rectified and dual pass filtered using a 1.7 Hz low pass cut off Butterworth filter. A moving average with a 250 ms sampling window was then used with an overlap of 249 ms.
+
+Signal amplitudes were normalized to the first concentric phase of the first set, for both 1SET and 3SET protocols. This was assumed to be at 70% activation, given the 70% of 1RM load and previous literature indicating a linear relationship between EMG amplitude and joint moment (Babault et al. 2001). The average for each phase of each repetition was modelled with a second order polynomial regression equation. These data for each 10% interval of time were then plotted according to the regression analysis. A fast Fourier transformation was performed on each 250 ms window. The mean power frequency (MPF), which approximates changes in muscle fibre conduction velocity (Brody et al. 1991), was then determined for each overlapping window, and subsequently averaged for each repetition.
+
+Muscle analyses
+
+A piece of wet muscle (~20 mg) was homogenized by hand on ice using a Teflon-coated pestle in a standard Western blotting homogenization buffer (10 μl mg−1): a 25 mM Tris (pH 7.2) buffer containing 1 mM Na3VO4, 50 mM NaF, 40 mM β-glycerolphosphate, 20 mM sodium pyrophosphate, 0.5% v/v Triton X-100, and Complete Protease Inhibitor Mini-Tabs (Roche, Indianapolis, IN, USA). The samples were centrifuged at 1500 g at 4°C for 10 min. The resultant supernatants were removed and protein content was determined by the Bradford assay. The myofibrillar and collagen pellet was stored at −80°C for future processing. Samples (25 μg of protein) were loaded on 7.5 or 10% SDS-polyacrylamide gels and then transferred to a PVDF membrane. Membranes were blocked with 5% BSA (w/v) in Tris-buffered saline with 0.1% Tween (v/v) (TBST), except p70S6K1 on Thr389 (2.5% milk for all conditions) and total p70S6K1 (1.5% milk). Membranes were then incubated overnight in primary antibody at 4°C: p70S6K1 on Thr389 (Santa Cruz Biotechnology, Inc., Santa Cruz, CA, USA; no. 11759, 1:500); total p70S6K1 (Santa Cruz Biotechnology, no. 9027, 1:500); rpS6 on Ser240/244 (Cell Signaling Technology, Inc., Danvers, MA, USA; no. 22155; 1:2000); total rpS6 (Cell Signaling Technology, no. 2217; 1:2000); eIF2Bε on Ser539 (Genetex, San Antonio, TX, USA; no. GTX24775, 1:6000); total eIF2Bε (Cell Signaling Technology, no. 3595; 1:750); GSK3β on Ser9 (Cell Signaling Technology, no. 9336S; 1:1000); total GSK3β (Cell Signaling Technology, no. 9315; 1:6000); p38 MAPK on Thr180/Tyr182 (Cell Signaling Technology, no. 9215S; 1:1000); total p38 MAPK (Cell Signaling Technology, no. 9212, 1:1000); p90RSK1 on Thr573 (Epitomics Inc., Burlingame, CA, USA; no. 2185-1; 1:500); total p90RSK1 (Cell Signaling Technology, no. 9355, 1:1000); mTOR on Ser2448 (Cell Signaling Technology, no. 2971; 1:1000); total mTOR (Cell Signaling
+Technology, no 2972; 1:1000). After washing in TBST, membranes were incubated in horseradish peroxidase (HRP)-linked anti-rabbit IgG secondary antibody (GE Healthcare (Amersham Biosciences), Piscataway, NJ, USA; no. NA934VS, 1:15,000), washed with TBST, and detected by chemiluminescence (SuperSignalWest Dura Extended Duration Substrate, Thermo Scientific, no. 34075). Images were developed using FluorChem SP Imaging system and quantified by spot densitometry using ImageJ software. All signalling protein responses were determined with \( n = 8 \), with the exception of mTOR (\( n = 7 \); due to a small muscle sample weight).
+
+Myofibrillar proteins were isolated as previously described (Moore et al. 2009b) and the hydrolysed amino acids were purified using cation-exchange chromatography (Dowex 50WX8-200 resin; Sigma-Aldrich Ltd) and converted to their N-acetyl-n-propyl ester derivatives for analysis by gas chromatography combustion isotope ratio mass spectrometry (GC-C-IRMS: Hewlett Packard 6890; IRMS model Delta Plus XP, Thermo Finnigan, Waltham, MA, USA) (Moore et al. 2009b). Intracellular amino acids were extracted from a separate piece of wet muscle (~20 mg) with ice-cold 0.6 M perchloric acid. Muscle was homogenized on ice with a Teflon-coated pestle and then centrifuged at 12,000 g for 10 min at 4°C. The supernatant was then collected and this process was repeated two more times. All three supernatants were combined and taken as the intracellular amino acids and purified by cation-exchange chromatography and converted to their heptafluorobutyrate derivatives before analysis by GC-MS (models 6890 GC and 5973 MS; Hewlett-Packard, Palo Alto, CA, USA) as previously described (Moore et al. 2009b).
+
+Calculations
+
+The fractional synthetic rate (FSR) of myofibrillar proteins was calculated using the standard precursor–product method:
+
+\[
+\text{FSR} (\% \text{h}^{-1}) = [E_{p2} - E_{p1}] / E_{ic} \times 1/t \times 100
+\]
+
+Where \( E_{p2} - E_{p1} \) represents the change in bound protein enrichment between two biopsy samples, \( E_{ic} \) is the average enrichment of intracellular phenylalanine between the two biopsy samples and \( t \) is the time between biopsies. It should be noted that the resting biopsy (Fast) obtained during trial 1 represented \( E_{p1} \) for both 1SET and 3SET exercise legs and as such the exercise bout was included in the calculation; this approach has been discussed previously (Moore et al. 2009b). Furthermore, the utilization of ‘tracer-naive’ subjects allowed us to use the pre-infusion blood sample (i.e. mixed plasma protein fraction) as the baseline enrichment (\( E_{p1} \)) for the calculation of resting MPS (Fast). This approach makes the assumption that the ‘natural’ \( ^{13}\mathrm{C} \) enrichment (\( \delta^{13}\mathrm{C}_{\mathrm{pdb}} \)) in the blood reflects that of muscle protein; this is an assumption that has been confirmed in our laboratory and others’ (Heys et al. 1990; Nakshabendi et al. 1995; West et al. 2009).
+
+Statistics
+
+A within-subject repeated measures design was utilized for the current study. Differences in MPS and anabolic signalling were tested by two-factor (condition × time) analysis of variance (ANOVA) with repeated measures on time factor. Acute exercise variables (repetitions, time under tension, and volume per set within 3SET) were analysed using a one-factor ANOVA. Differences in total volume performed between conditions were determined by Student’s paired \( t \) test. Blood glucose, plasma insulin, and blood amino acid concentrations were analysed using one-factor (time) repeated measures ANOVA. Linear regression analyses were performed to assess the existence of a linear fit between variables. Pearson’s \( r \) product moment correlation was used to examine the relationship between different variables (MPS and anabolic signalling molecules). Tukey’s post hoc test was performed to determine differences between means for all significant main effects and interactions. All statistical analyses were performed using SigmaStat 3.10.0 (Systat Software Inc., Point Richmond, CA, USA). For all analyses, differences were considered significant at \( P < 0.05 \). All results are presented as means ± standard error of the mean (S.E.M.).
+
+Results
+
+Resistance exercise
+
+Acute resistance exercise variables are shown in Table 2. There was no difference in the load utilized for 1SET or all three sets of 3SET. There was also no difference in the number of contractions, load, or volume load for 1SET and set 1 of 3SET. The repetitions performed during set 1 of 3SET were significantly greater than sets 2 (\( P < 0.001 \)) and 3 (\( P < 0.001 \)), and set 2 was significantly greater than set 3 (\( P = 0.009 \)). Similar results were found for volume load. The total volume performed for 3SET (2183 ± 154 kg) was significantly greater (\( P < 0.001 \)) than for 1SET (942 ± 97 kg).
+
+Blood glucose, plasma insulin, and amino acid concentrations
+
+Blood glucose remained stable during infusion trials 1 and 2 (Table 3). Plasma insulin concentration peaked (\( P < 0.001 \)) at 1 h post-drink ingestion for trial 1 (~4.2-fold increase) and trial 2 (~4.0-fold increase) but
+Table 2. Acute unilateral resistance exercise variables
+
+<table>
+  <tr>
+    <th rowspan="2"></th>
+    <th colspan="3">1SET</th>
+    <th colspan="3">3SET</th>
+  </tr>
+  <tr>
+    <th>Set 1</th>
+    <th>Set 2</th>
+    <th>Set 3</th>
+    <th>Set 1</th>
+    <th>Set 2</th>
+    <th>Set 3</th>
+  </tr>
+  <tr>
+    <td>Load (kg)</td>
+    <td>68 ± 4</td>
+    <td>64 ± 4</td>
+    <td>64 ± 4</td>
+    <td>64 ± 4</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Repetitions</td>
+    <td>14 ± 2</td>
+    <td>14 ± 1</td>
+    <td>11 ± 1*†</td>
+    <td>9 ± 1*†§</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Volume Load (kg)</td>
+    <td>942 ± 97</td>
+    <td>903 ± 59</td>
+    <td>698 ± 53*</td>
+    <td>582 ± 53*†</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Time under tension (s)</td>
+    <td>34 ± 3</td>
+    <td>33 ± 2</td>
+    <td>27 ± 2*†</td>
+    <td>24 ± 2*†</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+Values are means ± s.e.m. (n = 8). *Significantly different from 1SET, P < 0.05. †Significantly different from Set 1 of 3SET, P < 0.05. §Significantly different from Set 2 of 3SET, P < 0.009.
+
+Table 3. Blood amino acid concentrations, blood glucose, and plasma insulin concentrations in the fasted-state and following ingestion of 20 g of whey protein isolate during trial 1 and trial 2
+
+<table>
+  <tr>
+    <th rowspan="2">Trial</th>
+    <th colspan="2">After drink</th>
+    <th colspan="6">After drink</th>
+  </tr>
+  <tr>
+    <th>Fast</th>
+    <th>0 h</th>
+    <th>0.5 h</th>
+    <th>1.0 h</th>
+    <th>1.5 h</th>
+    <th>2.0 h</th>
+    <th>3.0 h</th>
+  </tr>
+  <tr>
+    <td>Trial 1:</td>
+    <td>Σ EAA (\( \mu \)M)</td>
+    <td>563 ± 48</td>
+    <td>624 ± 60</td>
+    <td>757 ± 72</td>
+    <td>1096 ± 98*</td>
+    <td>900 ± 92*</td>
+    <td>858 ± 73</td>
+    <td>618 ± 53</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Leucine (\( \mu \)M)</td>
+    <td>80 ± 7</td>
+    <td>89 ± 7</td>
+    <td>125 ± 20</td>
+    <td>244 ± 29*</td>
+    <td>187 ± 16*</td>
+    <td>153 ± 14*</td>
+    <td>106 ± 10</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Insulin (\( \mu \)U ml\(^{-1}\))</td>
+    <td>4.4 ± 0.4</td>
+    <td>3.5 ± 0.6</td>
+    <td>13.0 ± 0.2*</td>
+    <td>18.5 ± 3.4*</td>
+    <td>6.9 ± 1.0*</td>
+    <td>5.1 ± 0.6</td>
+    <td>4.03 ± 0.6</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Glucose (mm)</td>
+    <td>5.6 ± 0.2</td>
+    <td>–</td>
+    <td>5.6 ± 0.3</td>
+    <td>5.5 ± 0.1</td>
+    <td>5.6 ± 0.1</td>
+    <td>5.6 ± 0.4</td>
+    <td>5.4 ± 0.1</td>
+  </tr>
+  <tr>
+    <td>Trial 2:</td>
+    <td>Σ EAA (\( \mu \)M)</td>
+    <td>611 ± 47</td>
+    <td>600 ± 38</td>
+    <td>964 ± 63*</td>
+    <td>1156 ± 105*</td>
+    <td>889 ± 101*</td>
+    <td>756 ± 62</td>
+    <td>617 ± 60</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Leucine (\( \mu \)M)</td>
+    <td>104 ± 10</td>
+    <td>99 ± 12</td>
+    <td>201 ± 19*</td>
+    <td>239 ± 30*</td>
+    <td>214 ± 35*</td>
+    <td>154 ± 20</td>
+    <td>120 ± 16</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Insulin (\( \mu \)U ml\(^{-1}\))</td>
+    <td>4.1 ± 0.5</td>
+    <td>4.2 ± 1.0</td>
+    <td>8.2 ± 1.3*</td>
+    <td>16.2 ± 2.5*</td>
+    <td>8.5 ± 2.2*</td>
+    <td>4.6 ± 0.6</td>
+    <td>–</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Glucose (mm)</td>
+    <td>5.5 ± 0.2</td>
+    <td>–</td>
+    <td>5.2 ± 0.2</td>
+    <td>4.9 ± 0.1</td>
+    <td>5.0 ± 0.2</td>
+    <td>5.0 ± 0.2</td>
+    <td>4.7 ± 0.2</td>
+  </tr>
+</table>
+
+Values are means ± s.e.m. (n = 8). Drink comprised 20 g of whey protein isolate. Σ EAA are sum of His, Ile, Leu, Lys, Met, Phe, Thr, Val (note: Cys not measured). *Significantly different from Fast, P < 0.05.
+
+returned to basal levels by 2 h in both trials. Blood essential amino acid (EAA) concentrations peaked (P < 0.001) at 1 h post-drink ingestion for trial 1 (~2-fold increase) and trial 2 (~1.9-fold increase) and returned to basal by 2 h in both trials. Similarly, blood leucine concentration peaked (P < 0.001) at 1 h for trial 1 (~3.0-fold increase) and trial 2 (~2.2-fold increase) and returned to basal by 3 h and 2 h for trial 1 and trial 2, respectively.
+
+Electromyography
+
+The quadriceps muscles (i.e. vastus lateralis, vastus medialis and rectus femoris) showed similar EMG results and therefore only the vastus lateralis results are reported. EMG amplitude for the concentric phase of exercise (Fig. 2A) peaked at 50% of set completion time for 1SET and the first and second sets of 3SET (P < 0.001). The amplitude of the third set of 3SET was not different from 0% set completion at any time point (P > 0.05). EMG amplitude was not different from the start of the set (0% set completion) at 100%, 90%, or 70% set completion for 1SET or the first and second set of 3SET, respectively (P > 0.05). The peak amplitude of the third set of 3SET was significantly different from peak amplitude of 1SET between 30 and 60% set completion (P < 0.05). There was a significant main effect of time (P < 0.001) indicating a decrease in isometric MPF from 0% (i.e. 1st repetition) to 100% (i.e. last repetition) set completion (Fig. 2B).
+
+Plasma and Intracellular precursor enrichments
+
+Intracellular precursor enrichment in the rested fasted biopsy was 3.6 ± 0.3 tracer/tracee. Intracellular precursor enrichments were stable across time during the infusion trial 1 for 1SET (3.9 ± 0.3 tracer/tracee) and 3SET (3.7 ± 0.3 tracer/tracee) and during trial 2 for 1SET (3.8 ± 0.2, 4.2 ± 0.3 tracer/tracee at 1.5 and 6.5 h, respectively; P > 0.05) and 3SET (3.8 ± 0.2 and 4.2 ± 0.2 tracer/tracee at 1.5 and 6.5 h respectively; P > 0.05). Furthermore, linear regression analysis indicated that the slopes of the plasma enrichments were not significantly different from zero during trial 1 or trial 2 (P > 0.05), suggesting that isotopic plateau was achieved and that the use of the steady-state precursor product equation was appropriate. These data also indicate that the tracer added to the protein during ingestion did not appear in the circulation more rapidly than the amino acids from the protein (whey) itself and in fact enrichment was stable during the period of incorporation.
+Myofibrillar protein synthesis
+
+Fed-state MPS was elevated above Fast by 2.3- and 3.1-fold at 5 h post-exercise for 1SET and 3SET, respectively (both \( P < 0.001 \); Fig. 3). However, the response at 5 h post-exercise was significantly greater (\( P = 0.008 \)) for 3SET as compared to 1SET. MPS returned to a mean value not different from Fast in 1SET at 29 h post-exercise (\( P = 0.36 \)). However, MPS remained elevated by 2.3-fold above Fast in 3SET (\( P = 0.033 \)) and was significantly greater than 1SET at this same time point (\( P = 0.001 \)).
+
+Signalling proteins
+
+Phosphorylation of eIF2B\(\varepsilon\) (Fig. 4A) was significantly decreased from fast by 37% at 5 h Fed for 3SET (\( P = 0.031 \)), whereas, phosphorylation of 90 kDa ribosomal S6 protein kinase (p90RSK; Fig. 4B) was significantly (\( P < 0.05 \)) greater at 24 h Fast than at Fast by 120% and 116% for 1SET and 3SET, respectively. Exercise increased phosphorylation of 70 kDa S6 protein kinase (p70S6K; Fig. 4C) to a similar extent at 5 h Fed (\( P < 0.05 \)) by 61% and 64% above Fast for 1SET and 3SET, respectively. Furthermore, a latent feeding-induced increase in p70S6K phosphorylation was observed at 29 h Fed in 3SET such that this response was greater than Fast (\( P < 0.05 \)) and 1SET at that same time point (\( P = 0.031 \)). It was found that a significant relationship (\( r = 0.338, P = 0.033 \)) between the extent of p70S6K phosphorylation and MPS existed (Fig. 5). Phosphorylation of ribosomal protein S6 (rpS6) was greater than Fast at 5 h Fed for 3SET (\( P = 0.022 \)). Also, rpS6 phosphorylation showed a trend to be greater than Fast at 24 h Fast in 3SET (\( P = 0.068 \)). Similar to p70S6K, a latent increase in rpS6 was also demonstrated such that the response was greater than Fast at 29 h Fed for 1SET (\( P = 0.012 \)) and 3SET (\( P = 0.003 \)). Finally, there was no change in phosphorylation at any time points for Akt, p38, mTOR, or Glycogen synthase kinase (GSK) above Fast (data not shown).
+
+Discussion
+
+Our study is the first to describe the myofibrillar protein synthetic response and the extent of anabolic signalling molecule phosphorylation following resistance exercise performed for only one set or for three sets of contractions and to show a dose–response relationship between exercise volume and the response of MPS. We found that 1SET transiently enhanced fed-state MPS at 5 h post-exercise and to a lesser extent than 3SET; however, this minimal volume of exercise loses its stimulatory effect the next day (i.e. 24–29 h). By contrast, 3SET elevated fed-state myofibrillar protein synthesis at 5 h, more than 1SET, and sustained the myofibrillar protein synthetic response for at least 24 h post-exercise. The mechanisms facilitating this response may be related, in part, to phosphorylation (activation) of p70S6K and its downstream target, rpS6, and the eventual recycling of the ribosome by decreased eIF2B\(\varepsilon\) phosphorylation (activation). Furthermore, p90RSK1 showed a latent increase in phosphorylation at 24 h post-exercise; however, feeding had no stimulatory effect as p90RSK1 activation returned to basal levels by 29 h post-exercise.
+
+A novel finding of the current study is that the sustained response of MPS after performing 3SET of resistance exercise at 24–29 h suggests that a relatively low ‘dose’ of exercise conferred a ‘nutrient-sensitizing’ effect on skeletal muscle late into the post-exercise recovery period (i.e. at least 24 h later). This notion is supported by our data demonstrating that the feeding-induced rise in MPS is elevated 5 h following resistance exercise, whereas, the response in the absence of exercise is transiently elevated at 3 h but returns to basal levels in a non-exercise control leg (Moore et al. 2009b). Therefore, it is now
+
+![Increase in vastus lateralis EMG during the concentric phase of resistance exercise and change in mean power frequency during the isometric phase of resistance exercise](page_1012_1042_484_484.png)
+
+Figure 2. Increase in vastus lateralis EMG during the concentric phase of resistance exercise and change in mean power frequency during the isometric phase of resistance exercise
+A, percentage increase in vastus lateralis EMG (activation) during the concentric phase of resistance exercise. Numbers in parentheses of key following 3SET indicate set number. B, the change in mean power frequency (MPF) during the isometric phase of resistance exercise. Times with different lower-case letters indicate significantly differences from first repetition (0% completion): a for 1SET, b for 3SET(1), c for 3SET(2), d for 3SET(3), \( P < 0.05 \). *Significantly different from 1SET at that time point, \( P < 0.05 \).
+apparent that the lack of a stimulatory effect of feeding on MPS following 1SET of resistance exercise at 24–29 h post-exercise suggests that a certain threshold volume of contractile activity is necessary to sensitize the muscle to subsequent feeding.
+
+Recent data (Kumar et al. 2008) have suggested that the fall of fasted-state MPS at 2–4 h during post-exercise recovery may have been due to the low dose of resistance exercise volume utilized during their experimental trial. However, the authors speculated that it was possible that amino acid substrate simply became limiting and ultimately resulted in the sharp decline in myofibrillar protein synthesis. The current data shed some light on this paradoxical finding by demonstrating that resistance exercise volume is important, to some extent, in maximizing the anabolic response to an exercise stimulus. However, the ‘dose’ of exercise needed to confer a lasting and meaningful effect on MPS is less than commonly utilized in many investigations (i.e. 6–10 sets × 10–12 repetitions), which have been shown to have latent stimulatory effects for up to 48 h post-exercise (Phillips et al. 1997). Furthermore, these data illustrate that post-exercise feeding is important in sustaining the myofibrillar protein synthetic response.
+
+We have previously demonstrated that unilateral resistance training alters the fed-state response of mixed muscle protein synthesis such that a high load and a high volume bout of exercise, 6 sets × 8–10 repetitions at 80% 1RM, is incapable of sustaining the response at 28 h post-exercise following resistance training (Tang et al. 2008). The utilization of resistance-trained subjects in the current study and the fact that a relatively low dose of exercise volume can sustain the fed-state response for at least 24 h post-exercise would seem at odds with our previous findings (Tang et al. 2008). This discrepancy may be related to the notion that, in response to an isolated bout of resistance exercise, quantitatively important changes occurring in the myofibrillar protein fraction can become non-detectable if exclusively examining the mixed protein synthetic response in trained subjects (Kim et al. 2005) and this thesis is further supported by data demonstrating that training preferentially stimulates the synthesis of proteins specific to the exercise stimulus (Wilkinson et al. 2008).
+
+Evidence suggests that members of the MAPK signalling cascades (i.e. p38, Erk1/2, p90RSK1) are phosphorylated in close temporal proximity to the resistance exercise bout (Williamson et al. 2003; Creer et al. 2005; Drummond et al. 2008; Tannerstedt et al. 2009). The latent increase in phosphorylation of p90RSK1 at 24 h and the fact that one of its targets, rpS6, was also phosphorylated to a significant extent at 29 h post-exercise, suggests that the MAPK signalling cascade may be involved in facilitating translation initiation at further time points (i.e. ≥24 h) following resistance exercise. Furthermore, the current data suggest that there is redundancy in the signalling pathways to activate rpS6 because p70S6K was also phosphorylated the following day after acute resistance exercise (Fig. 4C). Therefore, it could be that MAPK and mTOR–p70S6K signalling cascades may converge to promote the prolonged phosphorylated (i.e. activated) state of rpS6; however, more studies are warranted to confirm this thesis. It is worth noting that the extent of p70S6K phosphorylation has been shown to be related to MPS (Kumar et al. 2008) and resistance exercise induced increases in muscle mass (Terzis et al. 2008; Mayhew et al. 2009). Our data further illustrate that the extent of p70S6K phosphorylation can serve as a reasonable proxy marker for the anabolic response to resistance exercise (Fig. 5).
+
+Translation initiation appears to be the primary locus of control for muscle protein synthesis (Kubica et al. 2005). During translation initiation, eIF2 recruits the initiator methionyl-tRNA to the 40S ribosome in a GTP-dependent manner. eIF2B catalyses the exchange of GDP for GTP on eIF2 and thus renews the tRNA binding capacity (Proud, 2005). We have recently demonstrated that reduced phosphorylation of eIF2B’s catalytic ε subunit occurs at 6 h following resistance exercise in the fasted and fed states (Glover et al. 2008a). Indeed, others have demonstrated that resistance exercise had little effect on eIF2Bε dephosphorylation within close temporal proximity (i.e. ≤1 h) to the resistance exercise bout (Camera et al. 2010). However, the current data demonstrate that resistance exercise induced a significant 37% dephoshorylation of eIF2Bε at 5 h following 3SET, but not 1SET, of resistance exercise (Fig. 4A). Therefore, it appears that resistance
+
+![Bar graph showing Myofibrillar protein fractional synthesis rate (FSR) at rest and 5 h after protein ingestion after one set (1SET) or 3 sets (3SET) of resistance exercise and 24–29 h later. Inset, volume load (kg times repetitions) performed during 1SET and 3SET of resistance exercise. *Significantly different from rest (P < 0.05). †Significantly different from 29 h (P < 0.05). ‡Significantly different from 1SET (P < 0.05).](page_101_1042_627_410.png)
+
+Figure 3. Myofibrillar protein fractional synthesis rate (FSR) at rest and 5 h after protein ingestion after one set (1SET) or 3 sets (3SET) of resistance exercise and 24–29 h later
+Inset, volume load (kg times repetitions) performed during 1SET and 3SET of resistance exercise. *Significantly different from rest (P < 0.05). †Significantly different from 29 h (P < 0.05). ‡Significantly different from 1SET (P < 0.05).
+Figure 4. Phosphorylation of eIF2BεSer539 (A), p90RSKThr573 (B), p70S6KThr389 (C) and rpS6Ser240/244 (D) following one set (1SET) or 3 sets (3SET) of resistance exercise in the fasted or fed states
+Data are expressed as fold-change from rest. *Significantly different from Fast (P < 0.05). †Significantly different from 1 set (1SET) within that time point (P < 0.05).
+
+exercise increases eIF2Bε activity at later time points in post-exercise recovery and that volume may be important in achieving full activation. Indeed, it is important to recognize that we have limited knowledge on the necessity of activating particular anabolic signalling molecules (i.e. eIF2Bε or p90RSK) to stimulate muscle protein synthesis. It has been established that the phosphorylated states of anabolic signalling molecules are not related to the anabolic response (Greenhaff et al. 2008; Moore et al. 2009a) and thus certain anabolic signalling molecules may only be permissive but not stimulatory for muscle protein synthesis.
+
+Examination of vastus lateralis surface EMG amplitudes during 1SET and 3SET reveals that the large higher-threshold motor units were activated and their associated type II fibres were recruited in both conditions. Moreover, motor unit drop-out of these highly fatigable fibres appeared to occur as the exercise set was nearing 100% completion. The recruitment of type II fibres is important in eliciting maximal adaptations to resistance exercise, as these fibres are highly responsive, and more so than type I fibres, to resistance training insofar as muscle hypertrophy is concerned (McCall et al. 1996; West et al. 2010). It has been reported that phosphorylation of p70S6K on Thr421/Ser424 (Koopman et al. 2006; Tannerstedt et al. 2009) and on Ser389 (Tannerstedt et al. 2009) is greater in type II fibres. This notion, combined with our data illustrating similar activation of p70S6K at 5 h post-exercise, provides further support that 1SET is capable of achieving maximal muscle activation as compared to 3SET (Fig. 2A). However, the third set of
+
+Figure 5. Relationship between myofibrillar protein synthesis and the extent of phosphorylation of p70S6KThr389
+There was a significant (P = 0.033) correlation between the degree of phosphorylation (fold-change from basal) and myofibrillar protein synthesis (FSR, % h⁻¹).
+3SET was significantly different from 1SET between 30 and 60% completion of the exercise, which suggests significant muscle fatigue was occurring, most likely in type II fibres (Sale, 1987).
+
+Our current methods do not allow us to discriminate between fibre type-specific MPS; however, it would appear that the duration of muscle activation may be important in sustaining the myofibrillar protein synthetic response. Whether 1SET or 3SET induces a similar stimulation of MPS in type II fibres and the subsequent increase in type II fibre cross-sectional area following resistance training remains to be seen. Lastly, mean power frequency (MPF) showed a shift in the frequency, regardless of condition, following the exercise sets (Fig. 2B). It has been demonstrated that this frequency shift is associated with fatigue and can be attributed to changes in muscle fibre conduction velocity which result from decreases in pH and metabolite accumulation with muscle fatigue (Brody et al. 1991).
+
+From a practical perspective it is important to recognize that scientific studies are performed under highly controlled conditions and help to decipher specific mechanistic responses to different exercise perturbations. In the current study we utilized loading parameters that were of equal relative intensities, whereas repetitions and load would be adjusted (i.e. progression) during repeated bouts of exercise (i.e. training) and ultimately result in increased volume load being applied during subsequent bouts. Clearly a training study is required to delineate the superiority of 1SET or 3SET for inducing hypertrophy. In summary, our data demonstrate that fundamental mechanistic differences exist between 1SET and 3SET that may support the greater accretion of myofibrillar proteins following 3SET of resistance exercise. The dose of resistance exercise that results in a lasting stimulation of MPS is less than is commonly utilized and that has been reported (Phillips et al. 1997; Phillips et al. 1999). Even 1SET of resistance exercise (~14 contractions) at a moderate intensity elicited a significant rise in MPS; however, sustaining the exercise-induced rise in MPS required a greater contraction volume.
+
+References
+
+Babault N, Pousson M, Ballay Y & Van Hoecke J (2001). Activation of human quadriceps femoris during isometric, concentric, and eccentric contractions. J Appl Physiol 91, 2628–2634.
+Brody LR, Pollock MT, Roy SH, De Luca CJ & Celli B (1991). pH-induced effects on median frequency and conduction velocity of the myoelectric signal. J Appl Physiol 71, 1878–1885.
+Burd NA, Tang JE, Moore DR & Phillips SM (2009). Exercise training and protein metabolism: influences of contraction, protein intake, and sex-based differences. J Appl Physiol 106, 1692–1701.
+Camera DM, Edge J, Short MJ, Hawley JA & Coffey VG (2010). Early time-course of Akt phosphorylation following endurance and resistance exercise. Med Sci Sports Exerc (in press).
+Carpinelli RN (2002). Berger in retrospect: effect of varied weight training programmes on strength. Br J Sports Med 36, 319–324.
+Creer A, Gallagher P, Slivka D, Jemiolo B, Fink W & Trappe S (2005). Influence of muscle glycogen availability on ERK1/2 and Akt signaling after resistance exercise in human skeletal muscle. J Appl Physiol 99, 950–956.
+Drummond MJ, Dreyer HC, Pennings B, Fry CS, Dhanani S, Dillon EL, Sheffield-Moore M, Volpi E & Rasmussen BB (2008). Skeletal muscle protein anabolic response to resistance exercise and essential amino acids is delayed with aging. J Appl Physiol 104, 1452–1461.
+Drummond MJ, Fry CS, Glynn EL, Dreyer HC, Dhanani S, Timmerman KL, Volpi E & Rasmussen BB (2009). Rapamycin administration in humans blocks the contraction-induced increase in skeletal muscle protein synthesis. J Physiol 587, 1535–1546.
+Glover EI, Oates BR, Tang JE, Moore DR, Tarnopolsky MA & Phillips SM (2008a). Resistance exercise decreases eIF2Be phosphorylation and potentiates the feeding-induced stimulation of p70S6K1 and rpS6 in young men. Am J Physiol Regul Integr Comp Physiol 295, R604–610.
+Glover EI, Phillips SM, Oates BR, Tang JE, Tarnopolsky MA, Selby A, Smith K & Rennie MJ (2008b). Immobilization induces anabolic resistance in human myofibrillar protein synthesis with low and high dose amino acid infusion. J Physiol 586, 6049–6061.
+Greenhaff PL, Karagounis LG, Peirce N, Simpson EJ, Hazell M, Layfield R, Wackerhage H, Smith K, Atherton P, Selby A & Rennie MJ (2008). Disassociation between the effects of amino acids and insulin on signaling, ubiquitin ligases, and protein turnover in human muscle. Am J Physiol Endocrinol Metab 295, E595–604.
+Hartman JW, Tang JE, Wilkinson SB, Tarnopolsky MA, Lawrence RL, Fullerton AV & Phillips SM (2007). Consumption of fat-free fluid milk after resistance exercise promotes greater lean mass accretion than does consumption of soy or carbohydrate in young, novice, male weightlifters. Am J Clin Nutr 86, 373–381.
+Heys SD, McNurlan MA, Park KG, Milne E & Garlick PJ (1990). Baseline measurements for stable isotope studies: an alternative to biopsy. Biomed Environ Mass Spectrometry 19, 176–178.
+Hubal MJ, Gordish-Dressman H, Thompson PD, Price TB, Hoffman EP, Angelopoulos TJ, Gordon PM, Moyna NM, Pescatello LS, Visich PS, Zoeller RF, Seip RL & Clarkson PM (2005). Variability in muscle size and strength gain after unilateral resistance training. Med Sci Sports Exerc 37, 964–972.
+Karlsson HK, Nilsson PA, Nilsson J, Chibalin AV, Zierath JR & Blomstrand E (2004). Branched-chain amino acids increase p70S6k phosphorylation in human skeletal muscle after resistance exercise. Am J Physiol Endocrinol Metab 287, E1–7.
+Kim PL, Staron RS & Phillips SM (2005). Fasted-state skeletal muscle protein synthesis after resistance exercise is altered with training. J Physiol 568, 283–290.
+Koopman R, Zorenc AH, Gransier RJ, Cameron-Smith D & van Loon LJ (2006). Increase in S6K1 phosphorylation in human skeletal muscle following resistance exercise occurs mainly in type II muscle fibers. Am J Physiol Endocrinol Metab 290, E1245–1252.
+Krieger JW (2009). Single versus multiple sets of resistance exercise: a meta-regression. J Strength Cond Res 23, 1890–1901.
+Krieger JW (2010). Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis. J Strength Cond Res 24, 1150–1159.
+Kubica N, Bolster DR, Farrell PA, Kimball SR & Jefferson LS (2005). Resistance exercise increases muscle protein synthesis and translation of eukaryotic initiation factor 2Bε mRNA in a mammalian target of rapamycin-dependent manner. J Biol Chem 280, 7570–7580.
+Kumar V, Selby A, Rankin D, Patel R, Atherton P, Hildebrandt W, Williams J, Smith K, Seynnes O, Hiscock N & Rennie MJ (2008). Age-related differences in dose response of muscle protein synthesis to resistance exercise in young and old men. J Physiol 587, 211–217.
+Marx JO, Ratamess NA, Nindl BC, Gotshalk LA, Volek JS, Dohi K, Bush JA, Gomez AL, Mazzetti SA, Fleck SJ, Hakkinen K, Newton RU & Kraemer WJ (2001). Low-volume circuit versus high-volume periodized resistance training in women. Med Sci Sports Exerc 33, 635–643.
+Mayhew DL, Kim JS, Cross JM, Ferrando AA & Bamman MM (2009). Translational signaling responses preceding resistance training-mediated myofiber hypertrophy in young and old humans. J Appl Physiol 107, 1655–1662.
+McCall GE, Byrnes WC, Dickinson A, Pattany PM & Fleck SJ (1996). Muscle fiber hypertrophy, hyperplasia, and capillary density in college men after resistance training. J Appl Physiol 81, 2004–2012.
+Moore DR, Phillips SM, Babraj JA, Smith K & Rennie MJ (2005). Myofibrillar and collagen protein synthesis in human skeletal muscle in young men after maximal shortening and lengthening contractions. Am J Physiol Endocrinol Metab 288, E1153–1159.
+Moore DR, Robinson MJ, Fry JL, Tang JE, Glover EI, Wilkinson SB, Prior T, Tarnopolsky MA & Phillips SM (2009a). Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men. Am J Clin Nutr 89, 161–168.
+Moore DR, Tang JE, Burd NA, Rerecich T, Tarnopolsky MA & Phillips SM (2009b). Differential stimulation of myofibrillar and sarcoplasmic protein synthesis with protein ingestion at rest and after resistance exercise. J Physiol 587, 897–904.
+Nakshabendi IM, Obeidat W, Russell RI, Downie S, Smith K & Rennie MJ (1995). Gut mucosal protein synthesis measured using intravenous and intragastric delivery of stable tracer amino acids. Am J Physiol Endocrinol Metab 269, E996–999.
+Phillips SM, Parise G, Roy BD, Tipton KD, Wolfe RR & Tarnopolsky MA (2002). Resistance-training-induced adaptations in skeletal muscle protein turnover in the fed state. Can J Physiol Pharmacol 80, 1045–1053.
+Phillips SM, Tang JE & Moore DR (2009). The role of milk- and soy-based protein in support of muscle protein synthesis and muscle protein accretion in young and elderly persons. J Am Coll Nutr 28, 343–354.
+Phillips SM, Tipton KD, Aarsland A, Wolf SE & Wolfe RR (1997). Mixed muscle protein synthesis and breakdown after resistance exercise in humans. Am J Physiol Endocrinol Metab 273, E99–107.
+Phillips SM, Tipton KD, Ferrando AA & Wolfe RR (1999). Resistance training reduces the acute exercise-induced increase in muscle protein turnover. Am J Physiol Endocrinol Metab 276, E118–124.
+Proud CG (2005). eIF2 and the control of cell physiology. Semin Cell Dev Biol 16, 3–12.
+Ratamess NA, Alvar BA, Evetoch TK, Housh TJ, Kibler WB, Kraemer WJ & Triplett NT (2009). American College of Sports Medicine position stand. Progression models in resistance training for healthy adults. Med Sci Sports Exerc 41, 687–708.
+Sale DG (1987). Influence of exercise and training on motor unit activation. Exerc Sport Sci Rev 15, 95–151.
+Sale DG (1988). Neural adaptation to resistance training. Med Sci Sports Exerc 20, S135–145.
+Tang JE, Perco JG, Moore DR, Wilkinson SB & Phillips SM (2008). Resistance training alters the response of fed state mixed muscle protein synthesis in young men. Am J Physiol Regul Integr Comp Physiol 294, R172–178.
+Tannerstedt J, Apro W & Blomstrand E (2009). Maximal lengthening contractions induce different signaling responses in the type I and type II fibers of human skeletal muscle. J Appl Physiol 106, 1412–1418.
+Terzis G, Georgiadis G, Stratakos G, Vogiatzis I, Kavouras S, Manta P, Mascher H & Blomstrand E (2008). Resistance exercise-induced increase in muscle mass correlates with p70S6 kinase phosphorylation in human subjects. Eur J Appl Physiol 102, 145–152.
+West DW, Burd NA, Tang JE, Moore DR, Staples AW, Holwerda AM, Baker SK & Phillips SM (2010). Elevations in ostensibly anabolic hormones with resistance exercise enhance neither training-induced muscle hypertrophy nor strength of the elbow flexors. J Appl Physiol 108, 60–67.
+West DW, Kujbida GW, Moore DR, Atherton P, Burd NA, Padzik JP, De Lisio M, Tang JE, Parise G, Rennie MJ, Baker SK & Phillips SM (2009). Resistance exercise-induced increases in putative anabolic hormones do not enhance muscle protein synthesis or intracellular signalling in young men. J Physiol 587, 5239–5247.
+Wilkinson SB, Phillips SM, Atherton PJ, Patel R, Yarasheski KE, Tarnopolsky MA & Rennie MJ (2008). Differential effects of resistance and endurance exercise in the fed state on signalling molecule phosphorylation and protein synthesis in human muscle. J Physiol 586, 3701–3717.
+Williamson D, Gallagher P, Harber M, Hollon C & Trappe S (2003). Mitogen-activated protein kinase (MAPK) pathway activation: effects of age and acute exercise on human skeletal muscle. J Physiol 547, 977–987.
+Winett RA, Williams DM & Davy BM (2009). Initiating and maintaining resistance training in older adults: a social cognitive theory-based approach. Br J Sports Med 43, 114–119.
+Author contributions
+
+N.A.B. and S.M.P. contributed to the conception and the design of the experiment. N.A.B., A.M.H., K.C.S., N.E.C., A.W.S., J.C., D.W.D.W., J.R.P. and S.M.P. contributed to collection, analysis, and interpretation of data. N.A.B., D.W.D.W., A.M.H., K.C.S., J.R.P., A.W.S., S.K.B. and S.M.P. contributed to drafting or revising the content of the manuscript. This study was conducted and analysed at McMaster University. All authors approved the final version of the submitted manuscript.
+
+Acknowledgements
+
+The authors wish to thank Todd Prior and Tracy Rerecich for expert analytical assistance. We also thank Richard Andrews for his help in data collection and the participants for their time and effort. Lastly, we wish to thank Colin De France of Inbalance Nutrition for his generous gift of whey protein isolate used in the study. This research was supported by a research grant from Natural Sciences and Engineering Research Council of Canada to S.M.P.

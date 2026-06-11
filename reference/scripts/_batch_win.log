@@ -1,0 +1,4 @@
+  File "C:\Users\micha\work\recov\reference\scripts\_batch_win.ps1", line 1
+    $ErrorActionPreference = 'Continue'
+    ^
+SyntaxError: invalid syntax
