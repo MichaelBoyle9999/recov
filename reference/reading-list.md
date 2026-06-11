@@ -301,6 +301,57 @@ before formal citing.
 
 ---
 
+## D. Round-2 modeling additions (added 2026-06-11, after the new-papers review)
+
+Surfaced during the second-pass review of `mathematical-model.md` against the 12 new
+papers. These target three specific gaps the review sharpened. Three are **pulled** (open
+access, auto-fetched into `pdfs/<slug>/`); one is **paywalled** and listed for manual
+retrieval. Citations spot-verified via PubMed/Crossref; mark **[verify]** before formal citing.
+
+### D1 — Global / systemic (cross-muscle) fatigue — the quantitative side of gap #9
+Sousa-2024 and Zając-2015 (Bucket C3) are qualitative; these two add the missing *magnitude*
+and *time course* for a cross-muscle systemic term `S(t)`.
+
+- **Behm DG, Alizadeh S, Anvar SH, Hanlon C, Ramsay E, Mahmoud MMI, Witten J, Fisher JP,
+  Prieske O, Chaabene H, Granacher U, Steele J (2021).** *Non-local Muscle Fatigue Effects on
+  Muscle Strength, Power, and Endurance in Healthy Individuals: A Systematic Review with
+  Meta-analysis.* Sports Medicine 51:1893–1907. DOI 10.1007/s40279-021-01456-3.
+  — **✓ pulled** (open SportRxiv preprint, server/74; published version paywalled).
+  *Why:* The only meta-analytic estimate of how much fatiguing one muscle group impairs a
+  *non-exercised* one. Headline = **trivial average effect (≈ −0.02) but substantial
+  heterogeneity** — i.e. acute cross-muscle fatigue is weak on average, so an `S(t)` acute
+  crossover term should probably be small/optional, with systemic cost coming more from shared
+  *recovery* demand (Sousa) than acute crossover. Directly bears on §1.11 #9.
+- **Zahiri A, Goudini R, Alizadeh S, Daneshjoo A, Mahmoud MMI, Konrad A, Granacher U, Behm DG
+  (2024).** *The Duration of Non-Local Muscle Fatigue Effects.* J Sports Sci Med 23(2):425–435.
+  DOI 10.52082/jssm.2024.425. PMID 38841632 (PMC11149065). — **✓ pulled** (open access).
+  *Why:* Time course of the non-local effect (tested 1/3/5 min post) — the kinetics half of the
+  systemic question; helps set whether any acute `S` decays within a session.
+
+### D2 — `d_set` load asymmetry (collapse #4 / fork #10)
+The review found stimulus is load-robust (Schoenfeld-2017) but *fatigue/damage is not*
+(Pareja-Blanco-2019). This pins the asymmetry with an isovolumic comparison.
+
+- **Winchester LJ, Morris CE, Allen P, Wiczynski TL, Arnett SW, Lyons TS (2022).** *Effects of
+  Varying Load Intensity on Skeletal Muscle Damage Between Two Isovolumic Resistance Exercise
+  Bouts.* Int J Exerc Sci 15(4):1212–1221. DOI 10.70252/HXMP5676. PMID 36620189 (PMC9799231).
+  — **✓ pulled** (open access).
+  *Why:* At **equated volume**, 85% 1RM produced more damage (myoglobin) than 67% 1RM despite
+  less total weight lifted. Evidence that `d_set` must carry a load/rep term even though `s_set`
+  does not — undercuts the `d_set ≈ s_set` collapse (§1.7 #4) and feeds the L2 modeling (§1.6).
+
+### D3 — Alternative adaptation backbone (the "right shape" fork, §1.11 #7) — NOT yet retrieved
+- **Philippe AG, Borrani F, Sanchez AMJ, Py G, Candau R (2019).** *Modelling performance and
+  skeletal muscle adaptations with exponential growth functions during resistance training.* J
+  Sports Sci 37(3):254–261. DOI 10.1080/02640414.2018.1494909. PMID 29972090. — **🔴 PAYWALLED
+  (Taylor & Francis / Atypon); no open PMC/HAL/preprint located.** *Needs manual retrieval.*
+  *Why:* The canonical **exponential-growth** adaptation form the model doc names as the main
+  alternative to the two-component IR backbone (reported to fit RT data better than impulse-
+  response in rodents). The single most load-bearing missing paper for the foundational
+  "what is the right mathematical shape" question — worth chasing despite the paywall.
+
+---
+
 ## Raw empirical data / datasets (cross-cutting)
 
 - **Pelland 2024 / Remmert 2024 supplements & code** — look for OSF.io links inside the
@@ -317,8 +368,8 @@ before formal citing.
 ## Bookkeeping — remaining retrieval list (split by access)
 
 Only items **not yet retrieved**. Full titles included for searching. Retrieved papers are in
-Bucket A at the top. **All open-access items are collected and all books are declined** — the only
-thing left to chase is one paywalled paper (Hellard 2006).
+Bucket A at the top. **All open-access items are collected and all books are declined** — the
+papers left to chase are two paywalled ones (Hellard 2006; Philippe 2019).
 
 ### 🟢 Open access
 - *(none remaining — all collected ✓)*
@@ -327,6 +378,10 @@ thing left to chase is one paywalled paper (Hellard 2006).
 - **Hellard P, Avalos M, Lacoste L, Barale F, Chatard JC, Millet GP (2006).** "Assessing the
   limitations of the Banister model in monitoring training." *International Journal of Sports
   Medicine* 27(1):62–68. DOI 10.1055/s-2005-837507
+- **Philippe AG, Borrani F, Sanchez AMJ, Py G, Candau R (2019).** "Modelling performance and
+  skeletal muscle adaptations with exponential growth functions during resistance training."
+  *Journal of Sports Sciences* 37(3):254–261. DOI 10.1080/02640414.2018.1494909. PMID 29972090.
+  (Exponential-growth backbone alternative — see §D3. Taylor & Francis; no open copy found.)
 
 ### 🚫 Declining to collect (deliberately not pursuing)
 - **Banister EW, Calvert TW, Savage MV, Bach T (1975).** "A systems model of training for athletic
