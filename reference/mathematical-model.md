@@ -279,7 +279,7 @@ bites.
 | `s_set` (stimulus impulse) | growth-relevant dose of one set | mostly **= 1 fractional set** (volume is counted in *sets*, per Baz-Valle-2021), modulated by proximity to failure | = 1 (a set is a set) |
 | effective-reps / RIR modifier | sets far from failure give less stimulus | `RIR_i`; stimulatory reps ≈ last ~5 before failure | assume fixed RIR prior |
 | load/rep modifier | hypertrophy is load-robust across ~30–80% 1RM if near failure | `L_i, r_i` (`Schoenfeld-2017_low-vs-high-load`) | none needed — load matters little for hypertrophy volume if taken near failure |
-| `d_set` (damage impulse) | fatigue/EIMD cost of one set | eccentric bias, novelty, load, range | = `s_set` (cost ∝ stimulus) as crudest collapse |
+| `d_set` (damage impulse) | fatigue/EIMD cost of one set | eccentric bias, novelty, range; **load ≈ neutral at matched volume** (`Winchester-2022`) | = `s_set` (cost ∝ stimulus) as crudest collapse — defensible for the slow layer |
 
 **Important simplification supported by the literature:** for *hypertrophy*, the
 primary volume currency is the **(fractional) set**, not volume-load
@@ -316,6 +316,12 @@ first:
 
 4. **Damage ≈ stimulus, to first order.** `d_set ≈ s_set` unless we add eccentric/novelty
    modifiers from Howatson/Paulsen. Lets Axis A be driven by the same impulse as Axis B.
+   *Empirically reinforced for the slow layer (2026-06 review):* `Winchester-2022` found
+   **structural damage (myoglobin) load-insensitive at matched volume** (85% ≈ 67% 1RM,
+   between-condition p≈1.0), i.e. EIMD tracks *volume*, not load. The load/rep fatigue effect of
+   `Pareja-Blanco-2019` (lighter+more-reps → more fatigue) **dissociates** from structural damage
+   and belongs to the **fast acute neuromuscular layer**, not the days-scale `d_set`. So keep
+   `d_set ≈ volume` on the slow layer and push any load/rep term into the acute kernel (§1.10 #1).
    *(§1.4, §1.6)*
 
 5. **EMG folds away.** Drop EMG entirely in v1; `a_{e,m} ∈ {0, 0.5, 1}`. Re-introduce
@@ -476,7 +482,7 @@ literature-backed, cheapest form.**
 | `a_{e,m}` direct=1/indirect=0.5 | L1 | both | mover-map + Remmert/Pelland | baseline locked |
 | EMG perturbation to `a_{e,m}` | L1 | both | EMG cluster (ordinal only) | deferred (Vigotsky caveat) |
 | `s_set` (≈1 set), RIR modifier | L2 | B | Baz-Valle, Schoenfeld load study | baseline locked |
-| `d_set` (damage), eccentric/novelty mod | L2 | A | Howatson, Paulsen | optional modifier |
+| `d_set` (damage), eccentric/novelty mod; **load-neutral at matched volume** | L2 | A | Howatson, Paulsen, Winchester-2022 | optional modifier; `d_set ≈ volume` on slow layer |
 | `τ1` fitness time const (~27–45 d) | L3 | B | Clarke | maybe unused (see collapse #3) |
 | `τ2` fatigue time const (**~1–5 d**, retuned) | L3 | A | Clarke + Paulsen/Howatson | needs fitting |
 | `k1, k2` gains; `k2(t)` non-stationary | L3 | A/B | Clarke, Busso | open (Busso optional) |
@@ -507,16 +513,38 @@ Tracked so they aren't lost. Two are **in scope and need building**; the rest ar
    velocity-loss, 0/6/24/48 h), `Jukic-2023` (velocity loss as in-set fatigue marker),
    `Refalo-2023_neuromuscular-fatigue` (acute fatigue vs RIR). Architecturally this is
    "add another EMA with a fast `τ_acute`," same machinery as §1.8.
+   *Refinement (2026-06 review): this layer is LOCAL (same-muscle), not cross-muscle.* `Zahiri-2024`
+   times the **cross-muscle** acute effect at τ≈1–3 min, fully recovered by 5 min — it lives inside
+   normal inter-exercise rest and is negligible at the set/exercise granularity we rank on. So the
+   acute kernel should carry the same-muscle set-to-set decrement and the load/rep fatigue term
+   (the `Pareja-Blanco`/`Winchester` dissociation, §1.7 #4) — but **not** a cross-channel coupling.
+   Bonus: τ_acute (~minutes) ≪ τ_fast (days) cleanly, so the double-count worry (§1.11 #8) mostly
+   dissolves.
 2. **Global / systemic per-exercise fatigue (WANTED — data is the bottleneck).** There is a
    **session-level productivity cap that spans muscles** (a hard leg session degrades an
    unrelated push). The model is currently 17 *independent* per-muscle channels; this adds a
    single shared "systemic fatigue" state `S(t)` that every set feeds (weighted by the
    exercise's systemic cost) and that discounts *all* exercises' scores while elevated.
-   Crucially, systemic cost **is** allowed to be exercise-specific (unlike stimulus) — a
-   squat costs more than a leg curl. Sources now in repo: `Zając-2015` (central vs peripheral
-   fatigue), `Sousa-2024` (grades exercises by recovery cost: multi-joint / lower-body /
-   eccentric cost more). **Gap:** neither gives clean quantitative `S`-kinetics or a per-
-   exercise cost table — better data here would be very valuable.
+   Sources now in repo: `Zając-2015` (central vs peripheral fatigue), `Sousa-2024` (grades
+   exercises by recovery cost: multi-joint / lower-body / eccentric cost more).
+   *Reframed (2026-06 review) — split `S` into two timescales, because the non-local-fatigue
+   evidence (`Behm-2021` meta, `Zahiri-2024`) reshapes it:*
+   - **Acute cross-muscle `S` ≈ negligible, and is NOT a force effect.** Crossover to a non-exercised
+     muscle is *trivial* for strength (+0.11) and power (−0.01); it is only moderate for
+     **endurance / reps-to-failure** (−0.54), which *is* the currency we care about (a working set is
+     a reps-to-failure task). But it is (a) **not moderated by fatigue severity, homologous/heterologous,
+     or upper/lower body** — so it can't be a clean exercise-cost-scaled term — (b) attributed to
+     **perceived effort**, not a force deficit, and (c) gone within ~5 min (`Zahiri-2024`). ⇒ model it,
+     if at all, as a **small, flat discount on *achievable volume*** (sets land at target RIR sooner),
+     **not** as a stimulus-quality multiplier or a max-force penalty, and **not** as a cross-channel
+     force coupling.
+   - **Between-session `S` is the real #9, and is still unquantified.** "Hard leg day degrades tomorrow's
+     push" is a *recovery-resource* competition over days (`Sousa-2024`), a different mechanism from
+     acute crossover — the NLMF papers mostly *rule out* acute crossover as its cause. Here the
+     exercise-specific cost ordering (squat ≫ leg curl) *does* plausibly apply, but neither source gives
+     clean `S`-kinetics or a per-exercise cost table.
+   **Gap:** a quantitative between-session `S(t)` and its per-exercise cost table — better data here
+   would be very valuable.
 3. **RIR modifier shape for L2 (refine).** The per-set stimulus modifier is concave and
    plateaus by ~1–2 RIR (`Refalo-2023` meta, small effect ES≈0.15–0.21) — replace the
    placeholder "mild RIR multiplier" with this published shape.
@@ -581,15 +609,19 @@ load-bearing they are. Cross-refs point to where each is developed.
    or **Kontro's multi-channel 3-D IR**? `Imbach-2022` warns IR is poorly identifiable — mitigated
    by our population-level stance, but the structural choice is open. *(→ §1.10 backbone risk)*
 
-8. **Acute layer `τ_acute` + timescale separation.** Calibrate the minutes–hours kernel from
-   `Pareja-Blanco-2019` / `Jukic-2023` such that it has effectively decayed before the days-scale
-   damage term acts — otherwise acute and `D_m` **double-count**. How separated must `τ_acute ≪
-   τ_fast` be? *(→ §1.10 #1)*
+8. **Acute layer `τ_acute` + timescale separation.** *Largely resolved (2026-06 review).* `Zahiri-2024`
+   times the cross-muscle acute effect at τ≈1–3 min (gone by 5 min) — minutes, not the "minutes–hours"
+   originally assumed — so `τ_acute ≪ τ_fast` (days) holds with room to spare and the double-count worry
+   mostly dissolves. Remaining work is calibration of the **same-muscle** set-to-set decrement + load/rep
+   fatigue term from `Pareja-Blanco-2019` / `Jukic-2023`, not the cross-muscle coupling. *(→ §1.10 #1)*
 
-9. **Systemic fatigue `S(t)`: functional form + per-exercise cost.** A single shared cross-muscle
-   state every set feeds (exercise-specific cost *allowed* here). No clean kinetics or cost table
-   exists yet (`Zając-2015`, `Sousa-2024` are qualitative) — likely semi-empirical at first. How
-   does `S` discount the per-muscle scores — multiplicatively, as a budget, as a cap? *(→ §1.10 #2)*
+9. **Systemic fatigue `S(t)`: functional form + per-exercise cost.** *Reframed (2026-06 review):* split
+   into (i) an **acute cross-muscle** term that the NLMF evidence says is ≈0 for force/power and at most
+   a small, flat, **perceived-effort discount on achievable volume** (`Behm-2021`; not severity- or
+   muscle-proximity-scaled, gone in ~5 min) — probably drop it in v1; and (ii) a **between-session
+   recovery-resource** term (the real cap; `Sousa-2024`) where exercise-specific cost *does* apply but
+   no clean kinetics or cost table exists yet. Open: functional form of (ii) — multiplicative discount,
+   budget, or cap — and whether it acts on *volume* or *score*. *(→ §1.10 #2)*
 
 10. **Effort/RIR modifier shape.** Adopt the `Refalo-2023` concave-plateau (small effect, flattens
     by ~1–2 RIR) for L2 — but how steep, and how does it interact with `d_set`? *(→ §1.6, §1.10 #3)*
@@ -599,6 +631,149 @@ load-bearing they are. Cross-refs point to where each is developed.
 
 12. **RP-12 → DB-17 mechanics.** The mapping table itself, *and* reconciling RP's **direct-set**
     landmarks with our **fractional** counting before using MEV/MAV/MRV as ceilings. *(→ §1.5)*
+
+---
+
+# Section 2 — The backbone (committed)
+
+> **In one paragraph.** Section 1 left the *objective* open and kept circling three
+> forks: fitness-fatigue state vs. dose-response slope (§1.11 #4), subtract vs. gate
+> (#2), and which adaptation form is "the" backbone (#7). All three dissolve once the
+> backbone is **named correctly**. It is not "the fitness-fatigue model." It is a
+> **Hammerstein–Wiener / linear-nonlinear (LN) cascade**: per-muscle **leaky
+> integrators** (linear convolution of the set history) feeding **static concave
+> nonlinearities**, combined **multiplicatively** across parallel channels, with one
+> shared systemic channel. Banister, Busso, Remmert/Pelland, exponential-growth and
+> sigmoid forms are all *instances* of this cascade — they differ only in the static
+> nonlinearity and the number of integrators, never in the engine. This section commits
+> to that structure and to the master formula it implies. The working statement lives in
+> `model.md`; this section is the *why*.
+
+## 2.1 The backbone is an LN cascade, not "the FF model"
+
+Every candidate spine in Section 1 starts from the **identical** operation: convolve the
+per-muscle impulse train `Σ_i a_{e_i,m}·w_i·δ(t − t_i)` with a decaying exponential —
+i.e. a **leaky integrator / EMA** with cheap real-time recursion (§1.3). What differs is
+only what happens *after* that convolution:
+
+| Apparent "backbone" | = same leaky integrator(s), then… |
+|---|---|
+| Banister IR (`Clarke-2013`) | **two** integrators, differenced, identity output |
+| Busso variable-gain (`Busso-2003`) | one gain promoted to a **third** integrator → bilinear fatigue (§1.8) |
+| Dose-response slope (`Remmert-2024`, `Pelland-2024`) | **one** integrator through a concave `f`, then differentiated |
+| Exponential-growth (`Philippe-2019`, *missing*) | one integrator through a different concave `f` |
+| Sigmoid stimulus (`Herold-2021`) | one integrator through a sigmoid `f` |
+
+So the invariant object is **linear leaky-integrator dynamics → static output
+nonlinearity**, with parallel channels. That cascade *is* the backbone. "FF state vs.
+dose-response slope" (§1.11 #4) is therefore a **false fork**: `G_m` and `f'(V_eff)` read
+the *same* convolved state through *different* output functions. We read it through the
+**concave dose-response slope**, because that is the lens our hypertrophy data actually
+constrains (Remmert/Pelland); the identity lens (`G_m`) is one the data is silent on.
+
+## 2.2 Why concavity is the spine, not an off-by-default knob (Ceddia)
+
+§1.8 filed concavity/negativity as opt-in refinements. `Ceddia-2025` shows the concave
+benefit is **load-bearing**. Optimizing a *linear* Banister model degenerates to
+**bang-bang** — "train maximally or not at all"; graded, realistic behavior
+(periodization, tapering, diminishing returns) only appears once a **saturating concave
+benefit** is in the model. For a *ranking* engine the same fact bites differently: a
+linear marginal value never falls, so it can **never de-prioritize a just-hammered
+muscle** — superposition (§1.8) makes each set history-independent. The concave `f` is
+the entire mechanism by which `f'` decays as volume accumulates, i.e. by which
+"underworked calves outrank fresh-but-saturated biceps" (§1.0). **Collapse #1 ("marginal
+value ≡ dose-response slope") is therefore promoted from *strongest available
+simplification* to *the definition of the backbone*.** (Ceddia also supplies a clean
+bound worth keeping — fatigue cannot exceed current performance, "you cannot lose more
+than you have" — which motivates the bounded `[0,1]` factors of §2.4.)
+
+## 2.3 The missing paper (Philippe-2019) is no longer load-bearing
+
+§D3 flagged the paywalled exponential-growth paper as "the single most load-bearing
+missing paper." Under §2.1 it is **not** load-bearing for the architecture: exponential-
+growth, IR, log and root all differ *only in the shape of the static nonlinearity `f`* —
+a swappable last stage over the identical integrator engine. Which `f` fits RT
+hypertrophy best is a later curve-fit that changes **no** state plumbing, recursion, or
+readout. `Imbach-2022` corroborates empirically: across forty years the FF variants
+"remain close in predictive performance while heterogeneous in complexity" — the
+*structure* is stable, the exact `f` is in the noise. **We go forward without Philippe;
+`f` is a tunable, evidence-swappable component.**
+
+## 2.4 Combine multiplicatively (gate), not subtractively — and normalization falls out
+
+§1.8/§1.11 #2 tentatively picked subtractive. **Section 2 commits to a multiplicative
+gate** as the primary, always-on combination, for three reasons:
+
+1. **Normalization for free (resolves #3).** Each channel readout is bounded to `[0,1]`;
+   a product of `[0,1]` factors is automatically in `[0,1]`. An *absolute* efficiency
+   falls out with no clamping — "a fried day genuinely tops out at 40%" becomes a
+   property of the math, and relative/percentile is then a pure **display** transform.
+   #3 (absolute vs relative) stops being a modeling decision.
+2. **It is the Damas reading.** A multiplicative recovery gate *is* "an unrecovered
+   muscle converts less of the available stimulus" (§1.4) — productivity, not a
+   bookkeeping debit. Subtraction is the endurance/TRIMP framing Banister inherited;
+   multiplication is the MPS framing our hypertrophy sources describe.
+3. **Subtraction's one edge barely bites in ranking.** Its only unique gift is genuine
+   *negativity* (a transient counterproductive window), but a just-trained muscle already
+   scores near-zero under the product (low gate × low marginal); negativity almost never
+   moves the argmax. So the subtractive acute penalty (`λ0`, `k3`, §1.8) is **kept as the
+   opt-in layer it already was** — used only where a sub-zero "do not train yet" signal is
+   wanted for forward projection — *over* the multiplicative spine.
+
+## 2.5 Shape and size of the state vector (Kontro, Imbach)
+
+- **Kontro-2025** is the structural precedent: its thesis is that collapsing
+  heterogeneous adaptation channels into one scalar is the Banister model's original sin,
+  fixed by **parallel independent IR channels** with their own `k`/`τ`. Our 17 muscles
+  are Kontro's energy systems. Lesson imported: **keep channels independent through the
+  dynamics, combine only at the readout** (our L5), and never pre-collapse muscles into a
+  single state. Kontro also licenses one **shared** channel across the independents — the
+  right home for systemic fatigue `S(t)` (§1.10 #2): a single global leaky integrator
+  entering as one more `[0,1]` multiplicative factor.
+- **Imbach-2022** sets the discipline: two-component FF is poorly identifiable and adding
+  components reliably fails to improve prediction. This bounds the state count: **≤3 leaky
+  integrators per muscle** (slow `V_eff`, fast recovery `D`, optional medium sensitizer
+  `C`) **+ 1–2 global** (systemic `S`, acute). Every integrator beyond that is a parameter
+  we cannot identify and that Imbach predicts won't pay for itself. Our **population-fixed,
+  no-per-user-fit** stance is not merely scope — Imbach makes it the only defensible one.
+
+## 2.6 The master formula (committed)
+
+```
+η_e(t)  =  S(t) · Σ_{m ∈ e}  a_{e,m} · Recovery_m(t) · f'(V_eff,m(t))      → normalize
+```
+
+with `S`, `Recovery_m`, `V_eff,m` each a population-parameterized leaky integrator (EMA)
+over the set history, `f` the concave dose-response (log/root now; swappable — §2.3), and
+every factor bounded to `[0,1]` so the product is an honest absolute efficiency (§2.4).
+This is a Hammerstein–Wiener cascade: **linear leaky-integrator dynamics, static concave
+nonlinearities, multiplicative combination, parallel per-muscle channels + one shared
+systemic channel.** It is *exactly* the §1.7 minimal set, with three forks closed by
+naming the structure.
+
+| Open question (§1.11) | Resolution |
+|---|---|
+| #7 FF backbone choice / Philippe risk | Non-issue. Backbone is the LN cascade; `f` is a swappable output stage. |
+| #4 Axis-B encoding | Dose-response slope `f'(V_eff)` — same convolution as `G_m`, read through the data-constrained lens. |
+| #2 subtract vs gate | Multiplicative gate as spine (bounded, Damas-consistent); subtractive penalty opt-in for acute negativity only. |
+| #3 normalization | Absolute falls out of the bounded product; relative is display. |
+
+**Still open after §2** (calibration *within* the structure, not a search *for* it): the
+`τ` values, the RP-12 → DB-17 map, the systemic per-exercise cost table, and the final
+choice of `f`. The working statement — formula, every input, every parameter, the output
+— is `model.md`.
+
+---
+
+### Source ledger for Section 2
+- LN-cascade framing dissolving the FF-vs-slope fork: synthesis over `Clarke-2013`,
+  `Busso-2003`, `Remmert-2024`, `Pelland-2024`.
+- Concavity is load-bearing (linear → bang-bang): `Ceddia-2025`.
+- Adaptation form `f` is swappable / not architecture-critical: `Imbach-2022`,
+  `Philippe-2019` (still missing — §D3), `Herold-2021`.
+- Parallel independent channels + one shared channel: `Kontro-2025`.
+- Minimal identifiable state count, population-fixed parameters: `Imbach-2022`.
+- Multiplicative gate = MPS/productivity reading: `Damas-2015`, `Damas-2016`.
 
 ---
 
@@ -613,6 +788,7 @@ load-bearing they are. Cross-refs point to where each is developed.
 - Diminishing-returns skepticism / bounds: `Buckner-2023`, `Nuckols-2022`
 - MPS time course & training-status modulation: `Damas-2015`
 - EIMD magnitude, recovery time course, repeated-bout: `Howatson-2008`, `Paulsen-2012`
+- EIMD load-insensitivity at matched volume (`d_set ≈ volume`): `Winchester-2022`
 - Frequency: `Schoenfeld-2019`
 - Attribution priors: `free-exercise-db_mover-map.csv`; EMG refinements: `Lehman-2004`, `Rodriguez-Ridao-2020`, `Martin-Fuentes-2020`, `Clark-2012`, `Saeterbakken-2013`; **interpretation caveat:** `Vigotsky-2018`
 - Volume landmarks: `RP-volume-landmarks_current.csv` (*practitioner data, not peer-reviewed*)
@@ -620,5 +796,5 @@ load-bearing they are. Cross-refs point to where each is developed.
 - FF identifiability / alternative backbones: `Imbach-2022`, `Kontro-2025`, `Herold-2021`, `Ceddia-2025`
 - Per-set RIR/proximity-to-failure modifier: `Refalo-2023_proximity-to-failure-hypertrophy-meta-analysis`
 - Productivity gate / training-status non-stationarity (primary): `Damas-2016`; per-session MyoPS ceiling: `Burd-2010`
-- Global/systemic fatigue (cross-muscle cap): `Zając-2015`, `Sousa-2024`
-- Sub-session / acute fatigue kinetics: `Pareja-Blanco-2019`, `Jukic-2023`, `Refalo-2023_neuromuscular-fatigue`
+- Global/systemic fatigue (cross-muscle cap): `Zając-2015`, `Sousa-2024`; non-local-fatigue magnitude (acute crossover ≈0 for force, modest for endurance/volume): `Behm-2021`
+- Sub-session / acute fatigue kinetics: `Pareja-Blanco-2019`, `Jukic-2023`, `Refalo-2023_neuromuscular-fatigue`; cross-muscle acute duration (τ≈1–3 min, gone by 5): `Zahiri-2024`

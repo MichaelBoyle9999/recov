@@ -318,27 +318,42 @@ and *time course* for a cross-muscle systemic term `S(t)`.
   Meta-analysis.* Sports Medicine 51:1893–1907. DOI 10.1007/s40279-021-01456-3.
   — **✓ pulled** (open SportRxiv preprint, server/74; published version paywalled).
   *Why:* The only meta-analytic estimate of how much fatiguing one muscle group impairs a
-  *non-exercised* one. Headline = **trivial average effect (≈ −0.02) but substantial
-  heterogeneity** — i.e. acute cross-muscle fatigue is weak on average, so an `S(t)` acute
-  crossover term should probably be small/optional, with systemic cost coming more from shared
-  *recovery* demand (Sousa) than acute crossover. Directly bears on §1.11 #9.
+  *non-exercised* one. Headline = **trivial average (≈ −0.02)** with high heterogeneity, BUT a
+  **by-outcome split that matters for us**: strength (+0.11) and power (−0.01) crossover is
+  trivial, yet **endurance / reps-to-failure is moderate (−0.54; long-duration −0.85)** — and a
+  hypertrophy working set *is* an endurance/TTF-type task. Not moderated by severity, homologous
+  vs heterologous, or upper/lower body; authors attribute the endurance effect to **perceived
+  effort**, not a force deficit. Implication for §1.11 #9: don't couple the 17 channels with a
+  fast cross-muscle *force* term (≈0); the real acute effect is a **perceptual discount on
+  achievable next-exercise volume**, flat (not dose-/proximity-scaled). The bigger between-session
+  systemic cost (Sousa) is *not* filled by this — these papers mainly rule out acute crossover as
+  its mechanism.
 - **Zahiri A, Goudini R, Alizadeh S, Daneshjoo A, Mahmoud MMI, Konrad A, Granacher U, Behm DG
   (2024).** *The Duration of Non-Local Muscle Fatigue Effects.* J Sports Sci Med 23(2):425–435.
   DOI 10.52082/jssm.2024.425. PMID 38841632 (PMC11149065). — **✓ pulled** (open access).
-  *Why:* Time course of the non-local effect (tested 1/3/5 min post) — the kinetics half of the
-  systemic question; helps set whether any acute `S` decays within a session.
+  *Why:* Time course of the non-local effect (tested 1/3/5 min post). Result: contralateral
+  quad MVIC −16% at 1 min → −8% at 3 min → **gone by 5 min**; EMG didn't track force (authors
+  rule out a neural mechanism). So *if* an acute cross-muscle term exists at all, **τ ≈ 1–3 min,
+  fully recovered by 5** — i.e. it decays inside normal inter-exercise rest and is essentially
+  irrelevant at the set/exercise granularity Recov ranks on (and τ_acute ≪ τ_fast cleanly, so the
+  double-counting worry in §1.11 #8 mostly dissolves).
 
-### D2 — `d_set` load asymmetry (collapse #4 / fork #10)
-The review found stimulus is load-robust (Schoenfeld-2017) but *fatigue/damage is not*
-(Pareja-Blanco-2019). This pins the asymmetry with an isovolumic comparison.
+### D2 — `d_set`: does load change damage at matched volume? (collapse #4 / fork #10)
+Tests whether the Pareja-Blanco-2019 load/rep fatigue effect also shows up in *structural
+damage* at equated volume. **It does not — correcting my pre-read summary.**
 
 - **Winchester LJ, Morris CE, Allen P, Wiczynski TL, Arnett SW, Lyons TS (2022).** *Effects of
   Varying Load Intensity on Skeletal Muscle Damage Between Two Isovolumic Resistance Exercise
   Bouts.* Int J Exerc Sci 15(4):1212–1221. DOI 10.70252/HXMP5676. PMID 36620189 (PMC9799231).
   — **✓ pulled** (open access).
-  *Why:* At **equated volume**, 85% 1RM produced more damage (myoglobin) than 67% 1RM despite
-  less total weight lifted. Evidence that `d_set` must carry a load/rep term even though `s_set`
-  does not — undercuts the `d_set ≈ s_set` collapse (§1.7 #4) and feeds the L2 modeling (§1.6).
+  *Why:* At matched volume, 85% (5×5) and 67% (3×11) 1RM produced **statistically
+  indistinguishable** muscle damage (myoglobin ≈ 3.3–3.5× baseline, between-condition p > 0.99;
+  CRP unchanged); 85% merely reached significance vs baseline with slightly *less* total volume.
+  So **structural damage ≈ volume-driven and load-insensitive** — which, read with Pareja-Blanco
+  (load/rep-sensitive *neuromuscular fatigue*), **dissociates** the two: the load/rep effect
+  lives in the fast acute neuromuscular layer, while the slow-layer damage term **keeps the
+  `d_set ≈ volume` collapse** (§1.7 #4) rather than undercutting it. Caveat: n = 11, acute,
+  myoglobin only (a crude membrane-leak marker) — weak evidence either way.
 
 ### D3 — Alternative adaptation backbone (the "right shape" fork, §1.11 #7) — NOT yet retrieved
 - **Philippe AG, Borrani F, Sanchez AMJ, Py G, Candau R (2019).** *Modelling performance and
