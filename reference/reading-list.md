@@ -397,22 +397,23 @@ already in Bucket A). Surfaced via search; mark **[verify]** before formal citin
 into `pdfs/` unless noted.
 
 ### E1 — Per-muscle recovery capacity & rate (parameterizes `cap_m`, `τ_fast,m`)
-- **Johnson MA, Polgar J, Weightman D, Appleton D (1973).** *Data on the distribution of fibre
+- **🚫 Johnson MA, Polgar J, Weightman D, Appleton D (1973).** *Data on the distribution of fibre
   types in thirty-six human muscles: an autopsy study.* J Neurol Sci 18(1):111–129. DOI
-  10.1016/0022-510X(73)90023-3. — **🟢 Open PDF** (jns-journal.com). *The* canonical per-muscle
-  Type I / Type II composition table. *Why:* fatigue-resistant Type-I-dominant postural muscles
-  (calves, abs, erectors, traps) recover faster / tolerate higher frequency — secondary proxy for
-  ordering `τ_fast,m`. **Caveat:** fiber type *per se* was not the clean determinant of damage
-  magnitude at matched length (see architecture review below) — use as a cross-check, not the
-  primary driver.
-- **[verify] "Effects of muscle architecture on eccentric-exercise-induced muscle damage
-  responses" (review).** PMC8488843. — **🟢 Open access.** *Why:* the better mechanistic ordering —
-  longitudinal/fusiform & biarticular muscles take more damage per unit volume than pennate ones;
-  arms > legs (habituation). Primary basis for the `τ_fast,m` susceptibility ordering.
-- **[verify] Hamstring vs quadriceps EIMD/recovery time course (Eur J Appl Physiol 2023).** DOI
-  10.1007/s00421-023-05234-z. — **🔴 Paywalled (Springer).** *Why:* concrete differential timing —
-  hamstrings peak damage ~48 h vs quads ~24 h; the cleanest single hamstring-vs-quad `τ` contrast.
-  *Numbers retrievable from abstract; full retrieval optional.*
+  10.1016/0022-510X(73)90023-3. — **COULD NOT OBTAIN (2026-06-12; too old, no scrapable copy).** Was
+  *the* canonical per-muscle Type I/II composition table; would have given a fiber-type axis for
+  `τ_fast,m` and `cap_m`. Now an **accepted gap** — see §F3 for consequence and substitute candidates.
+- **Şenışık SÇ, Akova B, Şekir U, Gür H (2021).** *Effects of Muscle Architecture on Eccentric
+  Exercise Induced Muscle Damage Responses.* J Sports Sci Med 20(4):655–664. DOI
+  10.52082/jssm.2021.655. PMC8488843. — **✓ RETRIEVED (PDF in `pdfs/`); conversion pending** (§F4).
+  *Why:* the
+  mechanistic ordering — longitudinal/fusiform muscles take more workload per unit volume than
+  pennate; arms > legs. Primary basis for the `τ_fast,m` susceptibility ordering **and** the
+  `cap_m` size→recovery inference.
+- **⚠️ [mis-cited — dropped] "Hamstring vs quadriceps EIMD timing," DOI 10.1007/s00421-023-05234-z.**
+  That DOI is actually *Effects of muscle fatigue on exercise-induced hamstring muscle damage* (an
+  RCT), **not** a hamstring-vs-quad contrast — the "hamstrings ~48 h vs quads ~24 h" claim is not
+  supported by it. No clean hamstring-vs-quad `τ` paper confirmed; **Şenışık-2021 covers the need**,
+  so this is dropped, not chased.
 - **RP volume landmarks** (`RP-volume-landmarks_current.csv`, Bucket A) — supplies **`cap_m`**
   as **one leg** (per-muscle MRV = recoverable-volume capacity). **No longer treated as sole/firm
   basis** — see section F: we now triangulate it against peer-reviewed anatomy so we aren't leaning
@@ -420,10 +421,13 @@ into `pdfs/` unless noted.
 
 > **Scope note (revised — see §F).** As with the `c_e` systemic-cost table, this is a **hand-set
 > population table** from proxies, not a fitted kinetic model. Earlier this note called `cap_m` "on
-> firm ground (RP MRV)"; that was overstated — RP MRV is practitioner data, not peer-reviewed, and
-> it drives `cap_m` (Axis A) outright. **`cap_m` is being re-footed** on independent peer-reviewed
-> muscle-size/architecture + fiber-type data (§F), with RP retained as one leg and a convergence
-> check. Rate (`τ_fast,m`) remains an ordering, not calibrated constants.
+> firm ground (RP MRV)"; that was overstated. **`cap_m` has now been re-footed** (§F): its
+> cross-muscle *ordering* rests on peer-reviewed whole-body muscle volume (`Riem-2025`, covering 16/17
+> DB muscles incl. the former RP-gap three), with Ward-2009 PCSA as a lower-limb cross-check and RP
+> retained only as the **sets-scale + convergence check**. The fiber-type leg (Johnson) could not be
+> obtained, so the ordering is **size-only**; and the **size→recovery step remains an assumption**
+> (`Şenışık-2021` supports it but doesn't calibrate it) — that inference, not the data, is now the
+> weakest link. Rate (`τ_fast,m`) remains an ordering, not calibrated constants.
 
 ---
 
@@ -438,58 +442,92 @@ forearms, neck). This mirrors the `f` treatment (primary source + RP as sanity c
 here the peer-reviewed legs anchor the cross-muscle **ordering/shape** and RP supplies the
 **sets-based scale** + a convergence check.
 
+**Outcome (2026-06-12):** largely achieved. `Riem-2025` (whole-body MRI volume) anchors the ordering
+for **16/17** DB muscles and fills **three** of the four RP-gap muscles (abductors, adductors,
+forearms); **neck** remains the lone borrowed value (Riem has no usable cervical muscle). The
+**fiber-type** leg (Johnson) could **not** be obtained, so the ordering is **size-only**. Net: `cap_m`
+went from "∝ a non-peer-reviewed chart" to "peer-reviewed volume ordering, RP-validated" — the residual
+weakness is now the *size→recovery assumption* (F4), not the data.
+
 **The construct gap (why no single paper just answers this):** nobody has measured "per-muscle
 recovery capacity" directly — the EIMD/recovery literature is single-muscle, protocol-specific, and
 high-variance (Paulsen-2012, Howatson-2008, Bucket A). So `cap_m` must be triangulated from proxies.
 The peer-reviewed proxies with real datasets are **muscle size (volume / PCSA)** and **fiber type**;
 the size→recovery link is a defensible assumption, not a measurement (state it as such when citing).
 
-> ⚠️ **Retrieval barrier (2026-06-12).** None of F1–F3 could be auto-downloaded: bioRxiv is behind
-> Cloudflare, NCBI/Europe PMC now gate PDF downloads behind a JavaScript proof-of-work challenge,
-> and the Elsevier/Springer landing pages return HTML, not PDF. All are **human-accessible in a
-> browser** — they need **manual retrieval** into `reference/pdfs/<base>/<base>.pdf`, then the
-> standard ensemble conversion. Suggested base-folder names are given per item.
+> **Retrieval status (updated 2026-06-12).** The three anatomy papers (F1, F2) and one recovery-by-
+> muscle paper (F4) were retrieved by hand and converted into `reference/<base>/`. The fiber-type
+> paper (F3, Johnson-1973) **could not be obtained** (too old; no scrapable copy) — recorded as an
+> accepted gap, see F3. Auto-download remains blocked for the rest (Cloudflare / NCBI proof-of-work /
+> publisher HTML), so anything still owed needs manual browser retrieval.
 
 ### F1 — Per-muscle size / volume (anchors the cross-muscle `cap_m` ordering)
-- **[verify] Riem L, Pinette M, DuCharme O, … Derave W, Blemker SS (2025).** *Big bones mean big
-  muscles: an MRI-based dataset of muscle-bone-body size relationships across 70 human muscles of the
-  upper limb, trunk, and lower limb.* J Appl Physiol. DOI 10.1152/japplphysiol.00772.2025. Preprint:
-  bioRxiv 2025.04.01.646599 (DOI 10.1101/2025.04.01.646599; headline says "71 muscles", JAPPL title
-  says 70). — **🔴 preprint open but Cloudflare-blocked; JAPPL paywalled.** *base:*
-  `Riem-2025_whole-body-muscle-volumes-mri`.
-  *Why:* The **most comprehensive** per-muscle volume dataset and the only one covering **upper limb +
-  trunk** — i.e. it reaches `forearms` and trunk muscles where RP has no landmark. 102 healthy adults,
-  per-muscle volumes. The primary peer-reviewed leg for the `cap_m` ordering. **Highest priority.**
-- **[verify] Handsfield GG, Meyer CH, Hart JM, Abel MF, Blemker SS (2014).** *Relationships of 35
-  lower limb muscles to height and body mass quantified using MRI.* J Biomech 47(3):631–638. DOI
-  10.1016/j.jbiomech.2013.12.002. — **🔴 paywalled (Elsevier).** *base:*
-  `Handsfield-2014_lower-limb-muscle-volumes-mri`.
-  *Why:* The standard MRI lower-limb per-muscle volume dataset (with body-size scaling). Lower-limb
-  cross-check on Riem-2025; well-cited, widely used in musculoskeletal models.
+- **Riem L, Pinette M, DuCharme O, … Derave W, Blemker SS (2025).** *Big bones mean big muscles: an
+  MRI-based dataset of muscle-bone-body size relationships across 70 human muscles of the upper limb,
+  trunk, and lower limb.* J Appl Physiol 140:1–19 (online Nov 14, 2025). DOI
+  10.1152/japplphysiol.00772.2025. — **✓ RETRIEVED & CONVERTED** (full published version, not the
+  preprint) → `reference/Riem-2025_muscle-bone-body-size-mri-dataset/`.
+  *Why / payoff:* The **primary peer-reviewed leg** for the `cap_m` ordering. Table 3 gives per-muscle
+  volume (mean ± SD, + fat fraction, asymmetry) for 70 muscles whole-body. Aggregated to our DB-17,
+  it covers **16 of 17** muscles — including the three RP couldn't reach (**abductors, adductors,
+  forearms**, formerly "borrowed/default"). Only **neck** has no usable Riem muscle. This is the
+  win that re-foots `cap_m` (see `parameters.md` §3.3).
+- **Handsfield GG, Meyer CH, Hart JM, Abel MF, Blemker SS (2014).** *Relationships of 35 lower limb
+  muscles to height and body mass quantified using MRI.* J Biomech 47(3):631–638. DOI
+  10.1016/j.jbiomech.2013.12.002. — **✓ RETRIEVED & CONVERTED** →
+  `reference/Handsfield-2014_lower-limb-muscle-volume-mri-scaling/`.
+  *Why:* Independent lower-limb volume method — convergence check on Riem. Also the source of the
+  **cadaver caveat**: it reports Ward-2009's cadaver volumes run ~½ of in-vivo, so Ward is for
+  *ratios/architecture*, not absolute scale.
 
 ### F2 — Muscle architecture / PCSA (force-capacity proxy; cadaveric ground truth)
-- **[verify] Ward SR, Eng CM, Smallwood LH, Lieber RL (2009).** *Are current measurements of lower
-  extremity muscle architecture accurate?* Clin Orthop Relat Res 467(4):1074–1082. DOI
-  10.1007/s11999-008-0594-8. PMC2650063. — **🔴 PMC "open" but PoW-gated; publisher paywalled.**
-  *base:* `Ward-2009_lower-limb-muscle-architecture`.
-  *Why:* The canonical cadaveric **PCSA / fascicle-length / pennation** table for lower-limb muscles —
-  PCSA is the size-normalized force-capacity measure, a sturdier capacity proxy than raw volume for
-  some muscles. Pairs with Handsfield (volume) and Ward (architecture) as the anatomy legs.
-- *(optional)* **Holzbaur KRS, Murray WM, Gold GE, Delp SL (2007).** *Upper limb muscle volumes in
-  adult subjects.* J Biomech 40(11):2442–2449. — *only if Riem-2025's upper-limb coverage proves thin.*
+- **Ward SR, Eng CM, Smallwood LH, Lieber RL (2009).** *Are current measurements of lower extremity
+  muscle architecture accurate?* Clin Orthop Relat Res 467(4):1074–1082. DOI
+  10.1007/s11999-008-0594-8. PMC2650063. — **✓ RETRIEVED & CONVERTED** →
+  `reference/Ward-2009_lower-extremity-muscle-architecture-accuracy/`.
+  *Why:* Cadaveric **PCSA / fiber-length / pennation** for 27 lower-limb muscles — a force-capacity
+  cross-check distinct from volume, and the pennation/fiber-length data also feeds the `τ_fast,m`
+  susceptibility ordering (§E1). Lower-limb only; elderly cadavers (83 ± 9 yr) → ratios not absolutes.
+- *(optional, not retrieved)* **Holzbaur KRS, Murray WM, Gold GE, Delp SL (2007).** *Upper limb
+  muscle volumes in adult subjects.* J Biomech 40(11):2442–2449. — superseded for our purpose by
+  Riem-2025's upper-limb coverage; pursue only if a second upper-limb source is wanted.
 
-### F3 — Fiber type (second, mechanistically-distinct leg — already catalogued)
-- **Johnson MA, Polgar J, Weightman D, Appleton D (1973)** — *see §E1.* Per-muscle Type I/II
-  composition (36 muscles, autopsy). Type-I-dominant muscles tolerate more volume / recover faster
-  → an independent axis on the `cap_m` ordering, not derived from size. **Still owed** (open PDF,
-  not yet pulled). *base:* `Johnson-1973_fibre-type-distribution-36-human-muscles`.
+### F3 — Fiber type (the missing second leg — ACCEPTED GAP)
+- **🚫 Johnson MA, Polgar J, Weightman D, Appleton D (1973).** *Data on the distribution of fibre
+  types in thirty-six human muscles: an autopsy study.* J Neurol Sci 18(1):111–129. PMID 4120482.
+  — **COULD NOT OBTAIN** (1973; no scrapable full text). *Consequence:* `cap_m` is **size-only**
+  for now (volume + PCSA), with no independent fiber-type axis. This is the main residual weakness on
+  the *ordering* side — though the bigger weakness is the size→recovery inference itself (F4, §3.3 pt 4).
+  *If revisited,* candidate substitutes: **Polgar et al. 1973** (companion, fibre size; J Neurol Sci
+  19(3):307–318, PMID 4717848) or a modern set like **Dahmane et al. 2005** (J Biomech 38(12):2451–2459)
+  — both partial, neither as complete as Johnson's 36-muscle table.
 
-> **Validation move (the point of §F):** once F1–F2 are in, build a quick cross-check — does RP's
-> MRV ordering across the 12 groups track peer-reviewed muscle volume/PCSA? **Agreement** promotes RP
-> from "practitioner folklore" to "tracks a measurable physiological quantity" (and we keep the MRV
-> sets-scale with confidence); **disagreement** is itself a finding and tells us which muscles to
-> re-weight. Either way `cap_m` stops depending on RP blindly. Reconcile RP's *direct-set* counts with
-> our *fractional* counting before comparing (the existing 12→17-map caveat).
+### F4 — Recovery / damage *by muscle* (supports the size→recovery inference, the real soft spot)
+The anatomy legs (F1–F2) give sturdy **size** numbers, but `cap_m` needs *recovery*; "bigger ⇒ more
+recoverable" is an assumption. These tie muscle identity/architecture to actual damage response.
+- **Şenışık SÇ, Akova B, Şekir U, Gür H (2021).** *Effects of Muscle Architecture on Eccentric
+  Exercise Induced Muscle Damage Responses.* J Sports Sci Med 20(4):655–664. DOI
+  10.52082/jssm.2021.655. PMID 35321142 (PMC8488843). — **✓ RETRIEVED (PDF staged in
+  `pdfs/Senisik-2021_muscle-architecture-eimd-responses/`); conversion pending** (run the ensemble
+  pipeline to produce `reference/Senisik-2021_.../`).
+  *Why:* Directly compares EIMD across **elbow flexors / knee extensors / knee flexors** (volume,
+  pennation, CK, torque, soreness to day 7) and attributes the differences to architecture —
+  longitudinal/fusiform muscles take more workload per unit volume than pennate. The best in-corpus
+  support that **architecture/size modulate recovery**, feeding both `cap_m` (the inference) and the
+  `τ_fast,m` ordering (§E1). Supersedes the mis-cited "hamstring-vs-quad" item below.
+- **⚠️ Citation correction:** the §E1 entry for a "hamstring vs quad EIMD timing" paper at DOI
+  10.1007/s00421-023-05234-z was a **mis-attribution** — that DOI is *Effects of muscle fatigue on
+  exercise-induced hamstring muscle damage* (an RCT, not a hamstring-vs-quad contrast). No clean
+  hamstring-vs-quad `τ` paper is confirmed under that DOI; Şenışık-2021 covers the per-muscle
+  differential-damage need, so this is **dropped, not chased**.
+
+> **Validation move (now actionable — data is in hand):** aggregate `Riem-2025` volumes into the 12
+> RP groups and test whether **RP's MRV ordering tracks peer-reviewed muscle volume**. *Agreement*
+> promotes RP from "practitioner folklore" to "tracks a measurable physiological quantity" (keep the
+> MRV sets-scale with confidence); *disagreement* flags which muscles to re-weight. Either way `cap_m`
+> stops depending on RP blindly. Reconcile RP's *direct-set* counts with our *fractional* counting
+> first. **Status: owed** — both inputs are now in the repo; the cross-check has not yet been run
+> (tracked in `parameters.md` §3.4 *Validation move*).
 
 ---
 
@@ -509,24 +547,21 @@ the size→recovery link is a defensible assumption, not a measurement (state it
 ## Bookkeeping — remaining retrieval list (split by access)
 
 Only items **not yet retrieved**. Full titles included for searching. Retrieved papers are in
-Bucket A at the top. Items left to chase: the two original paywalled ones (Hellard 2006;
-Philippe 2019), plus the §F `cap_m`-validation set (added 2026-06-12) — the latter are nominally
-open but **gated by anti-bot** (Cloudflare / NCBI proof-of-work) so they need manual browser
-retrieval, see the §F retrieval-barrier note.
+Bucket A / their `reference/<base>/` folders. Items left to chase: the two original paywalled ones
+(Hellard 2006; Philippe 2019). The §F `cap_m` set is **resolved** — Riem-2025, Handsfield-2014,
+Ward-2009, and Şenışık-2021 retrieved & converted; Johnson-1973 abandoned (see below).
 
-### 🟢 Open access (but auto-download blocked — manual browser retrieval)
-- **§F1 Riem L, …, Blemker SS (2025).** *Big bones mean big muscles…* bioRxiv 2025.04.01.646599
-  (preprint open; JAPPL version paywalled). → `Riem-2025_whole-body-muscle-volumes-mri`. **Top priority.**
-- **§F2 Ward SR, Eng CM, Smallwood LH, Lieber RL (2009).** *Are current measurements of lower
-  extremity muscle architecture accurate?* Clin Orthop Relat Res 467(4):1074–1082. PMC2650063
-  (PoW-gated). → `Ward-2009_lower-limb-muscle-architecture`.
+### ✓ Retrieved since last update (2026-06-12)
+- **§F1 Riem 2025** (`Riem-2025_muscle-bone-body-size-mri-dataset`) — full published JAPPL version. **Converted.**
+- **§F1 Handsfield 2014** (`Handsfield-2014_lower-limb-muscle-volume-mri-scaling`). **Converted.**
+- **§F2 Ward 2009** (`Ward-2009_lower-extremity-muscle-architecture-accuracy`). **Converted.**
+- **§F4 Şenışık 2021** (`Senisik-2021_muscle-architecture-eimd-responses`) — via JSSM `hfpdf.php`.
+  **PDF staged in `pdfs/`; conversion still pending.**
+
+### 🔴 Paywalled / unobtainable
 - **§F3 Johnson MA, Polgar J, Weightman D, Appleton D (1973).** *Distribution of fibre types in
-  thirty-six human muscles.* J Neurol Sci 18(1):111–129 (open PDF). → also informs `τ_fast,m` (§E1).
-
-### 🔴 Paywalled
-- **§F1 Handsfield GG, Meyer CH, Hart JM, Abel MF, Blemker SS (2014).** *Relationships of 35 lower
-  limb muscles to height and body mass quantified using MRI.* J Biomech 47(3):631–638. DOI
-  10.1016/j.jbiomech.2013.12.002. → `Handsfield-2014_lower-limb-muscle-volumes-mri`.
+  thirty-six human muscles.* J Neurol Sci 18(1):111–129. — **ABANDONED** (too old, no scrapable
+  copy). Leaves `cap_m` size-only; substitutes noted in §F3 if ever revisited.
 - **Hellard P, Avalos M, Lacoste L, Barale F, Chatard JC, Millet GP (2006).** "Assessing the
   limitations of the Banister model in monitoring training." *International Journal of Sports
   Medicine* 27(1):62–68. DOI 10.1055/s-2005-837507

@@ -186,40 +186,70 @@ traps, triceps)*
      distinct tiers.
   4. *What would change it:* a clean per-muscle recovery-kinetics dataset (none known to exist).
 
-### 3.3 — Recovery capacity `cap_m`  ⬜ TODO  *(falls out of the RP-12 → DB-17 map)*
+### 3.3 — Recovery capacity `cap_m`  ⬜ TODO  *(triangulated: peer-reviewed muscle size, RP-validated)*
 
-- **Value / location:** inline table below, `cap_m ∝ MRV_m`. Normalizes the recovery gate
-  `e^{-D_m/cap_m}` so high-capacity muscles aren't crushed by the same absolute deficit. The
-  `MRV_m` column is the mapped landmark (from rows 3.4–3.5); `cap_m` is that times the
-  proportionality constant (still to fix).
+- **Value / location:** inline table below. `cap_m` scales the recovery gate `e^{-D_m/cap_m}` so
+  high-capacity muscles aren't crushed by the same absolute deficit. **Re-footed (2026-06-12):** the
+  cross-muscle *ordering* is **no longer `∝ RP MRV` alone**. It is now anchored on **peer-reviewed
+  muscle volume** (`Riem-2025`, whole-body MRI), with **RP MRV** demoted to the **sets-based scale +
+  a convergence check**, and **Ward-2009 PCSA** as a lower-limb force-capacity cross-check. This is
+  the methodology that strengthens the RP numbers instead of depending on them blindly (see row 3.4).
 
-  | Muscle | `MRV_m` (mapped) | `cap_m` |
-  |---|---|---|
-  | abdominals | TODO | TODO |
-  | abductors | TODO (no RP — borrowed) | TODO |
-  | adductors | TODO (no RP — borrowed) | TODO |
-  | biceps | TODO | TODO |
-  | calves | TODO | TODO |
-  | chest | TODO | TODO |
-  | forearms | TODO (no RP — borrowed) | TODO |
-  | glutes | TODO | TODO |
-  | hamstrings | TODO | TODO |
-  | lats | TODO | TODO |
-  | lower back | TODO | TODO |
-  | middle back | TODO | TODO |
-  | neck | TODO (no RP — borrowed) | TODO |
-  | quadriceps | TODO | TODO |
-  | shoulders | TODO | TODO |
-  | traps | TODO | TODO |
-  | triceps | TODO | TODO |
+  Columns: aggregated Riem volume (sum of constituent muscles → our DB group), mapped RP MRV, and the
+  reconciled `cap_m`. The **"size source"** column flags coverage: ✓Riem = real anatomical volume,
+  *borrowed* = no peer-reviewed number (neck only).
+
+  | Muscle | size source | Riem vol, mL (agg.) | RP MRV (mapped) | `cap_m` |
+  |---|---|---|---|---|
+  | abdominals | ✓Riem (rectus abd. + obliques) | TODO | TODO | TODO |
+  | abductors | ✓Riem (glute med/min + TFL) — *was borrowed* | TODO | — (no RP) | TODO |
+  | adductors | ✓Riem (add. magnus/longus/brevis + pectineus + gracilis) — *was borrowed* | TODO | — (no RP) | TODO |
+  | biceps | ✓Riem (biceps brachii) | TODO | TODO | TODO |
+  | calves | ✓Riem (gastroc med/lat + soleus) | TODO | TODO | TODO |
+  | chest | ✓Riem (pec major/minor) | TODO | TODO | TODO |
+  | forearms | ✓Riem (~13 forearm muscles) — *was borrowed* | TODO | — (no RP) | TODO |
+  | glutes | ✓Riem (glute max; med/min if not → abductors) | TODO | TODO | TODO |
+  | hamstrings | ✓Riem (semiten/semimem + biceps femoris L/S) | TODO | TODO | TODO |
+  | lats | ✓Riem (latissimus dorsi) | TODO | TODO | TODO |
+  | lower back | ✓Riem (erector spinae + multifidus + QL) | TODO | TODO | TODO |
+  | middle back | ✓Riem (rhomboid; mid-trap allocation TBD) | TODO | TODO | TODO |
+  | neck | **borrowed** — Riem has no true cervical muscle | n/a | — (no RP) | TODO |
+  | quadriceps | ✓Riem (rectus fem + 3 vasti) | TODO | TODO | TODO |
+  | shoulders | ✓Riem (deltoid + rotator cuff) | TODO | TODO | TODO |
+  | traps | ✓Riem (trapezius) | TODO | TODO | TODO |
+  | triceps | ✓Riem (triceps brachii + anconeus) | TODO | TODO | TODO |
+
+  > **Coverage win:** Riem supplies real volume for **16 of 17** DB muscles, including the three that
+  > RP could not reach (**abductors, adductors, forearms** — formerly "borrowed/default"). **Neck** is
+  > the lone remaining borrowed value, and the least consequential for hypertrophy (`g_neck` is
+  > typically downweighted anyway).
 
 - **Provenance (plan):**
-  1. *Sources:* RP MRV from `RP-volume-landmarks_current.csv` (via the 12→17 map, row 3.5).
-  2. *Derivation (to build):* set directly proportional to MRV (quads/calves high,
-     hamstrings/front-delts low). Fix the proportionality constant / normalization.
-  3. *Judgment calls (open):* the scaling constant; what to do for muscles RP doesn't cover
-     (see row 3.5).
-  4. *What would change it:* revision of RP landmarks; a better capacity proxy.
+  1. *Sources:* **`Riem-2025`** (whole-body per-muscle MRI volume, 70 muscles, Table 3 — the primary
+     cross-muscle anchor); **`Ward-2009`** (lower-limb PCSA + architecture, cadaver — force-capacity
+     cross-check and pennation/fiber-length input shared with `τ_fast,m`; use for **ratios, not
+     absolute scale** — cadaver volumes ≈ ½ in-vivo per `Handsfield-2014`); **`Handsfield-2014`**
+     (independent lower-limb volume method — convergence check); **RP MRV**
+     (`RP-volume-landmarks_current.csv`) as the **sets-based scale + convergence check**, no longer
+     the ordering source; recovery-by-muscle support: **`Şenışık-2021`** (architecture → differential
+     EIMD across elbow flexors / knee extensors / knee flexors), `Paulsen-2012`, `Howatson-2008`.
+  2. *Derivation (to build):* (a) aggregate Riem's 70 muscles into our 17 DB groups (sum constituents;
+     resolve allocation calls, e.g. gluteus medius → *glutes* vs *abductors*, mid-trapezius → *traps*
+     vs *middle back*); (b) set the cap_m ordering from aggregated volume (optionally blended with
+     Ward PCSA where covered); (c) **validate** RP MRV against the volume ordering (row 3.4 validation
+     move); (d) fix the **absolute scale** from MRV, since `cap_m` normalizes a set-based `D_m`.
+     Hand-set population table, not fitted.
+  3. *Judgment calls (open):* the volume→capacity proportionality; whether/how to blend volume with
+     PCSA; the Riem→DB-17 aggregation/allocation calls; the **neck** borrowed value; whether a
+     fiber-type axis enters (Johnson unobtained, see §F — `cap_m` is **size-only** for now).
+  4. ⚠️ ***The soft spot — state it, don't hide it:*** these sources measure muscle **size**, not
+     **recovery**. "Bigger muscle ⇒ more recoverable volume" is a modeling **assumption**, not a
+     measurement. `Şenışık-2021` and the EIMD literature show architecture/size modulate damage
+     response, but the size→capacity link itself is **not directly calibrated**. This is now the
+     weakest link in `cap_m` (more than the data — the data is sturdy).
+  5. *What would change it:* a direct per-muscle recovery-capacity dataset (none known to exist);
+     obtaining the fiber-type leg to add a second, non-size construct; the RP-vs-volume validation
+     outcome (could re-weight specific muscles or, if RP diverges badly, down-rank it further).
 
 ### 3.4 — Volume landmarks `MV / MEV / MAV / MRV` — the Axis-B reference scale  🟡 PROVISIONAL
 
@@ -230,7 +260,10 @@ their own row, rather than living inside one consumer's provenance, precisely be
 parameters depend on them; this is the single documented home for the RP scrape and its caveats.
 
 - **Consumed by:**
-  - **3.3 `cap_m`** — recovery capacity ∝ **MRV** (the `MRV_m` column in 3.3 is the mapped value).
+  - **3.3 `cap_m`** — **no longer ∝ MRV outright.** As of 2026-06-12 the cross-muscle ordering is
+    anchored on peer-reviewed muscle volume (`Riem-2025`); RP MRV now supplies only the **sets-based
+    scale** and acts as a **convergence check** against that volume ordering. See the *validation
+    move* below — this is the re-footing that keeps RP in the loop without depending on it blindly.
   - **3.6 dose-response `f`** — **MEV** sets the stimulus-debt threshold (`f'` high below it);
     **MAV/MRV** are the saturation/ceiling clamps (`f' → 0` near MRV), reconciled against the
     Remmert/Pelland PUOS anchors.
@@ -245,7 +278,15 @@ parameters depend on them; this is the single documented home for the RP scrape 
      (0.5-secondary) counting — the two must be reconciled before MEV/MAV/MRV are used as ceilings
      (noted in `model.md`). This reconciliation is why status is 🟡 not 🔒.
   4. *What would change it:* re-scrape (RP revises periodically); the fractional-vs-direct
-     reconciliation; the 12→17 map.
+     reconciliation; the 12→17 map; the validation outcome below.
+- **Validation move (the point of the re-footing — strengthens RP rather than trusting it):**
+  aggregate `Riem-2025` volumes into the 12 RP groups and test whether **RP's MRV ordering tracks
+  peer-reviewed muscle volume**. *Agreement* promotes RP from "practitioner folklore" to "tracks a
+  measurable physiological quantity" — and we keep its sets-scale with confidence. *Disagreement* is
+  itself a finding and tells us which muscles to re-weight (or to trust volume over RP). Either way
+  RP stops being a single un-checked source. (Reconcile RP **direct-set** counts with our
+  **fractional** counts first — same caveat as point 3.) **Status: owed** — data is in hand
+  (`Riem-2025`, `RP-volume-landmarks_current.csv`); the cross-check has not yet been run.
 
 ### 3.5 — RP-12 → DB-17 map  ⬜ TODO
 
@@ -341,10 +382,14 @@ parameters depend on them; this is the single documented home for the RP scrape 
 ## Cross-cutting notes
 
 - **Coupled parameters (pin together, not in isolation):** `κ` ↔ `c_e` scale (only `κ·c_e`
-  matters); `cap_m` ↔ MRV ↔ the 12→17 map; `f` choice ↔ landmark saturation point.
+  matters); `cap_m` ordering ↔ `Riem-2025` volume, `cap_m` scale ↔ MRV ↔ the 12→17 map; `f` choice ↔
+  landmark saturation point.
 - **Same epistemic class — "hand-set population tables, not fit":** `c_e`, `τ_fast,m`, `cap_m`.
-  None has a clean dataset; each is triangulated from proxies and ordered by mechanism. Treat
-  their provenance with the same skepticism and document the ordering logic, not a false precision.
+  None has a *recovery* dataset; each is triangulated from proxies and ordered by mechanism. Treat
+  their provenance with skepticism and document the ordering logic, not a false precision.
+  **`cap_m` is now the best-footed of the three** — its cross-muscle ordering rests on a
+  peer-reviewed whole-body volume dataset (`Riem-2025`), not practitioner numbers; its residual
+  weakness is the *size→recovery inference* (an assumption), not the data (see 3.3 point 4).
 - **Illustrative ≠ committed.** Every number in the `model.md` worked example (`τ` = 3/7/5 d,
   `κ = 20`, `c_e` = 0.035/0.015) is a **placeholder** to show the machinery. None is committed
   here until its row says 🔒.
