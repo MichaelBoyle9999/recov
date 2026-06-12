@@ -739,11 +739,12 @@ gate** as the primary, always-on combination, for three reasons:
 
 ## 2.6 The master formula (committed)
 
-```
-η_e(t)  =  S(t) · Σ_{m ∈ e}  a_{e,m} · Recovery_m(t) · f'(V_eff,m(t))      → normalize
-```
+$$
+\eta_e(t) \;=\; \underbrace{S(t)}_{\substack{\text{shared}\\\text{systemic}}} \cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\text{attribution}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\text{Axis A: recovery}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\text{Axis B: marginal value}}
+\qquad\longrightarrow\ \text{normalize}
+$$
 
-with `S`, `Recovery_m`, `V_eff,m` each a population-parameterized leaky integrator (EMA)
+with $S$, $\mathrm{Recovery}_m$, $V_{\text{eff},m}$ each a population-parameterized leaky integrator (EMA)
 over the set history, `f` the concave dose-response (log/root now; swappable — §2.3), and
 every factor bounded to `[0,1]` so the product is an honest absolute efficiency (§2.4).
 This is a Hammerstein–Wiener cascade: **linear leaky-integrator dynamics, static concave
