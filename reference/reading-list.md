@@ -338,6 +338,26 @@ and *time course* for a cross-muscle systemic term `S(t)`.
   irrelevant at the set/exercise granularity Recov ranks on (and τ_acute ≪ τ_fast cleanly, so the
   double-counting worry in §1.11 #8 mostly dissolves).
 
+> **Declining the training-load-monitoring / ACWR class (2026-06-11).** When Shape B (the
+> cost-aware systemic gate `exp(−κ c_e S)`, model.md / §1.10 #2) was committed, the nearest
+> *structural* precedent turned out to live outside hypertrophy: the sport-science **training-load
+> monitoring** literature — session-RPE (Foster), Banister TRIMP, and the **acute:chronic workload
+> ratio (ACWR)** — all of which gate subsequent work on an exponentially-weighted accumulator of
+> per-session systemic load. We retrieved and read one open example to check it doesn't reshape our
+> model: **Maupin D, Schram B, Canetti E, Orr R (2020), *The Relationship Between Acute:Chronic
+> Workload Ratios and Injury Risk in Sports: A Systematic Review*, Open Access J Sports Med 11:51–75
+> (PMC7047972).** Findings: ACWR = acute load (≈ last week, windows 2–9 d) ÷ chronic load (rolling/EWMA
+> 3–6 wk), with an EWMA variant that weights recent load more — i.e. *exactly* our leaky-integrator
+> `S(t)` with a ~7 d acute window, used as a fatigue-tolerance gauge. **Verdict: confirms, does not
+> shake up.** It validates the *form* and the τ_sys order of magnitude but (a) supplies **no
+> hypertrophy-specific `c_e` or `κ`**, (b) is framed as a *ratio* (acute/chronic) we deliberately do
+> **not** adopt — and the ratio formulation is itself under statistical fire (spurious-correlation
+> critiques), which only reinforces our choice of a single-state EWMA gate over a ratio, and (c) is
+> about injury risk, not stimulus efficiency. **Decision:** cite the concept as structural precedent
+> only (Section 2 source ledger) and **decline to ingest papers of this class** going forward —
+> they refine constants we set by hand anyway, not the model's shape. The example PDF was read and
+> **not** kept in the repo.
+
 ### D2 — `d_set`: does load change damage at matched volume? (collapse #4 / fork #10)
 Tests whether the Pareja-Blanco-2019 load/rep fatigue effect also shows up in *structural
 damage* at equated volume. **It does not — correcting my pre-read summary.**

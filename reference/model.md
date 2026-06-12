@@ -30,13 +30,19 @@ literature (or explicitly guessed), never fit per user.
 ## The master formula
 
 $$
-\eta_e(t) \;=\; \underbrace{S(t)}_{\substack{\text{shared}\\\text{systemic}}} \,\cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\substack{\text{attribution}\\\text{(set credit)}}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\substack{\text{Axis A:}\\\text{recovery gate}}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\substack{\text{Axis B:}\\\text{marginal value}}}
+\eta_e(t) \;=\; \underbrace{e^{-\kappa\, c_e\, S(t)}}_{\substack{\text{systemic gate}\\\text{(cost-aware)}}} \,\cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\substack{\text{attribution}\\\text{(set credit)}}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\substack{\text{Axis A:}\\\text{recovery gate}}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\substack{\text{Axis B:}\\\text{marginal value}}}
 $$
 
 (then normalized to $[0,1]$). A **Hammerstein–Wiener cascade**: per-channel **leaky integrators** (linear convolution
 of the timestamped set history) → **static concave nonlinearities** → **multiplicative**
-combination across parallel per-muscle channels, all scaled by **one shared systemic
-channel**. Every factor is bounded to $[0,1]$, so each **per-muscle channel product**
+combination across parallel per-muscle channels, all scaled by a **cost-aware systemic
+gate**. The systemic gate is **not** a flat global dimmer: it discounts each candidate by
+*its own* prospective cost $c_e$ scaled by the current systemic depletion $S(t)$, so it is
+**inert when fresh** ($S\to 0 \Rightarrow$ gate $\to 1$ for all exercises) and **steers
+toward low-cost work when depleted** (a costly compound is penalized more than a cheap
+isolation). This is the only term that lets systemic fatigue *reorder* the ranking, not
+merely lower its ceiling (Shape B; see `mathematical-model.md` §1.10 #2). Every factor is
+bounded to $[0,1]$, so each **per-muscle channel product**
 $a_{e,m}\cdot\mathrm{Recovery}_m\cdot f'$ is in $[0,1]$; the **sum over an exercise's
 muscles** can exceed 1, which is what the explicit **normalize** step resolves (see the
 worked example).
@@ -53,7 +59,7 @@ $$
 |---|---|---|---|
 | $V_{\text{eff},m}(t)$ | effective accumulated volume for muscle $m$: $\;\sum_i a_{e_i,m}\,w_i\,e^{-(t-t_i)/\tau_{\text{slow}}}$ | B (stimulus debt) | $\tau_{\text{slow}}$ ~ days–week |
 | $D_m(t)$ | recovery deficit: $\;\sum_i a_{e_i,m}\,e^{-(t-t_i)/\tau_{\text{fast}}}$ | A (recovery) | $\tau_{\text{fast}}$ ~ 1–5 d (EIMD) |
-| $S(t)$ | systemic fatigue: $\;\sum_i c_{e_i}\,e^{-(t-t_i)/\tau_{\text{sys}}}$ (one global state, all muscles) | systemic | $\tau_{\text{sys}}$ ~ days (between-session) |
+| $S(t)$ | systemic depletion: $\;\sum_i c_{e_i}\,e^{-(t-t_i)/\tau_{\text{sys}}}$ (one global state; feeds the cost-aware gate) | systemic | $\tau_{\text{sys}}$ ~ days (between-session) |
 
 ### The static readouts (each bounded to `[0,1]`)
 
@@ -61,7 +67,7 @@ $$
 |---|---|---|
 | $f'(V_{\text{eff},m})$ | derivative of concave $f$ (log: $\Delta \propto \ln V$, PUOS≈11/session; or root $\sqrt{V}$, PUOS≈31/wk), rescaled to $[0,1]$ | marginal value of the *next* set: large when underworked, $\to 0$ at saturation/MRV |
 | $\mathrm{Recovery}_m(t)$ | $e^{-D_m(t)} \in (0,1]$ | recovery gate: 1 when fully repaired, $\to 0$ right after a hard bout |
-| $S(t)$ factor | $e^{-S(t)} \in (0,1]$ | global discount while systemically fatigued |
+| systemic gate | $e^{-\kappa\,c_e\,S(t)} \in (0,1]$ | **cost-aware**: inert when fresh ($S\to0$); penalizes high-$c_e$ exercises more as depletion rises → reorders toward low-cost work |
 
 $f$ is **swappable** (log / root / exponential-growth / sigmoid) without touching the
 engine — it only sets the shape of the diminishing-returns curve.
@@ -114,7 +120,7 @@ These come from `free-exercise-db_mover-map.csv` and do **not** change over time
 | **primary (direct) muscles** | → `a_{e,m} = 1.0` | `direct_muscles` column (`primaryMuscles`) | the muscles a set fully counts for |
 | **secondary (indirect) muscles** | → `a_{e,m} = 0.5` | `indirect_muscles` column (`secondaryMuscles`) | fractional credit (the empirically-favored 0.5; Remmert/Pelland) |
 | all other muscles | `a_{e,m} = 0` | — | not trained |
-| systemic cost | `c_e` | derived from `mechanic`/`force`/category + `Sousa-2024` ordering | feeds `S(t)`; multi-joint/lower-body/eccentric cost more. **Cost table still owed.** |
+| systemic cost | `c_e` | derived from `mechanic`/`force`/category + `Sousa-2024` ordering | multi-joint/lower-body/eccentric cost more. **One number, two jobs:** the dose a set *deposits* into `S(t)` when logged, **and** the cost the candidate is *charged* by the systemic gate $e^{-\kappa c_e S}$ when ranked. **Cost table still owed.** |
 
 So the **attribution map `a_{e,m}`** — the only place exercise identity enters the
 dynamics — is built directly from the primary/secondary muscle lists we already have:
@@ -164,7 +170,8 @@ borrowed/default scale.
 
 | Parameter | Symbol | Role | Status |
 |---|---|---|---|
-| systemic time constant | `τ_sys` | between-session systemic recovery | unquantified (gap) |
+| systemic time constant | `τ_sys` | between-session systemic recovery | unquantified (gap); ACWR convention ~7 d acute |
+| systemic coupling gain | `κ` | strength of the cost-aware systemic penalty | guess (no data); keep modest — `κ→0` recovers a pure per-muscle model |
 | acute penalty weight | `λ0` | negativity knob | **0 in v1** |
 | clustering gain | `k3` | super-additive fatigue knob | **0 in v1** |
 | sensitizer time constant | `τ3` | clustering EMA | only if `k3 > 0` (~2 d) |
@@ -175,12 +182,27 @@ borrowed/default scale.
 
 **Committed:** the LN-cascade structure; multiplicative bounded combination; `a_{e,m} ∈
 {0, 0.5, 1}` from primary/secondary muscles; marginal value = concave dose-response
-slope; population-fixed parameters; recovery gate = `exp(−D_m)`.
+slope; population-fixed parameters; recovery gate = `exp(−D_m)`; **cost-aware systemic
+gate** `exp(−κ·c_e·S)` (Shape B — reorders toward low-cost work when depleted, inert when
+fresh); **three timescales only** (no minutes-scale acute channel — see below).
+
+**Decided *out* (not deferred — declined by design):** a fourth, **minutes-scale acute /
+intra-bout channel**. The behaviors it would add are already supplied by machinery we
+commit to: (1) within-bout diminishing returns come from the **concavity of `f`** (each
+set lands on a higher `V_eff`, so `f'` falls) — no fast state needed; (2) "you just
+worked this muscle, move on" comes from the **slow channels accumulating per set** (`D_m`
+and `V_eff,m` rise on every logged set; the worked example buries bench at 9% from this
+alone). The only thing genuinely lost is **minute-resolution recovery within a bout** — a
+distinction below the granularity any user acts on (actionable recovery is hours–days).
+Crucially, omitting it does **not** re-introduce "days": `Δt` stays a continuous real
+number, nothing buckets by calendar, floating sets remain the native input. We simply
+decline to *resolve* minutes, because the value would be redundant and the state would be
+unidentifiable (Imbach). This is a defended boundary, not a gap.
 
 **Deferred / owed (calibration within this structure):** the `τ` values; the RP-12 →
-DB-17 map; the per-exercise systemic cost table `c_e`; the final choice of `f`; the RIR
-modifier shape; EMG perturbations to `a_{e,m}`; the acute (sub-session) and clustering
-refinements (`λ0`, `k3` start at 0).
+DB-17 map; the per-exercise systemic cost table `c_e` and the systemic coupling gain `κ`;
+the final choice of `f`; the RIR modifier shape; EMG perturbations to `a_{e,m}`; the
+subtractive/clustering refinements (`λ0`, `k3` start at 0).
 
 ---
 
@@ -208,7 +230,8 @@ $$
 — bounded to $(0,1]$, max at $V_{\text{eff}}=0$ (deepest stimulus debt). Per-set impulse
 $w_i = \mathrm{rir\_mod}(RIR_i)$; all sets below are working sets at RIR 1–2 so
 $w_i \approx 1$. Per-set systemic cost $c_e$: compound = 0.035, isolation = 0.015 (Sousa
-ordering — multi-joint costs more).
+ordering — multi-joint costs more). Systemic coupling gain $\kappa = 20$ (illustrative — the
+gain that turns accumulated depletion into a per-exercise penalty).
 
 ### Step 0 — the input: a stream of individual sets
 
@@ -231,10 +254,13 @@ day −1    17:30 ✓  17:36 ✓  17:42 ✓  17:49 ✓  17:55 ✓           benc
 > weight is constant to several decimals — the six curl sets at 19:00–19:50 contribute
 > identically whether we treat them as floating or as one 19:25 cluster. So un-clustering
 > is *representationally* honest but, on the day-scale layers alone, **numerically inert**:
-> every number below is unchanged. Within-bout timing only starts to matter once a
-> **minutes-scale** term exists (the acute layer — deliberately *not* added here; under
-> discussion). That indifference is exactly why the day-scale backbone is safe to leave
-> as-is while we still drop the "session" as an input unit.
+> every number below is unchanged. Within-bout timing would only bite if a **minutes-scale**
+> acute channel existed — and we have **decided not to add one** (see *Committed vs. deferred*).
+> That decision is not a limitation but the point: the within-bout work an acute term would do
+> is already done by the concavity of `f` and by the slow channels accumulating per set, so
+> resolving minutes would be redundant *and* unidentifiable. The indifference shown here is
+> therefore permanent by design — which is exactly what lets us drop the "session" as an input
+> unit without ever needing to reinstate it as a hidden timescale.
 
 ### Step 1 — expand each exercise into per-muscle impulses
 
@@ -301,11 +327,11 @@ $v_m = \mathrm{Recovery}_m \cdot \mathrm{Marginal}_m$ (Axis A × Axis B):
 | forearms | **0.204** |
 | calves | **0.646** |
 
-### Step 4 — systemic factor (also derived from the log)
+### Step 4 — systemic depletion state (also derived from the log)
 
-Every set also deposits a systemic cost $c_e$, summed over the whole stream:
-$S(t) = \sum_{\text{sets } i} c_{e_i}\,e^{-\Delta t_i/\tau_{\text{sys}}}$ (each bout's sets
-are within minutes, so we group as $\text{count}\times c_e$ at the bout's age):
+Every set also deposits a systemic cost $c_e$, summed over the whole stream into the single
+global state $S(t) = \sum_{\text{sets } i} c_{e_i}\,e^{-\Delta t_i/\tau_{\text{sys}}}$ (each
+bout's sets are within minutes, so we group as $\text{count}\times c_e$ at the bout's age):
 
 | Bout | $\text{count}\times c_e$ | $\times\,e^{-\Delta t/5}$ |
 |---|---|---|
@@ -314,18 +340,22 @@ are within minutes, so we group as $\text{count}\times c_e$ at the bout's age):
 | Curl (5 d) | $6\times0.015 = 0.090$ | 0.033 |
 | Calf (21 d) | $4\times0.015 = 0.060$ | 0.001 |
 
-$S(t) = 0.256 \Rightarrow$ systemic factor $e^{-S} = 0.774$.
+$S(t) = 0.256$. Note this is the **state**, not yet a factor — under Shape B it reads out
+*per exercise* in Step 5, not as one global multiplier.
 
-### Step 5 — per-exercise composite
+### Step 5 — per-exercise composite (cost-aware systemic gate)
 
-$\;\tilde\eta_e = e^{-S}\cdot \sum_{m\in e} a_{e,m}\,v_m\;$ (same attribution map as Step 1):
+$\;\tilde\eta_e = e^{-\kappa\,c_e\,S}\cdot \sum_{m\in e} a_{e,m}\,v_m\;$ — each exercise is
+discounted by **its own** cost $c_e$ (not a shared factor), so the compounds (pull-up,
+bench) are gated harder than the isolations. With $\kappa S = 20\times0.256 = 5.12$: gate
+$= e^{-5.12\,c_e}$, i.e. $e^{-0.179}=0.836$ for compounds, $e^{-0.077}=0.926$ for isolations.
 
-| Exercise | $\sum a_{e,m}\,v_m$ | $\times\,0.774$ |
-|---|---|---|
-| **Standing Calf Raise** | $0.646$ | **0.500** |
-| Pull-up | $0.074 + 0.5(0.038) + 0.5(0.189) = 0.187$ | 0.145 |
-| Barbell Curl | $0.038 + 0.5(0.204) = 0.140$ | 0.108 |
-| Bench Press | $0.006 + 0.5(0.051) + 0.5(0.051) = 0.058$ | 0.045 |
+| Exercise | $c_e$ | gate $e^{-\kappa c_e S}$ | $\sum a_{e,m}\,v_m$ | $\tilde\eta_e$ |
+|---|---|---|---|---|
+| **Standing Calf Raise** | 0.015 | 0.926 | $0.646$ | **0.598** |
+| Pull-up | 0.035 | 0.836 | $0.074 + 0.5(0.038) + 0.5(0.189) = 0.187$ | 0.156 |
+| Barbell Curl | 0.015 | 0.926 | $0.038 + 0.5(0.204) = 0.140$ | 0.130 |
+| Bench Press | 0.035 | 0.836 | $0.006 + 0.5(0.051) + 0.5(0.051) = 0.057$ | 0.048 |
 
 ### Step 6 — normalize → ranking
 
@@ -335,9 +365,14 @@ Relative (percentile) display divides by the current best:
 | Rank | Exercise | $\eta_e$ |
 |---|---|---|
 | 1 | **Standing Calf Raise** | **100%** |
-| 2 | Pull-up | 29% |
+| 2 | Pull-up | 26% |
 | 3 | Barbell Curl | 22% |
-| 4 | Bench Press | 9% |
+| 4 | Bench Press | 8% |
+
+The cost-aware gate is what separates Shape B from a flat dimmer: it nudged the two
+**compounds down** (pull-up 29→26%, bench 9→8%) relative to the isolations while leaving
+the cheap calf raise on top — a small effect at this modest depletion, but it grows with
+$S$ and would vanish entirely on a fresh day ($S\to0$).
 
 ### Reading the result
 
@@ -358,13 +393,17 @@ Relative (percentile) display divides by the current best:
   input is a stream of sets, not pre-bundled blocks.
 - **No "session" entered anywhere.** The input is a flat stream of timestamped sets; the
   output ranks the next *set*. On the day-scale layers shown here, *when* within a bout each
-  set landed is immaterial (Step 0 note) — so dropping the cluster costs us nothing now. The
-  only thing that would make within-bout timing bite is a **minutes-scale acute term**,
-  which we are deliberately holding for separate discussion rather than reflexively adding a
-  fourth decay state.
+  set landed is immaterial (Step 0 note) — so dropping the cluster costs us nothing. The only
+  thing that would make within-bout timing bite is a **minutes-scale acute term**, which we
+  have **deliberately declined** (see *Committed vs. deferred*): the within-bout behavior it
+  would add is already delivered by `f`'s concavity (set 5 of bench lands on a higher `V_eff`,
+  so scores less) and by the slow channels accumulating per set (which is *why* bench ends up
+  last here). The model stays at three timescales.
 - **Two subtleties this surfaces.** (1) Each per-muscle product is in $[0,1]$ but
   $\sum_{m\in e}$ is not — a fresh full-body exercise hitting several underworked muscles
   can exceed 1 pre-normalization; the **normalize** step is load-bearing, not cosmetic.
-  (2) At a single instant $S(t)$ is one number, so it scales every exercise equally and
-  **does not change the ranking** — it only sets the *absolute* ceiling (a systemically
-  fried day tops out lower). Its ranking effect appears only *across* time as it decays.
+  (2) The systemic state $S(t)$ is one number, but under Shape B it reads out through the
+  **per-exercise** gate $e^{-\kappa c_e S}$ — so it **does change the ranking**, penalizing
+  costly compounds more than cheap isolations (here pull-up and bench slip a point or two).
+  It also still lowers the *absolute* ceiling, and it vanishes when fresh ($S\to0 \Rightarrow$
+  gate $\to1$ for every exercise). A flat global dimmer would have done only the ceiling part.

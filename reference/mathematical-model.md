@@ -8,8 +8,10 @@
 > right now?** — by ranking every exercise 0–100%. The engine is a **fitness-fatigue /
 > impulse-response dynamical system** (Banister → Busso lineage) specialized to **hypertrophy**
 > and resolved to **17 muscles**: "effectiveness" weighs each muscle's accumulated **stimulus
-> debt** against its current **fatigue**, across three handed-off timescales (acute *minutes* →
-> damage *days* → adaptation *weeks*). Constants are **taken from the empirical literature where
+> debt** against its current **fatigue**, across two handed-off timescales (damage *days* →
+> adaptation *weeks*) plus a shared systemic channel. *(A third, minutes-scale acute timescale
+> was considered and declined — §1.10 #1; the within-bout behavior it would add is already
+> carried by dose-response concavity and per-set accumulation.)* Constants are **taken from the empirical literature where
 > it exists and explicitly guessed where it doesn't** — the rigor lives in the *structure* and in
 > keeping every assumption visible, not in pretending to data we lack. It is a **population-level**
 > recommender: no per-user fitting (individual override is a future UI concern). The payoff is a
@@ -33,7 +35,7 @@ These were decided up front; they constrain everything below.
 |---|---|---|
 | Adaptation target | **Hypertrophy** (not strength) | Use the *fractional*-set volume scheme; use the hypertrophy dose-response forms, not the strength ones. |
 | Output | Rank **all** exercises, **0–100% efficiency, real time** | The objective must be evaluable instantaneously from current state, for every exercise, and be normalizable to [0,1]. |
-| Time resolution | **Sub-session, continuous** — explicitly *replaces* the "session" / "PPL day" unit | "Right now" can mean mid-workout. Requires an acute (minutes–hours) fatigue layer in addition to the days-scale dynamics. See §1.10. |
+| Time resolution | **Continuous, day-scale kernels** — explicitly *replaces* the "session" / "PPL day" unit | `Δt` is a continuous real; nothing buckets by calendar. "Right now" can mean mid-workout, but within-bout *minutes* are deliberately **not** resolved — concavity + per-set accumulation already cover the within-bout behavior (acute layer declined, §1.10 #1). |
 | Per-exercise differentiation | **None** — direct/indirect (fractional) sets only | No exercise-specific *stimulus* (length/ROM/profile): precision exceeds user-input fidelity and is likely more individual than population. Exercise-specific *fatigue* (systemic) is wanted — see §1.10. |
 | Input log fidelity | **Full set detail** target (exercise, timestamp, reps, load, RIR/RPE); possible minimal fallback (exercise, timestamp, RPE) | Every per-set quantity below must *degrade gracefully* when reps/load/RIR are missing. |
 | Muscle granularity | **Exercise-DB native (17 muscles)** | State is tracked per-muscle over these 17. RP landmarks (12 groups) are mapped *onto* these 17, not vice versa. |
@@ -320,8 +322,11 @@ first:
    **structural damage (myoglobin) load-insensitive at matched volume** (85% ≈ 67% 1RM,
    between-condition p≈1.0), i.e. EIMD tracks *volume*, not load. The load/rep fatigue effect of
    `Pareja-Blanco-2019` (lighter+more-reps → more fatigue) **dissociates** from structural damage
-   and belongs to the **fast acute neuromuscular layer**, not the days-scale `d_set`. So keep
-   `d_set ≈ volume` on the slow layer and push any load/rep term into the acute kernel (§1.10 #1).
+   and belongs to a **fast acute neuromuscular layer**, not the days-scale `d_set`. So keep
+   `d_set ≈ volume` on the slow layer; the load/rep fatigue term *would* have lived in the acute
+   kernel — which we have **declined** (§1.10 #1) — so it is **dropped**, not relocated. This is
+   consistent: it is a minutes-scale effect, below the resolution we model, and its within-bout
+   consequence is already covered by per-set accumulation.
    *(§1.4, §1.6)*
 
 5. **EMG folds away.** Drop EMG entirely in v1; `a_{e,m} ∈ {0, 0.5, 1}`. Re-introduce
@@ -500,26 +505,38 @@ literature-backed, cheapest form.**
 
 ## 1.10 Known gaps & integration backlog
 
-Tracked so they aren't lost. Two are **in scope and need building**; the rest are
+Tracked so they aren't lost. One is **in scope and needs building** (systemic `S`); the rest are
 **deliberately deferred or declined** (recorded so the decision is explicit, not silent).
 
+### Decided out — the minutes-scale acute layer (DECLINED by design, 2026-06)
+1. **Sub-session / acute fatigue layer — DECLINED, not deferred.** Earlier drafts had this
+   in scope: dissolving the "session" as a unit seemed to *require* an acute (minutes-scale)
+   fatigue kernel on top of the days-scale `D_m` — a third faster timescale (`τ_acute` ~ minutes,
+   the W′-recharge layer from the CP model, Clarke-2013 `W'` half-time ~3.5 min, plus set-to-set
+   decrement data: `Pareja-Blanco-2019`, `Jukic-2023`, `Refalo-2023_neuromuscular-fatigue`).
+   *On review we are dropping it entirely.* The decision turns on what such a channel would
+   actually add to the **ranking**, item by item:
+   - **Within-bout diminishing returns** ("set 5 is worth less than set 1") are already supplied
+     by the **concavity of `f`** — each set lands on a higher `V_eff`, so `f'(V_eff)` falls. No
+     fast-decaying state is needed for "the more you've done, the less the next is worth."
+   - **"You just hammered this muscle, move on"** is already supplied by the **slow channels
+     accumulating per set**: every logged set raises `D_m` (recovery gate shrinks) and `V_eff,m`
+     (marginal value shrinks). In the §model.md worked example this alone drives bench to last
+     (9%) after five sets — the within-bout "stop flogging this" behavior is emergent, not added.
+   - **The only thing genuinely lost** is *minute-resolution recovery within a bout* (a muscle
+     worked 20 min ago vs 2 min ago) — a distinction below the granularity any user acts on;
+     actionable recovery is hours–days, which `τ_fast` already resolves.
+
+   And critically, omitting it does **not** re-introduce "days": `Δt` stays a continuous real,
+   nothing buckets by calendar, floating sets stay the native input — we simply decline to
+   *resolve* minutes. That keeps the state count minimal (Imbach: a fourth `τ_acute` component
+   is exactly the poorly-identifiable kind we'd be fitting from priors, not data). So the
+   double-count and timescale-separation worries (§1.11 #8) don't get *managed* — they're
+   **removed**. The `Zahiri-2024` cross-muscle timing (τ≈1–3 min, gone by 5) and the
+   same-muscle decrement data still stand as evidence; they just no longer motivate a state,
+   because the ranking already behaves correctly without one.
+
 ### In scope — to be modeled (v1 or fast-follow)
-1. **Sub-session / acute fatigue layer (IN SCOPE).** The whole point is to dissolve the
-   "session" and "PPL day" as units — so "right now" can be mid-workout, and the model
-   needs an acute (minutes–hours) fatigue kernel *on top of* the days-scale `D_m`. This is
-   a third, faster timescale (`τ_acute` ~ minutes–hours), conceptually the W′-recharge layer
-   set aside from the CP model (Clarke-2013, `W'` half-time ~3.5 min) plus the set-to-set
-   decrement data. New sources: `Pareja-Blanco-2019` (recovery time course by load ×
-   velocity-loss, 0/6/24/48 h), `Jukic-2023` (velocity loss as in-set fatigue marker),
-   `Refalo-2023_neuromuscular-fatigue` (acute fatigue vs RIR). Architecturally this is
-   "add another EMA with a fast `τ_acute`," same machinery as §1.8.
-   *Refinement (2026-06 review): this layer is LOCAL (same-muscle), not cross-muscle.* `Zahiri-2024`
-   times the **cross-muscle** acute effect at τ≈1–3 min, fully recovered by 5 min — it lives inside
-   normal inter-exercise rest and is negligible at the set/exercise granularity we rank on. So the
-   acute kernel should carry the same-muscle set-to-set decrement and the load/rep fatigue term
-   (the `Pareja-Blanco`/`Winchester` dissociation, §1.7 #4) — but **not** a cross-channel coupling.
-   Bonus: τ_acute (~minutes) ≪ τ_fast (days) cleanly, so the double-count worry (§1.11 #8) mostly
-   dissolves.
 2. **Global / systemic per-exercise fatigue (WANTED — data is the bottleneck).** There is a
    **session-level productivity cap that spans muscles** (a hard leg session degrades an
    unrelated push). The model is currently 17 *independent* per-muscle channels; this adds a
@@ -538,13 +555,26 @@ Tracked so they aren't lost. Two are **in scope and need building**; the rest ar
      if at all, as a **small, flat discount on *achievable volume*** (sets land at target RIR sooner),
      **not** as a stimulus-quality multiplier or a max-force penalty, and **not** as a cross-channel
      force coupling.
-   - **Between-session `S` is the real #9, and is still unquantified.** "Hard leg day degrades tomorrow's
+   - **Between-session `S` is the real #9 — now committed to Shape B.** "Hard leg day degrades tomorrow's
      push" is a *recovery-resource* competition over days (`Sousa-2024`), a different mechanism from
      acute crossover — the NLMF papers mostly *rule out* acute crossover as its cause. Here the
-     exercise-specific cost ordering (squat ≫ leg curl) *does* plausibly apply, but neither source gives
-     clean `S`-kinetics or a per-exercise cost table.
-   **Gap:** a quantitative between-session `S(t)` and its per-exercise cost table — better data here
-   would be very valuable.
+     exercise-specific cost ordering (squat ≫ leg curl) *does* apply. **Committed form (2026-06):** one
+     global state `S(t) = Σ c_e e^{−Δt/τ_sys}` reading out as a **cost-aware multiplicative gate**
+     `exp(−κ·c_e·S)` on each candidate's score — *not* a flat `e^{−S}` dimmer. The distinction is the
+     whole point: a flat global factor scales every exercise equally and so **cannot reorder a
+     single-instant ranking** (it only lowers the ceiling); the cost-aware gate penalizes a candidate by
+     *its own* `c_e`, so when systemically depleted the model **steers toward low-cost work** (the
+     "big compound(s) + accessories" structure practitioners already use). The same `c_e` does double
+     duty — the dose a set deposits into `S` *and* the cost it is charged at ranking. Inert when fresh
+     (`S→0`); `κ→0` recovers a pure per-muscle model.
+   **Structural precedent (not hypertrophy-specific):** the training-load-monitoring lineage —
+   session-RPE (`Foster`), Banister `TRIMP`, and the **acute:chronic workload ratio** — is exactly this
+   shape: an exponentially-weighted accumulator of per-session systemic cost used to gate subsequent
+   work, with an ~7 d acute window. It validates the *form* and offers a `τ_sys` convention; it does
+   **not** supply a hypertrophy-tuned `c_e` or `κ`.
+   **Gap (constants only):** the per-exercise `c_e` cost table, `κ`, and `τ_sys`. No clean kinetics
+   exist; set from the `Sousa-2024` ordering + a hand-chosen modest `κ`, revisit if the absolute-ceiling
+   behavior across days looks wrong. The *shape* is no longer open.
 3. **RIR modifier shape for L2 (refine).** The per-set stimulus modifier is concave and
    plateaus by ~1–2 RIR (`Refalo-2023` meta, small effect ES≈0.15–0.21) — replace the
    placeholder "mild RIR multiplier" with this published shape.
@@ -609,19 +639,25 @@ load-bearing they are. Cross-refs point to where each is developed.
    or **Kontro's multi-channel 3-D IR**? `Imbach-2022` warns IR is poorly identifiable — mitigated
    by our population-level stance, but the structural choice is open. *(→ §1.10 backbone risk)*
 
-8. **Acute layer `τ_acute` + timescale separation.** *Largely resolved (2026-06 review).* `Zahiri-2024`
-   times the cross-muscle acute effect at τ≈1–3 min (gone by 5 min) — minutes, not the "minutes–hours"
-   originally assumed — so `τ_acute ≪ τ_fast` (days) holds with room to spare and the double-count worry
-   mostly dissolves. Remaining work is calibration of the **same-muscle** set-to-set decrement + load/rep
-   fatigue term from `Pareja-Blanco-2019` / `Jukic-2023`, not the cross-muscle coupling. *(→ §1.10 #1)*
+8. **Acute layer `τ_acute` + timescale separation.** **CLOSED (2026-06): no acute channel.** The
+   layer is declined by design — within-bout diminishing returns are carried by the concavity of `f`,
+   and "you just worked this muscle" by per-set accumulation in the slow channels, so a minutes-scale
+   state would be redundant *and* unidentifiable (Imbach). Omitting it does not re-introduce "days":
+   `Δt` stays continuous; we just decline to *resolve* minutes. The timescale-separation and
+   double-count worries are thereby removed rather than managed. Full rationale in §1.10 #1. *(→ §1.10 #1)*
 
-9. **Systemic fatigue `S(t)`: functional form + per-exercise cost.** *Reframed (2026-06 review):* split
-   into (i) an **acute cross-muscle** term that the NLMF evidence says is ≈0 for force/power and at most
-   a small, flat, **perceived-effort discount on achievable volume** (`Behm-2021`; not severity- or
-   muscle-proximity-scaled, gone in ~5 min) — probably drop it in v1; and (ii) a **between-session
-   recovery-resource** term (the real cap; `Sousa-2024`) where exercise-specific cost *does* apply but
-   no clean kinetics or cost table exists yet. Open: functional form of (ii) — multiplicative discount,
-   budget, or cap — and whether it acts on *volume* or *score*. *(→ §1.10 #2)*
+9. **Systemic fatigue `S(t)`: functional form + per-exercise cost.** **RESOLVED (2026-06): Shape B —
+   a cost-aware multiplicative gate on score.** The split from the earlier review still holds: (i) the
+   **acute cross-muscle** term is ≈0 for force/power and at most a small, flat perceived-effort effect
+   (`Behm-2021`; gone in ~5 min) — **dropped** with the acute layer (#8); and (ii) the **between-session
+   recovery-resource** term (the real cap; `Sousa-2024`) is the surviving `S`. Its form is now committed:
+   a single global state `S(t) = Σ c_e e^{−Δt/τ_sys}` reading out through the **per-exercise** gate
+   `exp(−κ·c_e·S)`. This closes both sub-forks: it acts on **score** (the "volume" reading belonged to
+   the dropped acute piece), and the form is a **multiplicative discount** — but a *cost-aware* one, so
+   it **reorders** toward low-cost work when depleted rather than dimming flatly (a flat `e^{−S}` cannot
+   move a single-instant ranking; `exp(−κ c_e S)` can). Inert when fresh (`S→0 ⇒` gate `→1`); `κ→0`
+   recovers the pure per-muscle model. Still open: the `c_e` cost table, `κ`, `τ_sys` (constants only —
+   no data; ACWR convention ~7 d). *(→ §1.10 #2)*
 
 10. **Effort/RIR modifier shape.** Adopt the `Refalo-2023` concave-plateau (small effect, flattens
     by ~1–2 RIR) for L2 — but how steep, and how does it interact with `d_set`? *(→ §1.6, §1.10 #3)*
@@ -708,7 +744,10 @@ gate** as the primary, always-on combination, for three reasons:
    a product of `[0,1]` factors is automatically in `[0,1]`. An *absolute* efficiency
    falls out with no clamping — "a fried day genuinely tops out at 40%" becomes a
    property of the math, and relative/percentile is then a pure **display** transform.
-   #3 (absolute vs relative) stops being a modeling decision.
+   #3 (absolute vs relative) stops being a modeling decision. *(Under the Shape-B systemic
+   gate the ceiling drop is **exercise-specific** — a fried day tops out low for costly
+   compounds but a cheap isolation can still read high, which is the intended behavior, not
+   a violation of the bound.)*
 2. **It is the Damas reading.** A multiplicative recovery gate *is* "an unrecovered
    muscle converts less of the available stimulus" (§1.4) — productivity, not a
    bookkeeping debit. Subtraction is the endurance/TRIMP framing Banister inherited;
@@ -729,25 +768,32 @@ gate** as the primary, always-on combination, for three reasons:
   dynamics, combine only at the readout** (our L5), and never pre-collapse muscles into a
   single state. Kontro also licenses one **shared** channel across the independents — the
   right home for systemic fatigue `S(t)` (§1.10 #2): a single global leaky integrator
-  entering as one more `[0,1]` multiplicative factor.
+  entering as one more `[0,1]` multiplicative factor — but a **cost-aware** one,
+  `exp(−κ c_e S)`, so it reorders toward low-cost work rather than dimming flatly (Shape B).
 - **Imbach-2022** sets the discipline: two-component FF is poorly identifiable and adding
   components reliably fails to improve prediction. This bounds the state count: **≤3 leaky
   integrators per muscle** (slow `V_eff`, fast recovery `D`, optional medium sensitizer
-  `C`) **+ 1–2 global** (systemic `S`, acute). Every integrator beyond that is a parameter
+  `C`) **+ 1 global** (systemic `S`). A minutes-scale acute integrator was considered and
+**declined** (§1.10 #1) on exactly this principle — it is the unidentifiable kind of state
+Imbach warns against, and its behavior is already carried by concavity + per-set
+accumulation. Every integrator beyond that is a parameter
   we cannot identify and that Imbach predicts won't pay for itself. Our **population-fixed,
   no-per-user-fit** stance is not merely scope — Imbach makes it the only defensible one.
 
 ## 2.6 The master formula (committed)
 
 $$
-\eta_e(t) \;=\; \underbrace{S(t)}_{\substack{\text{shared}\\\text{systemic}}} \cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\text{attribution}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\text{Axis A: recovery}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\text{Axis B: marginal value}}
+\eta_e(t) \;=\; \underbrace{e^{-\kappa\, c_e\, S(t)}}_{\substack{\text{cost-aware}\\\text{systemic gate}}} \cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\text{attribution}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\text{Axis A: recovery}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\text{Axis B: marginal value}}
 \qquad\longrightarrow\ \text{normalize}
 $$
 
 with $S$, $\mathrm{Recovery}_m$, $V_{\text{eff},m}$ each a population-parameterized leaky integrator (EMA)
 over the set history, `f` the concave dose-response (log/root now; swappable — §2.3), and
-every factor bounded to `[0,1]` so the product is an honest absolute efficiency (§2.4).
-This is a Hammerstein–Wiener cascade: **linear leaky-integrator dynamics, static concave
+every factor bounded to `[0,1]` so the product is an honest absolute efficiency (§2.4). The
+systemic factor is **cost-aware** (Shape B, §1.10 #2): it discounts each candidate by its own
+prospective cost $c_e$ scaled by depletion $S$, so it is inert when fresh ($S\to0$) and steers
+toward low-cost work when depleted — the one term that lets systemic fatigue *reorder*, not
+just lower the ceiling. This is a Hammerstein–Wiener cascade: **linear leaky-integrator dynamics, static concave
 nonlinearities, multiplicative combination, parallel per-muscle channels + one shared
 systemic channel.** It is *exactly* the §1.7 minimal set, with three forks closed by
 naming the structure.
@@ -758,11 +804,13 @@ naming the structure.
 | #4 Axis-B encoding | Dose-response slope `f'(V_eff)` — same convolution as `G_m`, read through the data-constrained lens. |
 | #2 subtract vs gate | Multiplicative gate as spine (bounded, Damas-consistent); subtractive penalty opt-in for acute negativity only. |
 | #3 normalization | Absolute falls out of the bounded product; relative is display. |
+| #8 acute layer | Declined — no minutes-scale channel; concavity + per-set accumulation carry within-bout behavior (§1.10 #1). |
+| #9 systemic form | Shape B: one global state, cost-aware gate `exp(−κ c_e S)` on score — reorders toward low-cost work, inert when fresh (§1.10 #2). |
 
 **Still open after §2** (calibration *within* the structure, not a search *for* it): the
-`τ` values, the RP-12 → DB-17 map, the systemic per-exercise cost table, and the final
-choice of `f`. The working statement — formula, every input, every parameter, the output
-— is `model.md`.
+`τ` values (incl. `τ_sys`), the RP-12 → DB-17 map, the systemic per-exercise cost table
+`c_e` and gain `κ`, and the final choice of `f`. The working statement — formula, every
+input, every parameter, the output — is `model.md`.
 
 ---
 
@@ -775,6 +823,10 @@ choice of `f`. The working statement — formula, every input, every parameter, 
 - Parallel independent channels + one shared channel: `Kontro-2025`.
 - Minimal identifiable state count, population-fixed parameters: `Imbach-2022`.
 - Multiplicative gate = MPS/productivity reading: `Damas-2015`, `Damas-2016`.
+- Cost-aware systemic gate (Shape B) — per-exercise recovery cost ordering: `Sousa-2024`; central/systemic
+  fatigue basis: `Zając-2015`; structural precedent (EWMA-of-load → gate, ~7 d window) from the
+  training-load-monitoring lineage (session-RPE / Banister TRIMP / acute:chronic workload ratio) —
+  *form only, no hypertrophy-specific constants; we decline to ingest this class of paper (see reading list)*.
 
 ---
 
