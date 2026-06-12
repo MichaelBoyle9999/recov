@@ -30,7 +30,7 @@ literature (or explicitly guessed), never fit per user.
 ## The master formula
 
 $$
-\eta_e(t) \;=\; \underbrace{e^{-\kappa\, c_e\, S(t)}}_{\substack{\text{systemic gate}\\\text{(cost-aware)}}} \,\cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\substack{\text{attribution}\\\text{(set credit)}}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\substack{\text{Axis A:}\\\text{recovery gate}}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\substack{\text{Axis B:}\\\text{marginal value}}}
+\eta_e(t) \;=\; \underbrace{e^{-\kappa\, c_e\, S(t)}}_{\substack{\text{systemic gate}\\\text{(cost-aware)}}} \,\cdot \sum_{m \,\in\, e} \underbrace{g_m}_{\substack{\text{user}\\\text{priority}}} \cdot \underbrace{a_{e,m}}_{\substack{\text{attribution}\\\text{(set credit)}}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\substack{\text{Axis A:}\\\text{recovery gate}}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\substack{\text{Axis B:}\\\text{marginal value}}}
 $$
 
 (then normalized to $[0,1]$). A **Hammerstein–Wiener cascade**: per-channel **leaky integrators** (linear convolution
@@ -41,9 +41,14 @@ gate**. The systemic gate is **not** a flat global dimmer: it discounts each can
 **inert when fresh** ($S\to 0 \Rightarrow$ gate $\to 1$ for all exercises) and **steers
 toward low-cost work when depleted** (a costly compound is penalized more than a cheap
 isolation). This is the only term that lets systemic fatigue *reorder* the ranking, not
-merely lower its ceiling (Shape B; see `mathematical-model.md` §1.10 #2). Every factor is
+merely lower its ceiling (Shape B; see `mathematical-model.md` §1.10 #2). $g_m \in [0,1]$
+is the **user-configured priority** for muscle $m$ (default $1$ = full priority; lower it to
+de-emphasize muscles the user doesn't care to grow). It is the one place user input enters
+the model — and it is **configuration, not fitting**: the user states a *goal*, the dynamics
+($\tau$, landmarks, dose-response) remain population-fixed and are never inferred from the
+user's own logs (see *user configuration* below). Every factor is
 bounded to $[0,1]$, so each **per-muscle channel product**
-$a_{e,m}\cdot\mathrm{Recovery}_m\cdot f'$ is in $[0,1]$; the **sum over an exercise's
+$g_m\cdot a_{e,m}\cdot\mathrm{Recovery}_m\cdot f'$ is in $[0,1]$; the **sum over an exercise's
 muscles** can exceed 1, which is what the explicit **normalize** step resolves (see the
 worked example).
 
@@ -58,7 +63,7 @@ $$
 | State | Definition | Axis | $\tau$ (timescale) |
 |---|---|---|---|
 | $V_{\text{eff},m}(t)$ | effective accumulated volume for muscle $m$: $\;\sum_i a_{e_i,m}\,w_i\,e^{-(t-t_i)/\tau_{\text{slow}}}$ | B (stimulus debt) | $\tau_{\text{slow}}$ ~ days–week |
-| $D_m(t)$ | recovery deficit: $\;\sum_i a_{e_i,m}\,e^{-(t-t_i)/\tau_{\text{fast}}}$ | A (recovery) | $\tau_{\text{fast}}$ ~ 1–5 d (EIMD) |
+| $D_m(t)$ | recovery deficit: $\;\sum_i a_{e_i,m}\,e^{-(t-t_i)/\tau_{\text{fast},m}}$ | A (recovery) | $\tau_{\text{fast},m}$ ~ 1–5 d (EIMD), **per muscle** |
 | $S(t)$ | systemic depletion: $\;\sum_i c_{e_i}\,e^{-(t-t_i)/\tau_{\text{sys}}}$ (one global state; feeds the cost-aware gate) | systemic | $\tau_{\text{sys}}$ ~ days (between-session) |
 
 ### The static readouts (each bounded to `[0,1]`)
@@ -66,7 +71,7 @@ $$
 | Readout | Form | Meaning |
 |---|---|---|
 | $f'(V_{\text{eff},m})$ | derivative of concave $f$ (log: $\Delta \propto \ln V$, PUOS≈11/session; or root $\sqrt{V}$, PUOS≈31/wk), rescaled to $[0,1]$ | marginal value of the *next* set: large when underworked, $\to 0$ at saturation/MRV |
-| $\mathrm{Recovery}_m(t)$ | $e^{-D_m(t)} \in (0,1]$ | recovery gate: 1 when fully repaired, $\to 0$ right after a hard bout |
+| $\mathrm{Recovery}_m(t)$ | $e^{-D_m(t)/\mathrm{cap}_m} \in (0,1]$ | recovery gate: 1 when fully repaired, $\to 0$ right after a hard bout. **Capacity-normalized**: $\mathrm{cap}_m \propto \mathrm{MRV}_m$, so a high-capacity muscle isn't crushed by the same absolute deficit as a small one |
 | systemic gate | $e^{-\kappa\,c_e\,S(t)} \in (0,1]$ | **cost-aware**: inert when fresh ($S\to0$); penalizes high-$c_e$ exercises more as depletion rises → reorders toward low-cost work |
 
 $f$ is **swappable** (log / root / exponential-growth / sigmoid) without touching the
@@ -146,9 +151,26 @@ middle back, neck, quadriceps, shoulders, traps, triceps`.
 | Parameter | Symbol | Source | Status |
 |---|---|---|---|
 | slow time constant | `τ_slow` | dose-response / volume kinetics | needs setting |
-| fast (recovery) time constant | `τ_fast` | EIMD: `Paulsen-2012`, `Howatson-2008` (~1–5 d) | needs fitting |
+| fast (recovery) time constant | `τ_fast,m` | EIMD: `Paulsen-2012`, `Howatson-2008` (~1–5 d); **per-muscle rate** | population table owed (see below) |
+| recovery capacity | `cap_m` | `∝ MRV_m` (`RP-volume-landmarks_current.csv`) | normalizes the recovery gate; falls out of the RP-12 → DB-17 map |
 | volume landmarks | `MV / MEV / MAV / MRV` | `RP-volume-landmarks_current.csv` | locked as scale; **needs RP-12 → DB-17 map** |
 | dose-response curve `f` | `f_session` (log), `f_week` (root) | `Remmert-2024`, `Pelland-2024` | locked; shape swappable |
+
+**Per-muscle capacity & recovery rate (`cap_m`, `τ_fast,m`).** Muscles differ in both how
+much volume they can recover (`cap_m`) and how fast (`τ_fast,m`); a single global recovery
+gate over-penalizes high-capacity, fatigue-resistant muscles. There is **no clean kinetic
+dataset** giving per-muscle recovery time constants — so, exactly like the `c_e` cost table,
+this is a **hand-set population table** triangulated from the best available proxies, not fit:
+
+- **`cap_m` (capacity)** — set directly from **RP MRV** per muscle (already in repo; the same
+  RP-12 → DB-17 map). Larger recoverable ceiling → larger `cap_m` (quads/calves high,
+  hamstrings/front-delts low).
+- **`τ_fast,m` (rate)** — ordered by **damage susceptibility / architecture**: longitudinal-
+  fusiform and biarticular muscles recover slower (hamstrings peak ~48 h vs quads ~24 h;
+  `EJAP-2023`), pennate and habitually-loaded muscles faster; fatigue-resistant Type-I
+  postural muscles (calves, abs, erectors, traps — `Johnson-1973` fiber-type table) fastest,
+  consistent with RP's higher tolerable frequency for them. Set from this ordering, not a
+  fitted curve.
 
 **RP-12 → DB-17 map (owed).** RP's landmarks are for **12 groups**; we track **17
 muscles**. The mapping is one-to-many and must be built (and RP's *direct-set* counts
@@ -176,15 +198,39 @@ borrowed/default scale.
 | clustering gain | `k3` | super-additive fatigue knob | **0 in v1** |
 | sensitizer time constant | `τ3` | clustering EMA | only if `k3 > 0` (~2 d) |
 
+### User configuration (the *only* user-tunable input — config, not fitting)
+
+| Parameter | Symbol | Role | Status |
+|---|---|---|---|
+| muscle priority | `g_m` | per-muscle goal weight $\in [0,1]$, default $1$ | user-set; default uniform |
+
+`g_m` answers **"which muscles do I even care about, and how much?"** — a per-muscle weight
+the user sets once (default all $1$ = balanced total hypertrophy, the original v1 objective).
+Lowering `g_m` de-prioritizes a muscle in the ranking (set `g_neck`, `g_forearms` low and the
+engine stops surfacing trivial neglected muscles just because they're underworked — the
+failure mode of a pure "balanced" objective). It enters as a **pure multiplicative weight on
+the channel** (master formula above), so it reranks the readout **without touching the
+physiology** — `τ`, `cap_m`, landmarks, and dose-response stay population-fixed.
+
+This is a deliberate, narrow walk-back of the "no personalization" stance, and the line is
+sharp: **configuration is allowed, fitting is still banned.** The user may *declare a goal*
+(`g_m`); the model never *infers* dynamics (time constants, gains, `f`) from the user's own
+logs — that ill-conditioned per-subject fitting (Imbach) remains out of scope. `g_m` changes
+*what we optimize for*, not *the model of how muscles respond*. (A future UI could expose
+more config in the same spirit — e.g. a known injury masking an exercise — but `g_m` is the
+only one committed for v1.)
+
 ---
 
 ## What "v1" commits to vs. defers
 
 **Committed:** the LN-cascade structure; multiplicative bounded combination; `a_{e,m} ∈
 {0, 0.5, 1}` from primary/secondary muscles; marginal value = concave dose-response
-slope; population-fixed parameters; recovery gate = `exp(−D_m)`; **cost-aware systemic
-gate** `exp(−κ·c_e·S)` (Shape B — reorders toward low-cost work when depleted, inert when
-fresh); **three timescales only** (no minutes-scale acute channel — see below).
+slope; population-fixed *dynamics* (one user-config goal weight `g_m`, see below — but no
+per-user *fitting*); **capacity-normalized, per-muscle** recovery gate `exp(−D_m/cap_m)` with
+per-muscle `τ_fast,m`; **cost-aware systemic gate** `exp(−κ·c_e·S)` (Shape B — reorders
+toward low-cost work when depleted, inert when fresh); **per-muscle user priority** `g_m`
+(default uniform); **three timescales only** (no minutes-scale acute channel — see below).
 
 **Decided *out* (not deferred — declined by design):** a fourth, **minutes-scale acute /
 intra-bout channel**. The behaviors it would add are already supplied by machinery we
@@ -200,9 +246,11 @@ decline to *resolve* minutes, because the value would be redundant and the state
 unidentifiable (Imbach). This is a defended boundary, not a gap.
 
 **Deferred / owed (calibration within this structure):** the `τ` values; the RP-12 →
-DB-17 map; the per-exercise systemic cost table `c_e` and the systemic coupling gain `κ`;
-the final choice of `f`; the RIR modifier shape; EMG perturbations to `a_{e,m}`; the
-subtractive/clustering refinements (`λ0`, `k3` start at 0).
+DB-17 map; the per-muscle capacity/recovery-rate table (`cap_m ∝ MRV_m`, `τ_fast,m` from the
+damage-susceptibility ordering — hand-set like `c_e`, no kinetic data); the per-exercise
+systemic cost table `c_e` and the systemic coupling gain `κ`; the final choice of `f`; the
+RIR modifier shape; EMG perturbations to `a_{e,m}`; the subtractive/clustering refinements
+(`λ0`, `k3` start at 0). User priority `g_m` defaults to uniform (no calibration needed).
 
 ---
 
@@ -218,9 +266,12 @@ sets via the attribution map. The output ranks the single **next set**, not a se
 per above) — the point is to show the machinery end-to-end and that it behaves sanely, not
 to assert numbers.
 
-**Illustrative constants.** $\tau_{\text{fast}} = 3$ d (recovery), $\tau_{\text{slow}} = 7$
-d (volume), $\tau_{\text{sys}} = 5$ d (systemic). Recovery gate
-$\mathrm{Recovery}_m = e^{-D_m}$. Dose-response $f(V)=\sqrt{V}$ (the Pelland weekly root);
+**Illustrative constants.** $\tau_{\text{fast},m} = 3$ d (recovery), $\tau_{\text{slow}} = 7$
+d (volume), $\tau_{\text{sys}} = 5$ d (systemic). To keep this trace readable it runs with the
+two new per-muscle knobs at their **neutral defaults** — $\mathrm{cap}_m = 1$ and user priority
+$g_m = 1$ for every muscle — so the numbers below are unchanged; with real `cap_m` (∝ MRV) and a
+non-uniform `g_m` the recovery gate and the channel weights would shift per muscle. Recovery gate
+$\mathrm{Recovery}_m = e^{-D_m/\mathrm{cap}_m} = e^{-D_m}$ here. Dose-response $f(V)=\sqrt{V}$ (the Pelland weekly root);
 the **marginal value of the next set** is the increment of that curve,
 
 $$

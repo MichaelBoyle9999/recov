@@ -40,7 +40,7 @@ These were decided up front; they constrain everything below.
 | Input log fidelity | **Full set detail** target (exercise, timestamp, reps, load, RIR/RPE); possible minimal fallback (exercise, timestamp, RPE) | Every per-set quantity below must *degrade gracefully* when reps/load/RIR are missing. |
 | Muscle granularity | **Exercise-DB native (17 muscles)** | State is tracked per-muscle over these 17. RP landmarks (12 groups) are mapped *onto* these 17, not vice versa. |
 | "Efficiency" objective | **Not yet pinned down** — compound metric | Section 1 keeps recovery and stimulus-debt as *separate axes* (see §1.0). Section ≥2 will commit. |
-| Personalization | **None in v1** — population-level recommendation only | All time constants and gains are *set from the population literature, never fit per user.* Sidesteps ill-conditioned per-subject fitting (see §1.8). User-judgment override is a future UI concern, out of scope here. |
+| Personalization | **No per-user *fitting*; one per-user *goal* input** | All time constants and gains are *set from the population literature, never fit per user* — sidesteps ill-conditioned per-subject fitting (see §1.8). The one exception is **configuration, not fitting**: a per-muscle priority weight `g_m` (default uniform) by which the user *declares* which muscles to grow. It reweights the objective; it never infers dynamics from the user's logs. (Walk-back recorded 2026-06; see §1.10 *user configuration*.) |
 
 The 17 muscle units (from `free-exercise-db_mover-map.csv`):
 `abdominals, abductors, adductors, biceps, calves, chest, forearms, glutes,
@@ -489,7 +489,8 @@ literature-backed, cheapest form.**
 | `s_set` (≈1 set), RIR modifier | L2 | B | Baz-Valle, Schoenfeld load study | baseline locked |
 | `d_set` (damage), eccentric/novelty mod; **load-neutral at matched volume** | L2 | A | Howatson, Paulsen, Winchester-2022 | optional modifier; `d_set ≈ volume` on slow layer |
 | `τ1` fitness time const (~27–45 d) | L3 | B | Clarke | maybe unused (see collapse #3) |
-| `τ2` fatigue time const (**~1–5 d**, retuned) | L3 | A | Clarke + Paulsen/Howatson | needs fitting |
+| `τ_fast,m` fatigue time const (**~1–5 d**, retuned, **per-muscle**) | L3 | A | Clarke + Paulsen/Howatson; ordering `EJAP-2023`, `Johnson-1973` | hand-set population table |
+| `cap_m` recovery capacity (`∝ MRV_m`) | L3 | A | RP landmarks | normalizes recovery gate; from RP-12→17 map |
 | `k1, k2` gains; `k2(t)` non-stationary | L3 | A/B | Clarke, Busso | open (Busso optional) |
 | MPS window ~24–48 h; training-status drift | L3 | A | Damas | informs gate idea |
 | MV/MEV/MAV/MRV per muscle | L4 | B | RP (non-peer-reviewed) | locked as scale; needs 12→17 map |
@@ -500,6 +501,7 @@ literature-backed, cheapest form.**
 | `C_m`, `τ3` (sensitizer EMA) | L3 | A | Busso Eq.5 (`τ3≈2 d`) | enables clustering (`k3>0`) |
 | `k3` (clustering gain) | L5 | A | Busso Eq.5 | **0 in v1**; knob |
 | `combine` operator + A×B interaction | L5 | — | §1.8 (subtractive penalty) vs gate | partly resolved; gate still open for §2 |
+| `g_m` user priority weight (per-muscle, `∈[0,1]`) | L5 | — | user config (not fitted) | committed; default uniform |
 
 ---
 
@@ -579,7 +581,26 @@ Tracked so they aren't lost. One is **in scope and needs building** (systemic `S
    plateaus by ~1–2 RIR (`Refalo-2023` meta, small effect ES≈0.15–0.21) — replace the
    placeholder "mild RIR multiplier" with this published shape.
 4. **RP-12 → DB-17 muscle map.** Still owed (one-to-many; e.g. RP "Back" → lats + middle back
-   + lower back). Needed to use MEV/MAV/MRV as ceilings at our muscle resolution.
+   + lower back). Needed to use MEV/MAV/MRV as ceilings at our muscle resolution — *and* to set
+   `cap_m` (#5).
+5. **Per-muscle recovery capacity & rate (`cap_m`, `τ_fast,m`) — WANTED.** The v1 recovery gate
+   was global; muscles demonstrably differ in *how much* volume they recover (`cap_m`) and *how
+   fast* (`τ_fast,m`). Gate becomes `Recovery_m = exp(−D_m/cap_m)` with per-muscle `τ_fast,m`.
+   **No clean kinetic dataset exists** (as with `c_e`): set `cap_m ∝ MRV_m` (RP, already in repo)
+   and order `τ_fast,m` by **damage susceptibility / architecture** — biarticular/fusiform slower
+   (hamstrings peak ~48 h vs quads ~24 h, `EJAP-2023`), pennate/habituated faster, Type-I postural
+   muscles fastest (`Johnson-1973` fiber types; consistent with RP's higher frequency for calves/
+   abs/erectors). Hand-set population table, revisit if rankings look wrong. *(→ §1.4)*
+
+**User configuration (the lone per-user input — config, not fitting; walk-back 2026-06).** A
+per-muscle priority weight `g_m ∈ [0,1]` (default `1` = balanced) by which the user *declares*
+which muscles to grow. It enters as a pure multiplicative weight on each channel (master formula,
+§2.6), reranking the readout **without touching any dynamic constant**. The "no personalization"
+stance (§1.8) is narrowed precisely: **fitting stays banned** (no inferring `τ`, `k`, `f` from a
+user's logs — the ill-conditioned regime Imbach warns of), **configuration is allowed** (stating a
+goal). `g_m` changes *what we optimize for*, not *the model of how muscles respond*. It is the
+fix for the pure-balanced objective's failure mode — otherwise the argmax forever chases the
+most-neglected trivial muscle (neck, forearms) simply because `f'` peaks at zero volume.
 
 ### Deferred / declined (explicit non-goals)
 - **Per-exercise *stimulus* differentiation** (muscle length, ROM, resistance profile,
@@ -591,8 +612,9 @@ Tracked so they aren't lost. One is **in scope and needs building** (systemic `S
   — needs molecular parameters; our model is top-down/empirical.
 - **Early-training damage regime** (Damas-2016: week-1 MyoPS is damage-directed, not growth):
   declared **out of scope** under the population/trained-user assumption — stated, not inherited.
-- **Physique-goal weighting** of the objective: out of scope; the readout implicitly maximizes
-  balanced total hypertrophy. (Future UI-side user override, per project scope.)
+- **Physique-goal weighting** of the objective: **now IN scope as user configuration** (walk-back,
+  2026-06 — see *user configuration* below). The uniform-`g_m` default still maximizes balanced
+  total hypertrophy; the user may reweight.
 
 ### Backbone risk to revisit before §2 commits
 - **FF identifiability / alternative forms.** `Imbach-2022` documents that two-component FF
@@ -783,13 +805,20 @@ accumulation. Every integrator beyond that is a parameter
 ## 2.6 The master formula (committed)
 
 $$
-\eta_e(t) \;=\; \underbrace{e^{-\kappa\, c_e\, S(t)}}_{\substack{\text{cost-aware}\\\text{systemic gate}}} \cdot \sum_{m \,\in\, e} \underbrace{a_{e,m}}_{\text{attribution}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\text{Axis A: recovery}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\text{Axis B: marginal value}}
+\eta_e(t) \;=\; \underbrace{e^{-\kappa\, c_e\, S(t)}}_{\substack{\text{cost-aware}\\\text{systemic gate}}} \cdot \sum_{m \,\in\, e} \underbrace{g_m}_{\substack{\text{user}\\\text{priority}}} \cdot \underbrace{a_{e,m}}_{\text{attribution}} \cdot \underbrace{\mathrm{Recovery}_m(t)}_{\text{Axis A: recovery}} \cdot \underbrace{f'\!\big(V_{\text{eff},m}(t)\big)}_{\text{Axis B: marginal value}}
 \qquad\longrightarrow\ \text{normalize}
 $$
 
 with $S$, $\mathrm{Recovery}_m$, $V_{\text{eff},m}$ each a population-parameterized leaky integrator (EMA)
 over the set history, `f` the concave dose-response (log/root now; swappable — §2.3), and
-every factor bounded to `[0,1]` so the product is an honest absolute efficiency (§2.4). The
+every factor bounded to `[0,1]` so the product is an honest absolute efficiency (§2.4). Two
+parameters are **per-muscle, not global**: $\mathrm{Recovery}_m = e^{-D_m/\mathrm{cap}_m}$ is
+**capacity-normalized** ($\mathrm{cap}_m \propto \mathrm{MRV}_m$) and runs on a per-muscle
+recovery rate $\tau_{\text{fast},m}$ — muscles differ in how much volume they recover and how
+fast (hand-set from RP MRV + the damage-susceptibility ordering, no kinetic data; §1.4). The
+single factor $g_m \in [0,1]$ is the **user-configured priority** — the one non-population input,
+*configuration not fitting* (§1.10 *user configuration*): it reweights the objective toward the
+muscles the user wants to grow without altering any dynamic constant. The
 systemic factor is **cost-aware** (Shape B, §1.10 #2): it discounts each candidate by its own
 prospective cost $c_e$ scaled by depletion $S$, so it is inert when fresh ($S\to0$) and steers
 toward low-cost work when depleted — the one term that lets systemic fatigue *reorder*, not
@@ -808,8 +837,9 @@ naming the structure.
 | #9 systemic form | Shape B: one global state, cost-aware gate `exp(−κ c_e S)` on score — reorders toward low-cost work, inert when fresh (§1.10 #2). |
 
 **Still open after §2** (calibration *within* the structure, not a search *for* it): the
-`τ` values (incl. `τ_sys`), the RP-12 → DB-17 map, the systemic per-exercise cost table
-`c_e` and gain `κ`, and the final choice of `f`. The working statement — formula, every
+`τ` values (incl. `τ_sys`), the RP-12 → DB-17 map, the per-muscle capacity/recovery-rate table
+(`cap_m ∝ MRV_m`, `τ_fast,m`), the systemic per-exercise cost table `c_e` and gain `κ`, and the
+final choice of `f`. (User priority `g_m` needs no calibration — it defaults to uniform.) The working statement — formula, every
 input, every parameter, the output — is `model.md`.
 
 ---
@@ -841,6 +871,12 @@ input, every parameter, the output — is `model.md`.
 - Diminishing-returns skepticism / bounds: `Buckner-2023`, `Nuckols-2022`
 - MPS time course & training-status modulation: `Damas-2015`
 - EIMD magnitude, recovery time course, repeated-bout: `Howatson-2008`, `Paulsen-2012`
+- **Per-muscle recovery capacity & rate** (`cap_m`, `τ_fast,m`): capacity from RP MRV
+  (`RP-volume-landmarks_current.csv`); rate ordering from muscle-group damage-susceptibility —
+  hamstrings ~48 h vs quads ~24 h (`EJAP-2023` — Eur J Appl Physiol 2023, hamstring vs quad EIMD),
+  architecture/fusiform-vs-pennate (`Muscle-Architecture-EIMD-review`, PMC8488843), fiber-type
+  composition (`Johnson-1973` — Johnson, Polgar, Weightman, Appleton, *J Neurol Sci* 18(1):111–129).
+  *No clean kinetic dataset; hand-set table.*
 - EIMD load-insensitivity at matched volume (`d_set ≈ volume`): `Winchester-2022`
 - Frequency: `Schoenfeld-2019`
 - Attribution priors: `free-exercise-db_mover-map.csv`; EMG refinements: `Lehman-2004`, `Rodriguez-Ridao-2020`, `Martin-Fuentes-2020`, `Clark-2012`, `Saeterbakken-2013`; **interpretation caveat:** `Vigotsky-2018`

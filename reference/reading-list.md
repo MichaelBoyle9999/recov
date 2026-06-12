@@ -387,6 +387,41 @@ damage* at equated volume. **It does not — correcting my pre-read summary.**
 
 ---
 
+## E. Round-3 modeling additions (added 2026-06-11, sanity-check review)
+
+Surfaced when the sanity check flagged that the recovery gate was **global**, ignoring
+well-established per-muscle differences in recovery capacity and rate (`cap_m`, `τ_fast,m` —
+model.md / §1.10 #5). There is **no single paper with per-muscle recovery time constants** for
+hypertrophy; this set supplies the *ordering* to hand-set the table (capacity comes from RP MRV,
+already in Bucket A). Surfaced via search; mark **[verify]** before formal citing. Not yet pulled
+into `pdfs/` unless noted.
+
+### E1 — Per-muscle recovery capacity & rate (parameterizes `cap_m`, `τ_fast,m`)
+- **Johnson MA, Polgar J, Weightman D, Appleton D (1973).** *Data on the distribution of fibre
+  types in thirty-six human muscles: an autopsy study.* J Neurol Sci 18(1):111–129. DOI
+  10.1016/0022-510X(73)90023-3. — **🟢 Open PDF** (jns-journal.com). *The* canonical per-muscle
+  Type I / Type II composition table. *Why:* fatigue-resistant Type-I-dominant postural muscles
+  (calves, abs, erectors, traps) recover faster / tolerate higher frequency — secondary proxy for
+  ordering `τ_fast,m`. **Caveat:** fiber type *per se* was not the clean determinant of damage
+  magnitude at matched length (see architecture review below) — use as a cross-check, not the
+  primary driver.
+- **[verify] "Effects of muscle architecture on eccentric-exercise-induced muscle damage
+  responses" (review).** PMC8488843. — **🟢 Open access.** *Why:* the better mechanistic ordering —
+  longitudinal/fusiform & biarticular muscles take more damage per unit volume than pennate ones;
+  arms > legs (habituation). Primary basis for the `τ_fast,m` susceptibility ordering.
+- **[verify] Hamstring vs quadriceps EIMD/recovery time course (Eur J Appl Physiol 2023).** DOI
+  10.1007/s00421-023-05234-z. — **🔴 Paywalled (Springer).** *Why:* concrete differential timing —
+  hamstrings peak damage ~48 h vs quads ~24 h; the cleanest single hamstring-vs-quad `τ` contrast.
+  *Numbers retrievable from abstract; full retrieval optional.*
+- **RP volume landmarks** (`RP-volume-landmarks_current.csv`, Bucket A) — supplies **`cap_m`**
+  directly (per-muscle MRV = recoverable-volume capacity). No new retrieval needed.
+
+> **Scope note.** As with the `c_e` systemic-cost table, this is a **hand-set population table**
+> from proxies, not a fitted kinetic model — the literature does not support more. Capacity (`cap_m`)
+> is on firm ground (RP MRV); rate (`τ_fast,m`) is an ordering, not calibrated constants.
+
+---
+
 ## Raw empirical data / datasets (cross-cutting)
 
 - **Pelland 2024 / Remmert 2024 supplements & code** — look for OSF.io links inside the
